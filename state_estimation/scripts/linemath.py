@@ -112,12 +112,20 @@ def wall_equation(sonar_point, sonar_angle, wall):
     p, l = sonar_pos_line(sonar_point, sonar_angle)
     c = line_angle_sin(l, wall)
     d = line_point_dist(wall, p)
-    return sympy.trigsimp(d/c)
+    return d/c
+
+counter = 0
+
+def mysimple(a):
+    global counter
+    counter += 1
+    print(counter)
+    return sympy.trigsimp(a)
 
 
 def make_equations(sonar_points, sonar_angles, walls):
     equations = [[wall_equation(sonar_points[j], sonar_angles[j], i) for i in walls] for j in range(len(sonar_points))]
-    Hequations = [[[sympy.trigsimp(sympy.diff(i, k)) for k in (x, y, theta)] for i in j] for j in equations]
+    Hequations = [[[mysimple(sympy.diff(sympy.simplify(i), k)) for k in (x, y, theta)] for i in j] for j in equations]
     return equations, Hequations
 
 
