@@ -94,7 +94,7 @@ def localize():
     dt = timestamp - prevtimestamp #compute dt for the kalman filter
     prevtimestamp = timestamp
     kX, P, X = kalmanfilter.update(kX, P, dt, sonars, givenvel, imuAngVelZ2) # call kalman filter
-    if abs(X[0]) > 0.65 or abs(X[1]) > 0.65: # if the car is outside the walls, then use the previous position
+    if abs(X[0]) > 0.7 or abs(X[1]) > 0.7: # if the car is outside the walls, then use the previous position
         X[0] = prevX[0]
         X[1] = prevX[1]
     prevX = X

@@ -120,7 +120,7 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
     est[2] = norm(est[2])
     
     #If estimation is out of map, get previous estimation
-    if abs(est[0]) > 0.6 or abs(est[1]) > 0.6:
+    if abs(est[0]) > 0.7 or abs(est[1]) > 0.7:
         est[0] = prevest[0]
         est[1] = prevest[1]
     prevest = est

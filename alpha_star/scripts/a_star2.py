@@ -48,12 +48,12 @@ startang_robot = -np.pi/2
 obstacles = [((0.30, 0.15), (-0.30, -0.15))]
 
 
-cur,obs,obs_s = find_curve(start = start, end = end, obstacles = obstacles, smoothing_range = 0.8)
-pd = pdcon.pd_controller(setpoint = 0, kp = 10, kd = 12)
+cur,obs,obs_s = curvemath.find_curve(start = start, end = end, obstacles = obstacles, smoothing_range = 0.8, plot_ret = True)
+pd = pdcon.pd_controller(setpoint = 0, kp = 18, kd = 12)
 startang_curve = np.arctan2(cur[1][1] - cur[0][1], cur[1][0] - cur[0][0])
 startangle = linemath.norm(startang_curve - startang_robot)
 fhandle = file("/home/ubuntu/catkin_ws/src/alpha_star/scripts/info", 'w')
-pd_turn = pdcon.pd_controller(setpoint = startangle, kp = 2, kd = 0.1)
+pd_turn = pdcon.pd_controller(setpoint = startangle, kp = 5, kd = 0.4)
 
 def send_velocity():
     global sonarF_val
@@ -77,29 +77,31 @@ def send_velocity():
     if state == 0:
         #fhandle.write("theta: {}\n".format(theta))
         #fhandle.write("imuyaw {}\n".format(imuYaw))
-        velocity.angular.z =  -min(max(pd_turn.pd_out(imuYaw)[0], -2.8), 2.8)
+        velocity.angular.z =  min(max(pd_turn.pd_out(imuYaw), -2.8), 2.8)
+        if abs(velocity.angular.z) < 0.5:
+            velocity.angular.z = 0
         velocity.linear.x = 0
         #fhandle.write("diafora {}\n".format(linemath.norm(imuYaw - startangle)))
         if abs(linemath.norm(imuYaw - startangle)) < 0.17:
             count_state_0 += 1
             if count_state_0 >= 5:
                 velocity.angular.z = 0
-                state = 0
+                state = 1
                 
     elif state == 1:
         try:
-            fhandle.write("{};{} {} ".format(x,y,((x - end[0]) ** 2 + (y - end[1]) ** 2) ** (1/2.)))
+            fhandle.write("{};{} {}\n".format(x,y,((x - end[0]) ** 2 + (y - end[1]) ** 2) ** (1/2.)))
         except:
             pass
         begin_time = time.time()
         
-        if ((x - end[0]) ** 2 + (y - end[1]) ** 2) ** (1/2.) < 0.12:
+        if ((x - end[0]) ** 2 + (y - end[1]) ** 2) ** (1/2.) < 0.05:
             state = 2
         m = 1000
         ind = 0
-        for i in range(len(curve)):
-            if my_dist(cur[i], (x,y)) < m:
-                m = my_dist(cur[i], (x,y))
+        for i in range(len(cur)):
+            if curvemath.my_dist(cur[i], (x,y)) < m:
+                m = curvemath.my_dist(cur[i], (x,y))
                 ind = i
         if ind == 0:
             p1 = cur[ind]
@@ -107,20 +109,10 @@ def send_velocity():
         else:
             p2 = cur[ind]
             p1 = cur[ind-1]
-        if linemath.is_it_left(p1, p2, (x,y)):
+        if not linemath.is_it_left(p1, p2, (x,y)):
             m = -m
-        temp = pd.pd_out(m)[0]
+        temp = pd.pd_out(m)
         w = min(max(temp, -angular_velocity_limit), angular_velocity_limit)
-        points_ahead = int(curve_lookahead / size * resolution)
-        if points_ahead + ind + 1 < len(cur):
-            p3 = cur[ind + points_ahead]
-            p4 = cur[ind + points_ahead + 1]
-            a1 = np.arctan2(p2[1] - p1[1], p2[0] - p1[0])
-            a2 = np.arctan2(p4[1] - p3[1], p4[0] - p3[0])
-            diffa = linemath.norm(a2 - a1)
-            angout, kpa, kda = pda.pd_out(diffa)
-            w += angout
-        fhandle.write("pda_out: {} kpa: {} kda: {}\n".format(angout, kpa, kda))
         velocity.angular.z =  min(max(w, -angular_velocity_limit), angular_velocity_limit)
         velocity.linear.x = 0.2
 
@@ -139,7 +131,7 @@ def send_velocity():
         plt.plot([i[0] for i in obs], [i[1] for i in obs], 'o')
         plt.plot([i[0] for i in obs_s], [i[1] for i in obs_s], 'o')
         plt.plot([i[0] for i in cur], [i[1] for i in cur], 'o')
-        plt.plot(x1, y1, 'o')
+        plt.plot(x1, y1, '--', linewidth = 2)
         plt.title("kp: {}, kd: {}".format(pd.kp, pd.kd))
         plt.xlim(-0.75, 0.75)
         plt.ylim(-0.75, 0.75)

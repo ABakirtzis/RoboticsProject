@@ -223,8 +223,8 @@ def find_curve(start, end, obstacles, resolution = 80, size = 1.5, safety_net = 
             plt.show()
 
     if plot_ret:
-        return cur2, obs, obs_safety
-    return cur2
+        return p, obs, obs_safety
+    return p
 
 
 if __name__ == "__main__":

@@ -29,12 +29,12 @@ imuLinAccZ = 0.0
 
 start_point = [0.45, 0.45, -math.pi / 2]
 
-end_point = [0.10, -0.45]
+end_point = [0.0, -0.45]
 
 
 
 target_ang = 0.0
-state = 0
+state = 2
 count_state_0 = 0
 theta = math.atan2(end_point[1]- start_point[1], end_point[0]- start_point[0]) - start_point[2]
 pd_turn = pdcon.pd_controller(setpoint = theta, kp = 9, kd = 1.9)
@@ -42,8 +42,8 @@ pd_turn = pdcon.pd_controller(setpoint = theta, kp = 9, kd = 1.9)
 attractive_gain = 80.0
 repulsive_gain = 150.0
 grid_area_width = 1.5
-grid_resolution = 0.15
-robot_radious = 0.15
+grid_resolution = 0.075
+robot_radious = 0.17
 cells_count = int(grid_area_width / grid_resolution)
 obstacle = [(0.15 + 0.075, -0.15 - 0.075)]
 obstacle1 = (0.1,-0.1)
