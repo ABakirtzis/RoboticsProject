@@ -43,7 +43,7 @@ def client_handler(s):
                 os.chdir(cmd[2:].strip())
             except:
                 response = "Could not execute command"
-        elif cmd.startswith("roslaunch") or cmd.startswith("rosrun"):
+        elif cmd.startswith("roslaunch") or cmd.startswith("rosrun") or cmd.replace("  ", " ").startswith("rostopic echo"):
             q = Queue()
             p = multiprocessing.Process(target = run_project, args = (cmd, q))
             p.start()
@@ -59,7 +59,8 @@ def client_handler(s):
             except KeyboardInterrupt:
                 p.terminate()
             p.terminate()
-            os.system("killall {}".format(cmd.split()[0]))
+            if not cmd.startswith("rostopic"):
+                os.system("killall {}".format(cmd.split()[0]))
         else:
             try:
                 response = os.popen(cmd).read()
@@ -83,8 +84,7 @@ def client(ip, port):
         sys.stdout.flush()
         cmd = raw_input()
         s.sendall(cmd + '\n')
-        print "sent {}".format(repr(cmd))
-        if cmd.strip().startswith("roslaunch") or cmd.strip().startswith("rosrun"):
+        if cmd.strip().startswith("roslaunch") or cmd.strip().startswith("rosrun") or cmd.strip().replace("  ", " ").startswith("rostopic echo"):
             try:
                 while True:
                     sys.stdout.write(s.recv(1024))
