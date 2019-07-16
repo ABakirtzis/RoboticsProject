@@ -47,4 +47,9 @@
     <param name="sonar_trigger" value="24" /> 
   </node>
 
+  <!-- Follower -->
+
+  <node pkg="project" type="rosfollower.py" name="wall_follower" output="screen">  
+  </node>
+
 </launch>
