@@ -16,8 +16,6 @@ sonarL = []
 sonarFL = []
 sonarF = []
 bound = 0.4
-see_bound = 0.5
-state = 0
 
 pid = pdcon.pd_controller(setpoint = 0.1, kp = 7, kd = 0.8)
 def send_velocity():
@@ -26,8 +24,8 @@ def send_velocity():
     global sonarFR_val
     global sonarL_val
     global sonarR_val
-    global pid, state
-    global sonarF, sonarL, sonarFL
+    global pid
+    global ztotal, sonarF, sonarL, sonarFL
 
     velocity_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
     velocity = Twist()
@@ -37,20 +35,57 @@ def send_velocity():
     """
     velocity.linear.x = 0.15
 
-    if state == 0:
-        velocity.angular.z = -0.1
-        if sonarF_val <= see_bound or sonarFL_val <= see_bound:
-            velocity.angular.z = -0.2
-        elif sonarL_val <= see_bound:
-            state = 1
+    sonarL.append(sonarL_val)
+    sonarFL.append(sonarFL_val)
+    sonarF.append(sonarF_val)
+
+    if len(sonarL) > 5:
+        sonarL.pop(0)
+    if len(sonarF) > 5:
+        sonarF.pop(0)
+    if len(sonarFL) > 5:
+        sonarFL.pop(0)
+
+    if not (len(sonarL) > 1 and (sonarL[-1] - sonarL[-2]) < -bound):
+        sonarL_val = sum(sonarL) / len(sonarL)
+
+    if not (len(sonarF) > 1 and (sonarF[-1] - sonarF[-2]) < -bound):
+        sonarF_val = sum(sonarF) / len(sonarF)
+
+    if not (len(sonarFL) > 1 and (sonarFL[-1] - sonarFL[-2]) < -bound):
+        sonarFL_val = sum(sonarFL) / len(sonarFL)
+
+    if sonarL_val > 0.5:
+        if sonarF_val <= 0.5:
+            velocity.linear.x = 0.1
+            velocity.angular.z = 0.3
+        elif sonarR_val <= 0.5:
+            velocity.angular.z = 0.3
+        elif sonarFR_val <= 0.5:
+            velocity.angular.z = 0.5
+        else:
             velocity.angular.z = 0
-        elif sonarR_val <= see_bound or sonarFR_val <= see_bound:
-            velocity.angular.z = 0.2
-        
-    
+    else:
+        velocity.linear.x = 0.1
+        z1 = pid.update_control(min(sonarL_val, sonarFL_val - 0.02, sonarF_val -0.4))
+    #z2 = pid2.update_control(math.sqrt(sonarL_val**2 + sonarFL_val**2) -1)
+        velocity.angular.z = max(min(0.3, z1),-0.3)
+        if (velocity.linear.x - abs(z1)) < 0.1:
+            velocity.linear.x = 0.1
+        else:
+            velocity.linear.x = velocity.linear.x - abs(z1)
+        #ztotal = ztotal max(min(0.3, z1),-0.3)
+        #velocity.angular.z = -z1
+#    else:
+ #       velocity.angular.z = 0
+  #      velocity.linear.x = 0
+###    if ztotal >= 70:
+#        velocity.angular.z = 0
+#        velocity.linear.x = 0
+#flag2 = 1
+#    velocity.angular.z = -max(min(0.1, (z1 + z2)/2 ),-0.1)
+#\    velocity.angular.z = 0
     rospy.loginfo("Velocity x, z: %s, %s", velocity.linear.x, velocity.angular.z)
-    rospy.loginfo("Right Scan %s", sonarR_val)
-    rospy.loginfo("Front Right Scan %s", sonarFR_val)
     rospy.loginfo("Left Scan %s", sonarL_val)
     rospy.loginfo("Front Left Scan %s", sonarFL_val)
     rospy.loginfo("Front Scan %s", sonarF_val)
