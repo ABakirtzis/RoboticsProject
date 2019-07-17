@@ -4,6 +4,9 @@ from geometry_msgs.msg import Twist
 from sensor_msgs.msg import Range
 import time
 import math
+import pdcon
+
+
 sonarF_val = 3.0;
 sonarFL_val = 3.0;
 sonarFR_val = 3.0;
@@ -13,49 +16,8 @@ sonarL = []
 sonarFL = []
 sonarF = []
 bound = 0.4
-ztotal = 0
 
-class PID:
-    def __init__(self):
-        self.Kp = 7
-        self.Td = 0.8
-        self.curr_error = 0
-        self.prev_error = 0
-        self.sum_error = 0
-        self.prev_error_deriv = 0
-        self.curr_error_deriv = 0
-        self.control = 0
-        self.prev_time = time.time()
-        self.curr_time = time.time()
-
-    def update_control(self, current_error, reset_prev=False):
-
-        rospy.loginfo("Error %s", current_error)
-        self.curr_time = time.time()
-        self.curr_error_deriv = (self.curr_error - self.prev_error) / (self.curr_time - self.prev_time)
-        rospy.loginfo("Time %s", self.curr_time - self.prev_time)
-        #steering angle = P gain + D gain + I gain
-#        if abs(self.curr_error_deriv) < 3 * 10**(-11) and self.curr_error_deriv!= 0:
-        p_gain = self.Kp * self.curr_error
-
-        d_gain = self.Td * self.curr_error_deriv
-            #PID control
-        w = p_gain + d_gain  # = control?
-#        else:
-        #w = 0.0
-
-        self.control = w
-
-        # update error
-        self.prev_error = self.curr_error
-        self.curr_error = current_error
-        self.prev_error_deriv = self.curr_error_deriv
-        self.prev_time = self.curr_time
-        #print("control", self.control)
-        return self.control
-
-pid = PID()
-pid2 = PID()
+pid = pdcon.pd_controller(setpoint = 0.1, kp = 7, kd = 0.8)
 def send_velocity():
     global sonarF_val
     global sonarFL_val
