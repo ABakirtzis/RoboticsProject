@@ -26,12 +26,18 @@ class pd_controller:
 
     def pd_out(self, out):
         self._history.pop(0)
-        self._history.append(self.setpoint - out)
+        self._history.append(out - self.setpoint)
         self._history_times.pop(0)
         self._history_times.append(time.time())
         self._calc_der()
         return self.kp*self._history[-1] + self.kd*self._der
 
+    def reset(self, sp):
+        self.setpoint = sp
+        self._der = 0
+        self._curtime = time.time()
+        self._history = [0 for i in range(self.derivative_samples)]
+        self._history_times = [0 for i in range(self.derivative_samples)]
 
 
 if __name__ == "__main__":
