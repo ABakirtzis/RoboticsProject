@@ -19,12 +19,12 @@ sonarF = []
 bound = 0.4
 see_bound = 0.3
 pd_bound = 0.3
-state = 1
+state = 0
 substate = 0
 state2start = 0
 
 fhandle = file("/home/ubuntu/catkin_ws/src/project/scripts/raw_data", 'w')
-pd0 = pdcon.pd_controller(setpoint = 0.3, kp = 2, kd = 0.8)
+pd0 = pdcon.pd_controller(setpoint = 0.3, kp = 27, kd = 2.5)
 pd = pdcon.pd_controller(setpoint = 0.2, kp = 27, kd = 2.5)
 def send_velocity():
     global sonarF_val
@@ -68,8 +68,8 @@ def send_velocity():
     if state == 0:
         print "state 0"
         fhandle.write("state 0\n")
-        velocity.linear.x = 0.12
-        velocity.angular.z = 0.1
+        velocity.linear.x = 0.18
+        velocity.angular.z = -0.3
         if sonarL_val <= see_bound:
             print "substate 0"
             fhandle.write("substate 0\n")
@@ -84,7 +84,7 @@ def send_velocity():
             substate = 1
             pd_val = pd0.pd_out(sonarR_val)
             velocity.angular.z += pd_val
-            velocity.angular.z = max(min(velocity.angular.z, 0.3), 0.1)
+            velocity.angular.z = max(min(velocity.angular.z, 0.65), 0.1)
             fhandle.write("PD ret {}\n.".format(pd_val))
         elif sonarF_val <= see_bound + 0.1:
             if substate != 2:
@@ -94,7 +94,7 @@ def send_velocity():
             substate = 2
             pd_val = pd0.pd_out(sonarF_val)
             velocity.angular.z += pd_val
-            velocity.angular.z = min(max(velocity.angular.z, -0.3), -0.1)
+            velocity.angular.z = min(max(velocity.angular.z, -0.65), -0.1)
             fhandle.write("PD ret {}\n.".format(pd_val))
         elif sonarFL_val <= see_bound:
             if substate != 3:
@@ -104,7 +104,7 @@ def send_velocity():
             substate = 3
             pd_val = pd0.pd_out(sonarFL_val)
             velocity.angular.z += pd_val
-            velocity.angular.z = min(max(velocity.angular.z, -0.3), -0.1)
+            velocity.angular.z = min(max(velocity.angular.z, -0.65), -0.1)
             fhandle.write("PD ret {}\n.".format(pd_val))
         elif sonarFR_val <= see_bound + 0.2:
             if substate != 4 :
@@ -114,11 +114,11 @@ def send_velocity():
             substate = 4
             pd_val = pd0.pd_out(sonarFR_val)
             velocity.angular.z += pd_val
-            velocity.angular.z = max(min(velocity.angular.z, 0.3), 0.1)
+            velocity.angular.z = max(min(velocity.angular.z, 0.65), 0.1)
             fhandle.write("PD ret {}\n.".format(pd_val))
     elif state == 1:
         rospy.loginfo("in state 1")
-        velocity.linear.x = 0.2
+        velocity.linear.x = 0.18
         #if sonarF_val / 3 < 0.3:
         #    velocity.linear.x = 0.15
         if sonarR_val <= 0.1:
