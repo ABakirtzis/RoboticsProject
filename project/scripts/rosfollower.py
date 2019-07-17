@@ -35,9 +35,11 @@ def send_velocity():
     """
     PUT YOUR MAIN CODE HERE
     """
-    velocity.linear.x = 0.15
+    velocity.linear.x = 0
+    velocity.angular.z = 0
 
     if state == 0:
+        velocity.linear.x = 0.15
         velocity.angular.z = -0.1
         if sonarF_val <= see_bound or sonarFL_val <= see_bound:
             velocity.angular.z = -0.2
