@@ -21,6 +21,7 @@ see_bound = 0.3
 pd_bound = 0.3
 state = 1
 substate = 0
+state2start = 0
 
 fhandle = file("/home/ubuntu/catkin_ws/src/project/scripts/raw_data", 'w')
 pd0 = pdcon.pd_controller(setpoint = 0.3, kp = 2, kd = 0.8)
@@ -31,7 +32,7 @@ def send_velocity():
     global sonarFR_val
     global sonarL_val
     global sonarR_val
-    global pd0, pd, state, substate
+    global pd0, pd, state, substate, state2start
     global sonarF, sonarL, sonarFL
 
     velocity_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
@@ -40,6 +41,8 @@ def send_velocity():
     """
     PUT YOUR MAIN CODE HERE
     """
+
+    
     velocity.linear.x = 0.0
     velocity.angular.z = 0
 
@@ -55,6 +58,13 @@ def send_velocity():
     sonarF_val = sum(sonarF) / len(sonarF)
     sonarFL_val = sum(sonarFL) / len(sonarFL)
     sonarL_val = sum(sonarL) / len(sonarL)
+
+    if sonarF_val < 0.4:
+
+        state = 2
+        state2start = time.time()
+
+        
     if state == 0:
         print "state 0"
         fhandle.write("state 0\n")
@@ -109,16 +119,24 @@ def send_velocity():
     elif state == 1:
         rospy.loginfo("in state 1")
         velocity.linear.x = 0.2
-        if sonarF_val / 3 < 0.3:
-            velocity.linear.x = 0.15
+        #if sonarF_val / 3 < 0.3:
+        #    velocity.linear.x = 0.15
         if sonarR_val <= 0.1:
             rospy.loginfo("should terminate")
             fhandle.close()
-            state = 2
+            state = 3
             sys.exit(0)
         #velocity.angular.z = pd.pd_out(min(sonarL_val, sonarFL_val * math.cos(math.pi/6), sonarF_val / 3)) 
-        #velocity.angular.z = min(max(pd.pd_out(min(sonarL_val, sonarFL_val * math.cos(math.pi/6), sonarF_val - 0.2)), -0.5), 0.5)
+        #velocity.angular.z = min(max(pd.pd_out(min(sonarL_val, sonarFL_val * math.cos(math.pi/6), sonarF_val - 0.3)), -0.65), 0.65)
         velocity.angular.z = min(max(pd.pd_out(min(sonarL_val, sonarFL_val * math.cos(math.pi/6))), -0.5), 0.5)
+    elif state == 2:
+
+        velocity.linear.x = 0.15
+        velocity.angular.z = -0.6
+        if time.time() - state2start > 1.3:
+            state = 1
+        
+            
                
             
     #rospy.loginfo("Velocity x, z: %s, %s", velocity.linear.x, velocity.angular.z)
