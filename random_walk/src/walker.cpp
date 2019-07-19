@@ -171,7 +171,7 @@ int main(int argc, char **argv)
       else {
 
         linX = 0.0;
-        angZ = -angZ_move;
+        angZ = angZ_move;
       }
 
     }
