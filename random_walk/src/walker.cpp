@@ -72,11 +72,11 @@ int main(int argc, char **argv)
 
   ros::init(argc, argv, "walker");
   ros::NodeHandle n;
-  ros::Subscriber sonarFront_sub = n.subscribe("sonarFront_scan", 1, &sonarFrontCallback);
-  ros::Subscriber sonarFrontLeft_sub = n.subscribe("sonarFrontLeft_scan", 1, &sonarFrontLeftCallback);
-  ros::Subscriber sonarFrontRight_sub = n.subscribe("sonarFrontRight_scan", 1, &sonarFrontRightCallback);
-  ros::Subscriber sonarLeft_sub = n.subscribe("sonarLeft_scan", 1, &sonarLeftCallback);
-  ros::Subscriber sonarRight_sub = n.subscribe("sonarRight_scan", 1, &sonarRightCallback);
+  ros::Subscriber sonarFront_sub = n.subscribe("sonar_front", 1, &sonarFrontCallback);
+  ros::Subscriber sonarFrontLeft_sub = n.subscribe("sonar_front_left", 1, &sonarFrontLeftCallback);
+  ros::Subscriber sonarFrontRight_sub = n.subscribe("sonar_front_right", 1, &sonarFrontRightCallback);
+  ros::Subscriber sonarLeft_sub = n.subscribe("sonar_left", 1, &sonarLeftCallback);
+  ros::Subscriber sonarRight_sub = n.subscribe("sonar_right", 1, &sonarRightCallback);
   ros::Subscriber imu_sub = n.subscribe("imu_data", 1, &imuCallback);
   ros::Publisher velocity_pub = n.advertise<geometry_msgs::Twist>("cmd_vel", 1);
   int rosFreqHz = 10;
@@ -89,7 +89,7 @@ int main(int argc, char **argv)
   */
   int phase = 1;
   float linX_move = 0.2;
-  float angZ_move = 0.2;
+  float angZ_move = 3;
   float linX = 0.0;
   float angZ = 0.0;
   double fsfw = 0.35; // front sonar's threshold under which the linear motion is stopped (3.5cm from front sonar, but 3cm from chassis)
