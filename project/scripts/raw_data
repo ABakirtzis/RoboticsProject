@@ -1,2060 +1,2688 @@
 state 0
-Left Scan 0.607443809509
-Front Left Scan 0.564060807228
-Front Scan 1.62393903732
+Left Scan 3.0
+Front Left Scan 3.0
+Front Scan 0.783756256104
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.608650028706
-Front Left Scan 0.564755916595
-Front Scan 1.36746412516
+Left Scan 1.72775053978
+Front Left Scan 1.70699948072
+Front Scan 0.779626488686
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.611328244209
-Front Left Scan 0.565083026886
-Front Scan 1.23342386882
+Left Scan 1.30355834961
+Front Left Scan 1.27646271388
+Front Scan 0.776314496994
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.608588695526
-Front Left Scan 0.559072375298
-Front Scan 1.00784043471
+Left Scan 0.453851898511
+Front Left Scan 0.413889924685
+Front Scan 0.768477479617
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.607212106387
-Front Left Scan 0.560299038887
-Front Scan 0.953294793765
+Left Scan 0.451916495959
+Front Left Scan 0.411259412766
+Front Scan 0.756360769272
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.598938941956
-Front Left Scan 0.557518601418
-Front Scan 0.943018078804
+Left Scan 0.446764508883
+Front Left Scan 0.406052907308
+Front Scan 0.741150140762
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.594591101011
-Front Left Scan 0.558963338534
-Front Scan 0.929824630419
+Left Scan 0.440931042035
+Front Left Scan 0.401473363241
+Front Scan 0.724004109701
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.585677345594
-Front Left Scan 0.552407503128
-Front Scan 0.910797715187
+Left Scan 0.434797724088
+Front Left Scan 0.397071003914
+Front Scan 0.708629926046
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.579734841983
-Front Left Scan 0.546233296394
-Front Scan 0.887191255887
+Left Scan 0.428568998973
+Front Left Scan 0.391578276952
+Front Scan 0.692969520887
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.57298819224
-Front Left Scan 0.55682349205
-Front Scan 0.870781222979
+Left Scan 0.422517458598
+Front Left Scan 0.384790738424
+Front Scan 0.67691385746
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.567209243774
-Front Left Scan 0.548441290855
-Front Scan 0.85512081782
+Left Scan 0.416411399841
+Front Left Scan 0.379706899325
+Front Scan 0.662275671959
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.561198592186
-Front Left Scan 0.554451942444
-Front Scan 0.846547802289
+Left Scan 0.410114526749
+Front Left Scan 0.376394907633
+Front Scan 0.646042823792
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.556523640951
-Front Left Scan 0.552080392838
-Front Scan 0.832086801529
+Left Scan 0.402386546135
+Front Left Scan 0.373369137446
+Front Scan 0.630723158518
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.55246202151
-Front Left Scan 0.559276819229
-Front Scan 0.819043278694
+Left Scan 0.39290034771
+Front Left Scan 0.370861291885
+Front Scan 0.614326755206
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.549422621727
-Front Left Scan 0.555678606033
-Front Scan 0.803205688794
+Left Scan 0.386058290799
+Front Left Scan 0.366922338804
+Front Scan 0.597984870275
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.545756260554
-Front Left Scan 0.55993103981
-Front Scan 0.787599802017
+Left Scan 0.380810896556
+Front Left Scan 0.36337864399
+Front Scan 0.580648024877
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.54221256574
-Front Left Scan 0.568190574646
-Front Scan 0.772116581599
+Left Scan 0.375481724739
+Front Left Scan 0.3585673968
+Front Scan 0.56303858757
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.540345311165
-Front Left Scan 0.565083026886
-Front Scan 0.75941379865
+Left Scan 0.3702207009
+Front Left Scan 0.357313474019
+Front Scan 0.546737591426
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.540399829547
-Front Left Scan 0.562670588493
-Front Scan 0.749682267507
+Left Scan 0.364659825961
+Front Left Scan 0.356277624766
+Front Scan 0.530164003372
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.539377609889
-Front Left Scan 0.565083026886
-Front Scan 0.734935045242
+Left Scan 0.361702203751
+Front Left Scan 0.357245326042
+Front Scan 0.513181527456
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.539023240407
-Front Left Scan 0.576777219772
-Front Scan 0.718484123548
+Left Scan 0.369811813037
+Front Left Scan 0.357177178065
+Front Scan 0.495463053385
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.537305911382
-Front Left Scan 0.593909621239
-Front Scan 0.701965053876
+Left Scan 0.366268118223
+Front Left Scan 0.359058062236
+Front Scan 0.478371540705
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.538914203644
-Front Left Scan 0.597180724144
-Front Scan 0.688062866529
+Left Scan 0.361974795659
+Front Left Scan 0.356999993324
+Front Scan 0.460421363513
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.537946502368
-Front Left Scan 0.869663596153
-Front Scan 0.672961274783
+Left Scan 0.345046838125
+Front Left Scan 0.359685023626
+Front Scan 0.443956812223
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.538682500521
-Front Left Scan 0.668490767479
-Front Scan 0.630491455396
+Left Scan 0.342825214068
+Front Left Scan 0.359862208366
+Front Scan 0.427042484283
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.53988190492
-Front Left Scan 0.864511609077
-Front Scan 0.619001706441
+Left Scan 0.339227000872
+Front Left Scan 0.363296866417
+Front Scan 0.451275904973
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.543193896612
-Front Left Scan 0.848564982414
-Front Scan 0.605685591698
+Left Scan 0.337986707687
+Front Left Scan 0.364210049311
+Front Scan 0.434756835302
 Angular Velocity -0.3
 Linear Velocity 0.18
 state 0
-Left Scan 0.546737591426
-Front Left Scan 0.846356987953
-Front Scan 0.619342446327
+Left Scan 0.335751454035
+Front Left Scan 0.365695675214
+Front Scan 0.418578505516
 Angular Velocity -0.3
 Linear Velocity 0.18
-state 0
-Left Scan 0.549368103345
-Front Left Scan 0.836748123169
-Front Scan 0.606189886729
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.552216688792
-Front Left Scan 0.831269025803
-Front Scan 0.727724989255
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.555542310079
-Front Left Scan 0.819288611412
-Front Scan 0.716466943423
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.560626149178
-Front Left Scan 0.823704600334
-Front Scan 0.702578385671
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.566241542498
-Front Left Scan 0.820801496506
-Front Scan 0.55915415287
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.574078559875
-Front Left Scan 0.823909044266
-Front Scan 0.549558917681
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.582365353902
-Front Left Scan 0.525461792946
-Front Scan 0.543330192566
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.594195842743
-Front Left Scan 0.52186357975
-Front Scan 0.539200425148
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.609733581543
-Front Left Scan 0.515525817871
-Front Scan 0.936448613803
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.63340818882
-Front Left Scan 0.492873430252
-Front Scan 1.07702426116
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.704009493192
-Front Left Scan 0.481874346733
-Front Scan 1.20874067148
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.711955547333
-Front Left Scan 0.464087724686
-Front Scan 0.933600028356
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.695531884829
-Front Left Scan 0.458608627319
-Front Scan 0.912106156349
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.633285522461
-Front Left Scan 0.445933103561
-Front Scan 0.891130208969
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.600833455722
-Front Left Scan 0.437469124794
-Front Scan 0.872771143913
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.575850407283
-Front Left Scan 0.429618477821
-Front Scan 0.854589263598
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.554070313772
-Front Left Scan 0.42274916172
-Front Scan 0.83880619208
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.529250820478
-Front Left Scan 0.416942954063
-Front Scan 0.82604889075
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.529441634814
-Front Left Scan 0.411422967911
-Front Scan 0.811983148257
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.551262617111
-Front Left Scan 0.40299987793
-Front Scan 0.799920956294
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.60203286012
-Front Left Scan 0.403367877007
-Front Scan 0.786891063054
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.577962994576
-Front Left Scan 0.398583889008
-Front Scan 0.777227679888
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.516398111979
-Front Left Scan 0.395271897316
-Front Scan 0.76625585556
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.452884197235
-Front Left Scan 0.392246127129
-Front Scan 0.724358479182
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.439568082492
-Front Left Scan 0.388443470001
-Front Scan 0.670903205872
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.429223219554
-Front Left Scan 0.384477257729
-Front Scan 0.609965284665
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.41886472702
-Front Left Scan 0.385867476463
-Front Scan 0.58075706164
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.410686969757
-Front Left Scan 0.385703921318
-Front Scan 0.556755344073
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.40410387516
-Front Left Scan 0.386562585831
-Front Scan 0.53925494353
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.399878700574
-Front Left Scan 0.391183018684
-Front Scan 0.521700024605
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.397520780563
-Front Left Scan 0.392041683197
-Front Scan 0.507184505463
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.394508639971
-Front Left Scan 0.393759012222
-Front Scan 0.488730033239
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.389070431391
-Front Left Scan 0.40455365181
-Front Scan 0.46918519338
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.384436368942
-Front Left Scan 0.403040766716
-Front Scan 0.451180497805
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.382487336795
-Front Left Scan 0.410727858543
-Front Scan 0.436596830686
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.383346001307
-Front Left Scan 0.422258496284
-Front Scan 0.423621455828
-Angular Velocity -0.3
-Linear Velocity 0.18
-state 0
-Left Scan 0.383645852407
-Front Left Scan 0.442784667015
-Front Scan 0.408124605815
-Angular Velocity -0.3
-Linear Velocity 0.18
-Left Scan 0.386208216349
-Front Left Scan 0.435424685478
-Front Scan 0.393949826558
+Left Scan 0.335179011027
+Front Left Scan 0.36884411176
+Front Scan 0.362097462018
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.388607025146
-Front Left Scan 0.484327673912
-Front Scan 0.380156675975
+Left Scan 0.340480923653
+Front Left Scan 0.36821715037
+Front Scan 0.345864613851
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.392545978228
-Front Left Scan 0.548645734787
-Front Scan 0.370207071304
+Left Scan 0.340371886889
+Front Left Scan 0.378439346949
+Front Scan 0.332030574481
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.395067453384
-Front Left Scan 0.552898168564
-Front Scan 0.361456871033
+Left Scan 0.343043287595
+Front Left Scan 0.414448738098
+Front Scan 0.31957312425
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.402918100357
-Front Left Scan 0.558418154716
-Front Scan 0.353851556778
+Left Scan 0.339336037636
+Front Left Scan 0.454179008802
+Front Scan 0.308301448822
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.416016141574
-Front Left Scan 0.560994148254
-Front Scan 0.352488597234
+Left Scan 0.342021067937
+Front Left Scan 0.481629014015
+Front Scan 0.29719332854
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.428541739782
-Front Left Scan 0.355364441872
-Front Scan 0.775414943695
+Left Scan 0.345864613851
+Front Left Scan 0.482201457024
+Front Scan 0.286630392075
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.48083849748
-Front Left Scan 0.33340716362
-Front Scan 1.23869852225
+Left Scan 0.352611263593
+Front Left Scan 0.48146545887
+Front Scan 0.277253230413
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.525134682655
-Front Left Scan 0.312840104103
-Front Scan 1.64537839095
+Left Scan 0.360039393107
+Front Left Scan 0.483687082926
+Front Scan 0.273723165194
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.567890723546
-Front Left Scan 0.304785013199
-Front Scan 1.6213085254
+Left Scan 0.366159081459
+Front Left Scan 0.491755803426
+Front Scan 0.765806078911
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.564524213473
-Front Left Scan 0.296525478363
-Front Scan 1.51840507984
+Left Scan 0.373696247737
+Front Left Scan 0.416752139727
+Front Scan 1.32775429885
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.564292510351
-Front Left Scan 0.280742406845
-Front Scan 1.46002952258
+Left Scan 0.384845256805
+Front Left Scan 0.336378415426
+Front Scan 1.87197041512
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.563951770465
-Front Left Scan 0.274241089821
-Front Scan 1.44402837753
+Left Scan 0.399020036062
+Front Left Scan 0.247309009234
+Front Scan 1.92530302207
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.563706437747
-Front Left Scan 0.269048213959
-Front Scan 1.46467721462
+Left Scan 0.438532233238
+Front Left Scan 0.239471991857
+Front Scan 1.9117552042
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.565764506658
-Front Left Scan 0.260829567909
-Front Scan 1.47822503249
+Left Scan 0.472156445185
+Front Left Scan 0.229645053546
+Front Scan 1.91501267751
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.571775158246
-Front Left Scan 0.252774477005
-Front Scan 1.29671971003
+Left Scan 0.491823951403
+Front Left Scan 0.220499595006
+Front Scan 1.65416948001
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.581329504649
-Front Left Scan 0.23940384388
-Front Scan 1.10863129298
+Left Scan 0.492682615916
+Front Left Scan 0.209009846052
+Front Scan 1.65382874012
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.995451132456
-Front Left Scan 0.243370056152
-Front Scan 0.932277957598
+Left Scan 0.498897711436
+Front Left Scan 0.199796239535
+Front Scan 1.6628651619
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.903805732727
-Front Left Scan 0.243370056152
-Front Scan 0.905741135279
+Left Scan 0.783238331477
+Front Left Scan 0.189042488734
+Front Scan 1.54731345177
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.803600947062
-Front Left Scan 0.247990489006
-Front Scan 0.883511265119
-Angular Velocity 0.283781276459
-Linear Velocity 0.18
-Left Scan 0.290869196256
-Front Left Scan 0.250198483467
-Front Scan 0.856988072395
-Angular Velocity 0.349615826036
-Linear Velocity 0.18
-Left Scan 0.280347148577
-Front Left Scan 0.243370056152
-Front Scan 0.84035996596
-Angular Velocity 0.398500493147
-Linear Velocity 0.18
-Left Scan 0.273423314095
-Front Left Scan 0.237522959709
-Front Scan 0.835834940275
-Angular Velocity 0.386264382054
-Linear Velocity 0.18
-Left Scan 0.268857399623
-Front Left Scan 0.221739888191
-Front Scan 0.829088290532
-Angular Velocity 0.296981150367
-Linear Velocity 0.18
-Left Scan 0.264223337173
-Front Left Scan 0.205425262451
-Front Scan 0.824631412824
-Angular Velocity 0.0611761965924
-Linear Velocity 0.18
-Left Scan 0.26130660375
-Front Left Scan 0.204075932503
-Front Scan 0.803832650185
-Angular Velocity -0.250430337937
-Linear Velocity 0.18
-Left Scan 0.261756380399
-Front Left Scan 0.193281292915
-Front Scan 0.883756597837
+Left Scan 1.06414429347
+Front Left Scan 0.180919249852
+Front Scan 1.16081901391
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.36193732421
+Front Left Scan 0.176189780235
+Front Scan 0.754943291346
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.996364315351
+Front Left Scan 0.173790971438
+Front Scan 0.731623053551
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.618960817655
+Front Left Scan 0.173804601034
+Front Scan 0.713550209999
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.257244984309
-Front Left Scan 0.193076848984
-Front Scan 0.870495001475
+Left Scan 0.213194131851
+Front Left Scan 0.178888440132
+Front Scan 0.696226994197
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.247990489006
-Front Left Scan 0.189151525497
-Front Scan 0.863584796588
+Left Scan 0.198774019877
+Front Left Scan 0.182827393214
+Front Scan 0.676682154338
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.234047412872
-Front Left Scan 0.1912368536
-Front Scan 0.756497065226
+Left Scan 0.188470045726
+Front Left Scan 0.18597582976
+Front Scan 0.659086346626
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.223579883575
-Front Left Scan 0.184899091721
-Front Scan 0.728147506714
+Left Scan 0.181777914365
+Front Left Scan 0.187338789304
+Front Scan 0.640686392784
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.2145434618
-Front Left Scan 0.183672428131
-Front Scan 0.698407729467
+Left Scan 0.178520441055
+Front Left Scan 0.194535215696
+Front Scan 0.620964368184
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.209050734838
-Front Left Scan 0.187965750694
-Front Scan 0.674119790395
+Left Scan 0.175849040349
+Front Left Scan 0.202808380127
+Front Scan 0.59877538681
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.201227347056
-Front Left Scan 0.184899091721
-Front Scan 0.6582685709
+Left Scan 0.180183251699
+Front Left Scan 0.213439464569
+Front Scan 0.584696014722
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.19419447581
-Front Left Scan 0.189192414284
-Front Scan 0.643126090368
+Left Scan 0.182582060496
+Front Left Scan 0.226087729136
+Front Scan 0.570289532344
+Angular Velocity -0.450753155055
+Linear Velocity 0.18
+Left Scan 0.187147974968
+Front Left Scan 0.401309808095
+Front Scan 0.557763934135
+Angular Velocity -0.331616715103
+Linear Velocity 0.18
+Left Scan 0.188810785611
+Front Left Scan 0.573846856753
+Front Scan 0.541313012441
+Angular Velocity -0.289421906736
+Linear Velocity 0.18
+Left Scan 0.19249077638
+Front Left Scan 0.691320339839
+Front Scan 0.525543570518
+Angular Velocity -0.18967030512
+Linear Velocity 0.18
+Left Scan 0.197233875593
+Front Left Scan 0.634089668592
+Front Scan 0.511423309644
+Angular Velocity -0.0605446537336
+Linear Velocity 0.18
+Left Scan 0.203230897586
+Front Left Scan 0.577090700467
+Front Scan 0.500492374102
+Angular Velocity 0.107235666116
+Linear Velocity 0.18
+Left Scan 0.210141102473
+Front Left Scan 0.543125748634
+Front Scan 0.490256547928
+Angular Velocity 0.298371433549
+Linear Velocity 0.18
+Left Scan 0.217855453491
+Front Left Scan 0.518537958463
+Front Scan 0.474309921265
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.226264913877
+Front Left Scan 0.485322634379
+Front Scan 0.453388492266
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.234551707904
+Front Left Scan 0.476122657458
+Front Scan 0.433025876681
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.24050784111
+Front Left Scan 0.46126639843
+Front Scan 0.414680441221
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.242047985395
+Front Left Scan 0.449885686239
+Front Scan 0.397425373395
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.242443243663
+Front Left Scan 0.434743205706
+Front Scan 0.380906303724
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.242429614067
+Front Left Scan 0.423035383224
+Front Scan 0.365014195442
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.248385747274
+Front Left Scan 0.418060580889
+Front Scan 0.349680900574
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.25586839517
+Front Left Scan 0.403654098511
+Front Scan 0.337168931961
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.263882597287
+Front Left Scan 0.407524903615
+Front Scan 0.326524217923
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.269538879395
+Front Left Scan 0.416793028514
+Front Scan 0.316533724467
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.278343598048
+Front Left Scan 0.440808375676
+Front Scan 0.309841593107
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.33092657725
+Front Left Scan 0.406911571821
+Front Scan 0.589398225149
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.380374749502
+Front Left Scan 0.354996442795
+Front Scan 0.876205801964
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.425829450289
+Front Left Scan 0.300559838613
+Front Scan 1.14672601223
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.423212567965
+Front Left Scan 0.287884314855
+Front Scan 1.12654058139
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.423267086347
+Front Left Scan 0.277771155039
+Front Scan 1.09708702564
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.43019092083
+Front Left Scan 0.26674481233
+Front Scan 0.8994033734
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.770726362864
+Front Left Scan 0.254096547763
+Front Scan 0.880308310191
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.783701737722
+Front Left Scan 0.247690637906
+Front Scan 0.857219775518
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.18882783254
+Front Left Scan 0.24266131719
+Front Scan 1.01173849901
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.25039271514
+Front Left Scan 0.239812731743
+Front Scan 0.985951304436
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.19477033615
+Front Left Scan 0.236909627914
+Front Scan 0.965656836828
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.739269256592
+Front Left Scan 0.236119111379
+Front Scan 0.946847995122
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.283700029055
+Front Left Scan 0.236637036006
+Front Scan 0.927303155263
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.270779172579
+Front Left Scan 0.239431103071
+Front Scan 0.907185872396
+Angular Velocity 0.177384630279
+Linear Velocity 0.18
+Left Scan 0.255350470543
+Front Left Scan 0.247540712357
+Front Scan 0.88945376873
+Angular Velocity 0.349133428789
+Linear Velocity 0.18
+Left Scan 0.25060737133
+Front Left Scan 0.254450917244
+Front Scan 0.880880753199
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.245291829109
+Front Left Scan 0.254846175512
+Front Scan 0.865888198217
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.242552280426
+Front Left Scan 0.246327678363
+Front Scan 0.853376229604
+Angular Velocity 0.358632210888
+Linear Velocity 0.18
+Left Scan 0.239076733589
+Front Left Scan 0.238449772199
+Front Scan 0.831418951352
+Angular Velocity 0.155200531263
+Linear Velocity 0.18
+Left Scan 0.236337184906
+Front Left Scan 0.22993127505
+Front Scan 0.814559141795
+Angular Velocity -0.0534030818652
+Linear Velocity 0.18
+Left Scan 0.229985793432
+Front Left Scan 0.223702549934
+Front Scan 0.789916833242
+Angular Velocity -0.196799807235
+Linear Velocity 0.18
+Left Scan 0.227477947871
+Front Left Scan 0.220145225525
+Front Scan 0.772934357325
+Angular Velocity -0.274476189294
+Linear Velocity 0.18
+Left Scan 0.222216924032
+Front Left Scan 0.217569231987
+Front Scan 0.756183584531
+Angular Velocity -0.327312929517
+Linear Velocity 0.18
+Left Scan 0.217133084933
+Front Left Scan 0.217214862506
+Front Scan 0.744012355804
+Angular Velocity -0.328885756005
+Linear Velocity 0.18
+Left Scan 0.209173401197
+Front Left Scan 0.210699915886
+Front Scan 0.730355501175
+Angular Velocity -0.483622766913
+Linear Velocity 0.18
+Left Scan 0.20414408048
+Front Left Scan 0.211967468262
+Front Scan 0.719220121702
+Angular Velocity -0.452046234136
+Linear Velocity 0.18
+Left Scan 0.20351711909
+Front Left Scan 0.21221280098
+Front Scan 0.704745491346
+Angular Velocity -0.442852232147
+Linear Velocity 0.18
+Left Scan 0.19963268439
+Front Left Scan 0.229372461637
+Front Scan 0.687763015429
+Angular Velocity -0.0163536243992
+Linear Velocity 0.18
+Left Scan 0.193676551183
+Front Left Scan 0.227314392726
+Front Scan 0.669526616732
+Angular Velocity -0.151906985254
+Linear Velocity 0.18
+Left Scan 0.188633600871
+Front Left Scan 0.227641503016
+Front Scan 0.652789473534
+Angular Velocity -0.302896966023
+Linear Velocity 0.18
+Left Scan 0.185321609179
+Front Left Scan 0.205684224765
+Front Scan 0.637074549993
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.187393307686
-Front Left Scan 0.19978260994
-Front Scan 0.623513102531
+Left Scan 0.185566941897
+Front Left Scan 0.203735192617
+Front Scan 0.618252078692
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.183222651482
-Front Left Scan 0.198392391205
-Front Scan 0.605453888575
+Left Scan 0.181982358297
+Front Left Scan 0.203108231227
+Front Scan 0.600247383118
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.181219100952
-Front Left Scan 0.200968384743
-Front Scan 0.586413343747
+Left Scan 0.253837585449
+Front Left Scan 0.220417817434
+Front Scan 0.582419872284
+Angular Velocity -0.230316060983
+Linear Velocity 0.18
+Left Scan 0.252965291341
+Front Left Scan 0.224602103233
+Front Scan 0.56614613533
+Angular Velocity -0.11936441485
+Linear Velocity 0.18
+Left Scan 0.253932992617
+Front Left Scan 0.415770808856
+Front Scan 0.549272696177
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.180305918058
+Front Left Scan 0.544120709101
+Front Scan 0.532576441765
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.178643107414
-Front Left Scan 0.210618138313
-Front Scan 0.570971012115
+Left Scan 0.179338216782
+Front Left Scan 0.832454800606
+Front Scan 0.516152779261
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.177321036657
-Front Left Scan 0.23273897171
-Front Scan 0.556400974592
+Left Scan 0.178193330765
+Front Left Scan 0.94335881869
+Front Scan 0.499579191208
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.179501771927
-Front Left Scan 0.598693609238
-Front Scan 0.541258494059
+Left Scan 0.179733475049
+Front Left Scan 0.925231456757
+Front Scan 0.484136859576
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.182704726855
-Front Left Scan 0.625312209129
-Front Scan 0.526170531909
-Angular Velocity -0.45336536882
+Left Scan 0.180932879448
+Front Left Scan 0.745566129684
+Front Scan 0.468530972799
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.187175234159
-Front Left Scan 0.56271147728
-Front Scan 0.510496497154
-Angular Velocity -0.331072251927
+Left Scan 0.183045466741
+Front Left Scan 0.549817879995
+Front Scan 0.452925086021
+Angular Velocity -0.451207476192
+Linear Velocity 0.18
+Left Scan 0.186139384905
+Front Left Scan 0.524221499761
+Front Scan 0.437441865603
+Angular Velocity -0.365348975526
 Linear Velocity 0.18
 Left Scan 0.189628561338
-Front Left Scan 0.547582626343
-Front Scan 0.497970898946
-Angular Velocity -0.265507645739
+Front Left Scan 0.510278423627
+Front Scan 0.422013163567
+Angular Velocity -0.267870108949
 Linear Velocity 0.18
-Left Scan 0.192327221235
-Front Left Scan 0.53318977356
-Front Scan 0.483973304431
-Angular Velocity -0.194114689032
+Left Scan 0.195175806681
+Front Left Scan 0.49171491464
+Front Scan 0.407143274943
+Angular Velocity -0.113636471166
 Linear Velocity 0.18
-Left Scan 0.195584694544
-Front Left Scan 0.52341735363
-Front Scan 0.472033778826
-Angular Velocity -0.107576980193
-Linear Velocity 0.18
-Left Scan 0.20055949688
-Front Left Scan 0.506284952164
-Front Scan 0.458717664083
-Angular Velocity 0.0301273657216
-Linear Velocity 0.18
-Left Scan 0.205643335978
-Front Left Scan 0.500274300575
-Front Scan 0.447173396746
-Angular Velocity 0.171088049147
-Linear Velocity 0.18
-Left Scan 0.210999766986
-Front Left Scan 0.485513448715
-Front Scan 0.433734615644
-Angular Velocity 0.318380815453
-Linear Velocity 0.18
-Left Scan 0.213344057401
-Front Left Scan 0.475045919418
-Front Scan 0.419723391533
-Angular Velocity 0.378502096732
-Linear Velocity 0.18
-Left Scan 0.21705130736
-Front Left Scan 0.468381047249
-Front Scan 0.405085206032
-Angular Velocity 0.47562205063
-Linear Velocity 0.18
-Left Scan 0.220554113388
-Front Left Scan 0.455337524414
-Front Scan 0.389997243881
+Left Scan 0.2025903066
+Front Left Scan 0.483700712522
+Front Scan 0.392505089442
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.225065509478
-Front Left Scan 0.446260213852
-Front Scan 0.375413576762
+Left Scan 0.208873550097
+Front Left Scan 0.47088889281
+Front Scan 0.379011789958
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.226960023244
-Front Left Scan 0.439022898674
-Front Scan 0.362438201904
+Left Scan 0.214011907578
+Front Left Scan 0.463910539945
+Front Scan 0.36696322759
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.230612754822
-Front Left Scan 0.436610460281
-Front Scan 0.3540832599
+Left Scan 0.219504634539
+Front Left Scan 0.454874118169
+Front Scan 0.356836438179
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.236677924792
-Front Left Scan 0.430109143257
-Front Scan 0.346941351891
+Left Scan 0.228363871574
+Front Left Scan 0.451044201851
+Front Scan 0.347568313281
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.244501312574
-Front Left Scan 0.432685136795
-Front Scan 0.341734846433
+Left Scan 0.547705292702
+Front Left Scan 0.443370739619
+Front Scan 0.341612180074
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.254273732503
-Front Left Scan 0.438164234161
-Front Scan 0.335683306058
+Left Scan 0.635929663976
+Front Left Scan 0.414912144343
+Front Scan 0.337387005488
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.263010303179
-Front Left Scan 0.36803996563
-Front Scan 0.795191486677
+Left Scan 0.719451824824
+Front Left Scan 0.37037062645
+Front Scan 0.545429150263
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.276667157809
-Front Left Scan 0.317787647247
-Front Scan 1.26642111937
+Left Scan 0.484150489171
+Front Left Scan 0.332998275757
+Front Scan 0.745634277662
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.341557661692
-Front Left Scan 0.372319658597
-Front Scan 1.73386172454
+Left Scan 0.476708730062
+Front Left Scan 0.314571062724
+Front Scan 0.936857501666
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.400505661964
-Front Left Scan 0.287448167801
-Front Scan 1.73735090097
+Left Scan 0.473464886347
+Front Left Scan 0.307551821073
+Front Scan 0.770276586215
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.451848347982
-Front Left Scan 0.322703388002
-Front Scan 1.79508586725
+Left Scan 0.471911112467
+Front Left Scan 0.298051993052
+Front Scan 0.611069281896
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.446423768997
-Front Left Scan 0.275794863701
-Front Scan 1.50675177574
+Left Scan 0.480143388112
+Front Left Scan 0.29503985246
+Front Scan 0.45242079099
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.443507035573
-Front Left Scan 0.26737177372
-Front Scan 1.21565087636
+Left Scan 0.477390209834
+Front Left Scan 0.297029773394
+Front Scan 0.441094597181
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.441789706548
-Front Left Scan 0.259807348251
-Front Scan 0.85882806778
+Left Scan 0.481574495633
+Front Left Scan 0.389533837636
+Front Scan 0.558854301771
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.443084518115
-Front Left Scan 0.257067799568
-Front Scan 0.843549291293
+Left Scan 0.472892443339
+Front Left Scan 0.390678723653
+Front Scan 0.677718003591
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.448168357213
-Front Left Scan 0.256372690201
-Front Scan 0.842581590017
+Left Scan 0.475291252136
+Front Left Scan 0.38560851415
+Front Scan 0.790271202723
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.405698537827
-Front Left Scan 0.254859805107
-Front Scan 0.822614232699
+Left Scan 0.483400861422
+Front Left Scan 0.284872174263
+Front Scan 0.768995404243
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.355977773666
-Front Left Scan 0.259316682816
-Front Scan 0.811642408371
+Left Scan 0.42989106973
+Front Left Scan 0.271651466688
+Front Scan 0.750350117683
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.300123691559
-Front Left Scan 0.259970903397
-Front Scan 0.862930576007
+Left Scan 0.369757294655
+Front Left Scan 0.259739200274
+Front Scan 0.731609423955
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.288906534513
-Front Left Scan 0.261524677277
-Front Scan 0.925694863002
+Left Scan 0.298351844152
+Front Left Scan 0.254546324412
+Front Scan 0.712868730227
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.281246701876
-Front Left Scan 0.232534527779
-Front Scan 0.986005822817
+Left Scan 0.288852016131
+Front Left Scan 0.25323788325
+Front Scan 0.694128036499
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.277253230413
-Front Left Scan 0.252447366714
-Front Scan 0.905168692271
-Angular Velocity 0.478657766375
+Left Scan 0.279979149501
+Front Left Scan 0.252679069837
+Front Scan 0.679953257243
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.27451368173
-Front Left Scan 0.215933680534
-Front Scan 0.89689552784
-Angular Velocity 0.405247482984
+Left Scan 0.272905389468
+Front Left Scan 0.249012708664
+Front Scan 0.666568994522
+Angular Velocity 0.416393993153
 Linear Velocity 0.18
-Left Scan 0.272919019063
-Front Left Scan 0.234456300735
-Front Scan 0.885119557381
-Angular Velocity 0.0333610700001
+Left Scan 0.266962885857
+Front Left Scan 0.240153471629
+Front Scan 0.653702656428
+Angular Velocity 0.199945920212
 Linear Velocity 0.18
-Left Scan 0.269320805868
-Front Left Scan 0.225010991096
-Front Scan 0.938343127569
-Angular Velocity 0.0541186418396
+Left Scan 0.26211074988
+Front Left Scan 0.232439120611
+Front Scan 0.640890836716
+Angular Velocity 0.00994375905942
 Linear Velocity 0.18
-Left Scan 0.2650411129
-Front Left Scan 0.218509674072
-Front Scan 0.842704256376
-Angular Velocity -0.161197271447
+Left Scan 0.258389870326
+Front Left Scan 0.311845143636
+Front Scan 0.628201683362
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.258866906166
-Front Left Scan 0.213357686996
-Front Scan 0.831159989039
-Angular Velocity -0.127269859805
+Left Scan 0.548918326696
+Front Left Scan 0.304539680481
+Front Scan 0.612882018089
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.253892103831
-Front Left Scan 0.209064364433
-Front Scan 0.748728195826
-Angular Velocity -0.296414118722
+Left Scan 1.08149476846
+Front Left Scan 0.296184738477
+Front Scan 0.599565903346
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.246463974317
-Front Left Scan 0.203912377357
-Front Scan 0.74277206262
-Angular Velocity -0.419407379529
-Linear Velocity 0.18
-Left Scan 0.239185770353
-Front Left Scan 0.204075932503
-Front Scan 0.725039958954
+Left Scan 1.5800926288
+Front Left Scan 0.208382884661
+Front Scan 0.589057485263
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.232098380725
-Front Left Scan 0.192749738693
-Front Scan 0.777064124743
+Left Scan 1.71940072378
+Front Left Scan 0.198883056641
+Front Scan 0.579857508341
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.226387580236
-Front Left Scan 0.198433279991
-Front Scan 0.832809170087
+Left Scan 1.61300810178
+Front Left Scan 0.188838044802
+Front Scan 0.564755916595
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.219477375348
-Front Left Scan 0.197738170624
-Front Scan 0.82063794136
+Left Scan 1.09846361478
+Front Left Scan 0.171964605649
+Front Scan 0.546846628189
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.211517691612
-Front Left Scan 0.192749738693
-Front Scan 0.805768052737
+Left Scan 0.654615839322
+Front Left Scan 0.16933409373
+Front Scan 0.529182672501
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.20584777991
-Front Left Scan 0.196020841599
-Front Scan 0.790666460991
+Left Scan 0.207687775294
+Front Left Scan 0.163664182027
+Front Scan 0.51021027565
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.201895197233
-Front Left Scan 0.196715950966
-Front Scan 0.773806651433
+Left Scan 0.200654904048
+Front Left Scan 0.155731757482
+Front Scan 0.490392843882
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.197220245997
-Front Left Scan 0.202522158623
-Front Scan 0.756660620372
+Left Scan 0.188769896825
+Front Left Scan 0.146818002065
+Front Scan 0.47043911616
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.192708849907
-Front Left Scan 0.205302596092
-Front Scan 0.739623626073
+Left Scan 0.180305918058
+Front Left Scan 0.142415642738
+Front Scan 0.451861977577
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.172809640567
+Front Left Scan 0.144242008527
+Front Scan 0.433162172635
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.16452284654
+Front Left Scan 0.149775624275
+Front Scan 0.413958072662
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.156917532285
+Front Left Scan 0.150170882543
+Front Scan 0.396062413851
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.152815024058
+Front Left Scan 0.151247620583
+Front Scan 0.378221273422
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.153619170189
+Front Left Scan 0.488021294276
+Front Scan 0.36152501901
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.158471306165
+Front Left Scan 0.498829563459
+Front Scan 0.345455725988
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.160243153572
+Front Left Scan 0.697835286458
+Front Scan 0.330817540487
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.152924060822
+Front Left Scan 0.497125864029
+Front Scan 0.316928982735
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.145209709803
+Front Left Scan 1.05678431193
+Front Scan 0.303844571114
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.139144539833
+Front Left Scan 1.21896286805
+Front Scan 0.292191267014
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.141257127126
+Front Left Scan 1.1468214194
+Front Scan 0.282064477603
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.146695335706
+Front Left Scan 0.638437509537
+Front Scan 0.272973537445
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.156249682109
+Front Left Scan 0.337795893351
+Front Scan 0.262846748034
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.165272474289
+Front Left Scan 0.328977545102
+Front Scan 0.25323788325
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.179624438286
+Front Left Scan 0.330285986265
+Front Scan 0.245346347491
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.571611603101
+Front Left Scan 0.327655474345
+Front Scan 0.670099059741
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.977896213531
+Front Left Scan 0.319777568181
+Front Scan 1.10172108809
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.38583000501
+Front Left Scan 0.287093798319
+Front Scan 1.53275704384
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.34117945035
+Front Left Scan 0.254110177358
+Front Scan 1.53424266974
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.374050617218
+Front Left Scan 0.225024620692
+Front Scan 1.8904384772
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.357245326042
+Front Left Scan 0.217419306437
+Front Scan 2.08205691973
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.468721787135
+Front Left Scan 0.21221280098
+Front Scan 1.97852651278
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.366322636604
+Front Left Scan 0.218141674995
+Front Scan 1.5067789952
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.365068713824
+Front Left Scan 0.216124494871
+Front Scan 1.18066370487
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.726770917575
+Front Left Scan 0.205329855283
+Front Scan 1.14116513729
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.1175177892
+Front Left Scan 0.193499366442
+Front Scan 1.10521026452
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.51956359545
+Front Left Scan 0.215974569321
+Front Scan 1.08513387044
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.54653656483
+Front Left Scan 0.244896570841
+Front Scan 1.06627051036
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.53383378188
+Front Left Scan 0.27188316981
+Front Scan 1.04615322749
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 1.50587948163
+Front Left Scan 0.272796352704
+Front Scan 1.02619949977
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 1.0733033816
+Front Left Scan 0.276340047518
+Front Scan 1.00944872697
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.642621795336
+Front Left Scan 0.272687315941
+Front Scan 0.99618713061
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.218155304591
+Front Left Scan 0.265095631282
+Front Scan 0.983375310898
+Angular Velocity 0.46625857434
+Linear Velocity 0.18
+Left Scan 0.244092424711
+Front Left Scan 0.254396398862
+Front Scan 0.973371187846
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.246654788653
+Front Left Scan 0.243070205053
+Front Scan 0.959537148476
+Angular Velocity 0.252472143679
+Linear Velocity 0.18
+Left Scan 0.273709535599
+Front Left Scan 0.232425491015
+Front Scan 0.948960582415
+Angular Velocity 0.00955910780751
+Linear Velocity 0.18
+Left Scan 0.253946622213
+Front Left Scan 0.221290111542
+Front Scan 0.931528329849
+Angular Velocity -0.265322516188
+Linear Velocity 0.18
+Left Scan 0.251711368561
+Front Left Scan 0.211981097857
+Front Scan 0.924100200335
+Angular Velocity -0.480985651333
+Linear Velocity 0.18
+Left Scan 0.23877688249
+Front Left Scan 0.202672084173
+Front Scan 0.918157696724
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.227736910184
+Front Left Scan 0.196266174316
+Front Scan 0.916658441226
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.229290684064
+Front Left Scan 0.188647230466
+Front Scan 0.904705286026
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.214025537173
+Front Left Scan 0.183849612872
+Front Scan 0.888363401095
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.214775164922
+Front Left Scan 0.177443703016
+Front Scan 0.859046141307
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.212880651156
+Front Left Scan 0.174540599187
+Front Scan 0.833735982577
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.20602496465
+Front Left Scan 0.17214179039
+Front Scan 0.805945237478
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.196811358134
+Front Left Scan 0.172196308772
+Front Scan 0.786782026291
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.187502344449
+Front Left Scan 0.174581487974
+Front Scan 0.765165487925
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.180469473203
+Front Left Scan 0.176394224167
+Front Scan 0.743453542391
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.176012595495
+Front Left Scan 0.179488142331
+Front Scan 0.724535663923
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.170697053274
+Front Left Scan 0.184013168017
+Front Scan 0.705713192622
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.167657653491
+Front Left Scan 0.193690180779
+Front Scan 0.686958869298
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.165136178335
+Front Left Scan 0.204662005107
+Front Scan 0.668558915456
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.164958993594
+Front Left Scan 0.703218976657
+Front Scan 0.650172591209
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.170915126801
+Front Left Scan 0.972185413043
+Front Scan 0.633585373561
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.17384548982
+Front Left Scan 1.17593423525
+Front Scan 0.616998155912
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.177457332611
+Front Left Scan 0.941600600878
+Front Scan 0.601324121157
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.177457332611
+Front Left Scan 0.828515847524
+Front Scan 0.586754083633
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.186766346296
+Front Left Scan 0.767400741577
+Front Scan 0.574405670166
+Angular Velocity -0.341157579422
+Linear Velocity 0.18
+Left Scan 0.19281788667
+Front Left Scan 0.643916606903
+Front Scan 0.560694297155
+Angular Velocity -0.170837611622
+Linear Velocity 0.18
+Left Scan 0.198651353518
+Front Left Scan 0.620132962863
+Front Scan 0.547664403915
+Angular Velocity -0.00739945371946
+Linear Velocity 0.18
+Left Scan 0.201731642087
+Front Left Scan 0.602073748906
+Front Scan 0.533203403155
+Angular Velocity 0.0678915672832
+Linear Velocity 0.18
+Left Scan 0.212199171384
+Front Left Scan 0.58927555879
+Front Scan 0.521250247955
+Angular Velocity 0.354887686835
+Linear Velocity 0.18
+Left Scan 0.224438548088
+Front Left Scan 0.574705521266
+Front Scan 0.50632584095
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.233829339345
+Front Left Scan 0.561266740163
+Front Scan 0.490433732669
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.238558808963
+Front Left Scan 0.549599806468
+Front Scan 0.472429037094
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.242443243663
+Front Left Scan 0.536787986755
+Front Scan 0.45349752903
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.245809753736
+Front Left Scan 0.524725794792
+Front Scan 0.435656388601
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.248631079992
+Front Left Scan 0.510769089063
+Front Scan 0.415920734406
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.247990489006
+Front Left Scan 0.498311638832
+Front Scan 0.399347146352
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.248154044151
+Front Left Scan 0.485172708829
+Front Scan 0.381001710892
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.250770926476
+Front Left Scan 0.473001480103
+Front Scan 0.367862780889
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.255404988925
+Front Left Scan 0.464019576708
+Front Scan 0.355064590772
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.262097120285
+Front Left Scan 0.458922108014
+Front Scan 0.346328020096
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.269756952922
+Front Left Scan 0.456645965576
+Front Scan 0.337864041328
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.276503602664
+Front Left Scan 0.454083601634
+Front Scan 0.332548499107
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.284286101659
+Front Left Scan 0.451521237691
+Front Scan 0.330476800601
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.353578964869
+Front Left Scan 0.452039162318
+Front Scan 0.327778140704
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.42024131616
+Front Left Scan 0.461361805598
+Front Scan 0.884179115295
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.48146545887
+Front Left Scan 0.411613782247
+Front Scan 1.27217280865
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.473914662997
+Front Left Scan 0.352611263593
+Front Scan 1.82452579339
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.496035496394
+Front Left Scan 0.282691438993
+Front Scan 1.8264747858
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.491278767586
+Front Left Scan 0.269307176272
+Front Scan 1.98192032178
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.491224249204
+Front Left Scan 0.258621573448
+Front Scan 1.98655438423
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.466064016024
+Front Left Scan 0.251752257347
+Front Scan 1.97848570347
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.473492145538
+Front Left Scan 0.245877901713
+Front Scan 2.2352672418
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.285403728485
+Front Left Scan 0.246668418248
+Front Scan 2.47411223253
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.378044088682
+Front Left Scan 0.245591680209
+Front Scan 2.09229274591
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.30791982015
+Front Left Scan 0.24439227581
+Front Scan 1.44597736994
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.27469086647
+Front Left Scan 0.240058064461
+Front Scan 0.798517107964
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.264509558678
+Front Left Scan 0.239826361338
+Front Scan 0.770903547605
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.255350470543
+Front Left Scan 0.243601759275
+Front Scan 0.751972039541
+Angular Velocity 0.257891560293
+Linear Velocity 0.18
+Left Scan 0.248440265656
+Front Left Scan 0.248508413633
+Front Scan 0.736120820045
+Angular Velocity 0.356856166906
+Linear Velocity 0.18
+Left Scan 0.245237310727
+Front Left Scan 0.259262164434
+Front Scan 0.720351378123
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.244092424711
+Front Left Scan 0.263541857402
+Front Scan 0.705481489499
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.24158457915
+Front Left Scan 0.265490889549
+Front Scan 0.689357678095
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.237631996473
+Front Left Scan 0.255255063375
+Front Scan 0.675414601962
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.234606226285
+Front Left Scan 0.247254490852
+Front Scan 0.659304420153
+Angular Velocity 0.36014897039
+Linear Velocity 0.18
+Left Scan 0.232439120611
+Front Left Scan 0.237141331037
+Front Scan 0.644966085752
+Angular Velocity 0.111425002801
+Linear Velocity 0.18
+Left Scan 0.229467868805
+Front Left Scan 0.227982242902
+Front Scan 0.634089668592
+Angular Velocity -0.102335789362
+Linear Velocity 0.18
+Left Scan 0.225815137227
+Front Left Scan 0.218141674995
+Front Scan 0.623867472013
+Angular Velocity -0.334082280291
+Linear Velocity 0.18
+Left Scan 0.22186255455
+Front Left Scan 0.20910525322
+Front Scan 0.608493288358
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.229127128919
+Front Left Scan 0.20351711909
+Front Scan 0.587067564329
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.224779287974
+Front Left Scan 0.200791200002
+Front Scan 0.565273841222
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.22449306647
+Front Left Scan 0.199646313985
+Front Scan 0.546287814776
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.210086584091
+Front Left Scan 0.200777570407
+Front Scan 0.527070085208
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.206488370895
+Front Left Scan 0.20133638382
+Front Scan 0.508206725121
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.199346462886
+Front Left Scan 0.201159199079
+Front Scan 0.489166180293
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.196088989576
+Front Left Scan 0.20602496465
+Front Scan 0.471965630849
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.193458477656
+Front Left Scan 0.208819031715
+Front Scan 0.454819599787
 Angular Velocity -0.5
 Linear Velocity 0.18
 Left Scan 0.190255522728
-Front Left Scan 0.234088301659
-Front Scan 0.720024267832
-Angular Velocity -0.5
+Front Left Scan 0.216710567474
+Front Scan 0.442021409671
+Angular Velocity -0.314881796839
 Linear Velocity 0.18
-Left Scan 0.188701748848
-Front Left Scan 0.237359404564
-Front Scan 0.704459269842
-Angular Velocity -0.375305285467
+Left Scan 0.186943531036
+Front Left Scan 0.225624322891
+Front Scan 0.680689255397
+Angular Velocity -0.339026202039
 Linear Velocity 0.18
-Left Scan 0.187897602717
-Front Left Scan 1.01510500908
-Front Scan 0.686113834381
-Angular Velocity -0.302193100406
+Left Scan 0.185226202011
+Front Left Scan 0.241121172905
+Front Scan 0.665478626887
+Angular Velocity -0.393718578371
 Linear Velocity 0.18
-Left Scan 0.187965750694
-Front Left Scan 0.511927604675
-Front Scan 0.672675053279
-Angular Velocity -0.307031852875
+Left Scan 0.185457905134
+Front Left Scan 0.262901266416
+Front Scan 0.649014075597
+Angular Velocity -0.396125804614
 Linear Velocity 0.18
-Left Scan 0.188142935435
-Front Left Scan 0.51021027565
-Front Scan 0.658500274022
-Angular Velocity -0.316564101405
+Left Scan 0.188592712084
+Front Left Scan 0.393063902855
+Front Scan 0.651535550753
+Angular Velocity -0.305838754442
 Linear Velocity 0.18
-Left Scan 0.188715378443
-Front Left Scan 0.500764966011
-Front Scan 0.647528449694
-Angular Velocity -0.303588735395
-Linear Velocity 0.18
-Left Scan 0.189792116483
-Front Left Scan 0.522395133972
-Front Scan 0.633517225583
-Angular Velocity -0.273091379801
-Linear Velocity 0.18
-Left Scan 0.191632111867
-Front Left Scan 0.676709413528
-Front Scan 0.621114293734
-Angular Velocity -0.221122868194
-Linear Velocity 0.18
-Left Scan 0.195339361827
-Front Left Scan 0.501991629601
-Front Scan 0.607280254364
-Angular Velocity -0.11679058671
-Linear Velocity 0.18
-Left Scan 0.197560985883
-Front Left Scan 0.644652605057
-Front Scan 0.594768285751
-Angular Velocity -0.0545976069238
-Linear Velocity 0.18
-Left Scan 0.20166349411
-Front Left Scan 0.633162856102
-Front Scan 0.579339583715
-Angular Velocity 0.0583792454667
-Linear Velocity 0.18
-Left Scan 0.204934597015
-Front Left Scan 0.608670473099
-Front Scan 0.565110286077
-Angular Velocity 0.146937541829
-Linear Velocity 0.18
-Left Scan 0.208614587784
-Front Left Scan 0.596649169922
-Front Scan 0.549449880918
-Angular Velocity 0.247773832083
-Linear Velocity 0.18
-Left Scan 0.213480353355
-Front Left Scan 0.593705177307
-Front Scan 0.534811695417
-Angular Velocity 0.380273944139
-Linear Velocity 0.18
-Left Scan 0.216955900192
-Front Left Scan 0.578126549721
-Front Scan 0.52153646946
-Angular Velocity 0.474863336484
-Linear Velocity 0.18
-Left Scan 0.220090707143
-Front Left Scan 0.565287470818
-Front Scan 0.506884654363
-Angular Velocity 0.5
-Linear Velocity 0.18
-Left Scan 0.221521814664
-Front Left Scan 0.556169271469
-Front Scan 0.492205580076
-Angular Velocity 0.5
-Linear Velocity 0.18
-Left Scan 0.223348180453
-Front Left Scan 0.551221728325
-Front Scan 0.477335691452
-Angular Velocity 0.5
-Linear Velocity 0.18
-Left Scan 0.223293662071
-Front Left Scan 0.549627065659
-Front Scan 0.462247729301
-Angular Velocity 0.5
-Linear Velocity 0.18
-Left Scan 0.222544034322
-Front Left Scan 0.279883742332
-Front Scan 0.447377840678
-Angular Velocity 0.5
-Linear Velocity 0.18
-Left Scan 0.221412777901
-Front Left Scan 0.261361122131
-Front Scan 0.431608398755
-Angular Velocity 0.5
-Linear Velocity 0.18
-Left Scan 0.222612182299
-Front Left Scan 0.246109604836
-Front Scan 0.419041911761
-Angular Velocity 0.5
-Linear Velocity 0.18
-Left Scan 0.221808036168
-Front Left Scan 0.241611838341
-Front Scan 0.405207872391
-Angular Velocity 0.5
-Linear Velocity 0.18
-Left Scan 0.221467296282
-Front Left Scan 0.237359404564
-Front Scan 0.390351613363
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.219409227371
-Front Left Scan 0.233066082001
-Front Scan 0.376503944397
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.218455155691
-Front Left Scan 0.233270525932
-Front Scan 0.364428122838
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.216737826665
-Front Left Scan 0.245414495468
-Front Scan 0.35235230128
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.213998277982
-Front Left Scan 0.255514025688
-Front Scan 0.339554111163
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.213643908501
-Front Left Scan 0.446260213852
-Front Scan 0.325910886129
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.213984648387
-Front Left Scan 0.406638979912
-Front Scan 0.314025878906
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.216778715452
-Front Left Scan 0.39445412159
-Front Scan 0.302699685097
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.220267891884
-Front Left Scan 0.395476341248
-Front Scan 0.293022672335
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.226224025091
-Front Left Scan 0.38623547554
-Front Scan 0.285430987676
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.232684453328
-Front Left Scan 0.385376811028
-Front Scan 0.278520782789
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.240276137988
-Front Left Scan 0.387053251266
-Front Scan 0.274581829707
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.252842624982
-Front Left Scan 0.401977658272
-Front Scan 0.271596948306
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.313712398211
-Front Left Scan 0.284340620041
-Front Scan 0.758827726046
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.366772413254
-Front Left Scan 0.263773560524
-Front Scan 1.24079747995
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.409310380618
-Front Left Scan 0.234619855881
-Front Scan 1.72677433491
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.39989233017
-Front Left Scan 0.223620772362
-Front Scan 1.7238030831
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.394399603208
-Front Left Scan 0.213521242142
-Front Scan 1.60175005595
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.391946276029
-Front Left Scan 0.208900809288
-Front Scan 1.48101909955
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.393595457077
-Front Left Scan 0.200273275375
-Front Scan 1.34815780322
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.396798412005
-Front Left Scan 0.193485736847
-Front Scan 1.26023328304
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.404158393542
-Front Left Scan 0.191768407822
-Front Scan 1.17299024264
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.363174200058
-Front Left Scan 0.18968307972
-Front Scan 1.09073563417
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.312867363294
-Front Left Scan 0.188824415207
-Front Scan 1.08559727669
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.253469586372
-Front Left Scan 0.189151525497
-Front Scan 1.05581661065
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.238885919253
-Front Left Scan 0.194139957428
-Front Scan 1.02888453007
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.228145798047
-Front Left Scan 0.202399492264
-Front Scan 0.997563719749
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.219518264135
-Front Left Scan 0.205629706383
-Front Scan 0.979613542557
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.212894280752
-Front Left Scan 0.212335467339
-Front Scan 0.961268107096
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.208546439807
-Front Left Scan 0.220554113388
-Front Scan 0.944980740547
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.204539338748
-Front Left Scan 0.240426063538
-Front Scan 0.930642406146
-Angular Velocity -0.401983334248
-Linear Velocity 0.18
-Left Scan 0.200082461039
-Front Left Scan 0.259643793106
-Front Scan 0.915036519368
-Angular Velocity -0.124167486607
-Linear Velocity 0.18
-Left Scan 0.197915355364
-Front Left Scan 0.781343817711
-Front Scan 0.900043964386
-Angular Velocity -0.0285606764818
-Linear Velocity 0.18
-Left Scan 0.197969873746
-Front Left Scan 1.20666897297
-Front Scan 0.883061488469
-Angular Velocity -0.0362794217986
-Linear Velocity 0.18
-Left Scan 0.198596835136
-Front Left Scan 0.80743086338
-Front Scan 0.874938249588
-Angular Velocity -0.0325785466949
-Linear Velocity 0.18
-Left Scan 0.199264685313
-Front Left Scan 1.71892368793
-Front Scan 0.860817988714
-Angular Velocity -0.0179056002034
-Linear Velocity 0.18
-Left Scan 0.200232386589
-Front Left Scan 1.11851274967
-Front Scan 0.852803786596
-Angular Velocity 0.00938084986475
-Linear Velocity 0.18
-Left Scan 0.202467640241
-Front Left Scan 1.16500329971
-Front Scan 0.835030794144
-Angular Velocity 0.0718680017524
-Linear Velocity 0.18
-Left Scan 0.205057263374
-Front Left Scan 0.860954284668
-Front Scan 0.824222524961
-Angular Velocity 0.144718189372
-Linear Velocity 0.18
-Left Scan 0.207810441653
-Front Left Scan 0.834826350212
-Front Scan 0.807076493899
-Angular Velocity 0.221433503098
-Linear Velocity 0.18
-Left Scan 0.2106590271
-Front Left Scan 0.930219888687
-Front Scan 0.791020830472
-Angular Velocity 0.299180122879
-Linear Velocity 0.18
-Left Scan 0.210768063863
-Front Left Scan 0.815485954285
-Front Scan 0.773356874784
-Angular Velocity 0.299063135518
-Linear Velocity 0.18
-Left Scan 0.210713545481
-Front Left Scan 0.79389667511
-Front Scan 0.757124026616
-Angular Velocity 0.292940039767
-Linear Velocity 0.18
-Left Scan 0.210372805595
-Front Left Scan 0.783756256104
-Front Scan 0.741790731748
-Angular Velocity 0.279685258203
-Linear Velocity 0.18
-Left Scan 0.212553540866
-Front Left Scan 1.03738939762
-Front Scan 0.727098027865
-Angular Velocity 0.341035474671
-Linear Velocity 0.18
-Left Scan 0.212894280752
-Front Left Scan 0.637824177742
-Front Scan 0.710756142934
-Angular Velocity 0.351780139075
-Linear Velocity 0.18
-Left Scan 0.213071465492
-Front Left Scan 0.267535328865
-Front Scan 0.696295142174
-Angular Velocity 0.356444868114
-Linear Velocity 0.18
-Left Scan 0.211340506872
-Front Left Scan 0.24594604969
-Front Scan 0.680184960365
-Angular Velocity 0.304751220014
-Linear Velocity 0.18
-Left Scan 0.212021986643
-Front Left Scan 0.24251139164
-Front Scan 0.667536695798
-Angular Velocity 0.32278203898
-Linear Velocity 0.18
-Left Scan 0.209445993106
-Front Left Scan 0.222434997559
-Front Scan 0.653539101283
-Angular Velocity 0.250793923272
-Linear Velocity 0.18
-Left Scan 0.207919478416
-Front Left Scan 0.220881223679
-Front Scan 0.639977653821
-Angular Velocity 0.13213045179
-Linear Velocity 0.18
-Left Scan 0.204716523488
-Front Left Scan 0.216955900192
-Front Scan 0.626198132833
-Angular Velocity -0.0738156346814
-Linear Velocity 0.18
-Left Scan 0.202317714691
-Front Left Scan 0.205793261528
-Front Scan 0.613440831502
-Angular Velocity -0.280255266871
-Linear Velocity 0.18
-Left Scan 0.201050162315
-Front Left Scan 0.209227919579
-Front Scan 0.600247383118
-Angular Velocity -0.410742571192
-Linear Velocity 0.18
-Left Scan 0.198542316755
-Front Left Scan 0.2145434618
-Front Scan 0.585336605708
-Angular Velocity -0.49565946343
-Linear Velocity 0.18
-Left Scan 0.196361581484
-Front Left Scan 0.215770125389
-Front Scan 0.567563613256
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.193335811297
-Front Left Scan 0.223457217216
-Front Scan 0.550703803698
-Angular Velocity -0.417032893512
-Linear Velocity 0.18
-Left Scan 0.191904703776
-Front Left Scan 0.244024276733
-Front Scan 0.5336668094
-Angular Velocity -0.295296713538
-Linear Velocity 0.18
-Left Scan 0.1909370025
-Front Left Scan 0.2689255476
-Front Scan 0.518238107363
-Angular Velocity -0.231492733407
-Linear Velocity 0.18
-Left Scan 0.192299962044
-Front Left Scan 0.595095396042
-Front Scan 0.503354589144
-Angular Velocity -0.197380057302
-Linear Velocity 0.18
-Left Scan 0.194644252459
-Front Left Scan 0.548441290855
-Front Scan 0.488648255666
-Angular Velocity -0.136641186912
-Linear Velocity 0.18
-Left Scan 0.196184396744
-Front Left Scan 0.528037786484
-Front Scan 0.474050958951
-Angular Velocity -0.0954852574401
+Left Scan 0.193172256152
+Front Left Scan 0.438450455666
+Front Scan 1.16346315543
+Angular Velocity -0.173110346662
 Linear Velocity 0.18
 Left Scan 0.197220245997
-Front Left Scan 0.515157818794
-Front Scan 0.460693955421
-Angular Velocity -0.0682612763511
+Front Left Scan 0.475032289823
+Front Scan 1.15276392301
+Angular Velocity -0.0584422886372
 Linear Velocity 0.18
-Left Scan 0.197056690852
-Front Left Scan 0.504240512848
-Front Scan 0.446410139402
-Angular Velocity -0.0760221951538
+Left Scan 0.200082461039
+Front Left Scan 0.390665094058
+Front Scan 0.874638398488
+Angular Velocity 0.0182752966881
 Linear Velocity 0.18
-Left Scan 0.199918905894
-Front Left Scan 0.488416552544
-Front Scan 0.433380246162
-Angular Velocity 0.0024104475975
+Left Scan 0.199905276299
+Front Left Scan 0.388157248497
+Front Scan 0.348195274671
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.204880078634
+Front Left Scan 0.37192440033
+Front Scan 0.839324116707
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.210372805595
+Front Left Scan 0.363514939944
+Front Scan 0.818811575572
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.219913522402
+Front Left Scan 0.351343711217
+Front Scan 0.790393869082
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.228036761284
+Front Left Scan 0.35375614961
+Front Scan 0.266335924466
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.240262508392
+Front Left Scan 0.397030115128
+Front Scan 0.25060737133
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.528160452843
+Front Left Scan 0.364727973938
+Front Scan 0.251125295957
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.564851323764
+Front Left Scan 0.329904357592
+Front Scan 0.244555830956
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.601215084394
+Front Left Scan 0.341462254524
+Front Scan 0.551657875379
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.357109030088
+Front Left Scan 0.326824069023
+Front Scan 0.842295368512
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.36277894179
+Front Left Scan 0.309909741084
+Front Scan 1.13286471367
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.38530866305
+Front Left Scan 0.201404531797
+Front Scan 1.10771811008
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.403081655502
+Front Left Scan 0.193690180779
+Front Scan 1.07947758834
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.783061146736
+Front Left Scan 0.185566941897
+Front Scan 1.06130933762
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.728229284286
+Front Left Scan 0.178534070651
+Front Scan 1.03997902075
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.21552821
+Front Left Scan 0.172646085421
+Front Scan 0.836461901665
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.790039499601
+Front Left Scan 0.170874238014
+Front Scan 0.812678257624
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.770780881246
+Front Left Scan 0.170015573502
+Front Scan 0.793474157651
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.213507612546
+Front Left Scan 0.173095862071
+Front Scan 0.963326176008
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.200532237689
+Front Left Scan 0.175562818845
+Front Scan 0.946180144946
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.191782037417
+Front Left Scan 0.178942958514
+Front Scan 0.930683294932
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.182827393214
+Front Left Scan 0.184435685476
+Front Scan 0.908903201421
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.201799790064
-Front Left Scan 0.477621912956
-Front Scan 0.419137318929
-Angular Velocity 0.0555113514264
+Left Scan 0.178193330765
+Front Left Scan 0.238218069077
+Front Scan 0.891920725505
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.204989115397
-Front Left Scan 0.462533950806
-Front Scan 0.40610742569
-Angular Velocity 0.145405348142
+Left Scan 0.177457332611
+Front Left Scan 0.282514254252
+Front Scan 0.872484922409
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.206992665927
-Front Left Scan 0.451534867287
-Front Scan 0.391932646434
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.208996216456
-Front Left Scan 0.443152666092
-Front Scan 0.378153125445
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.211572209994
-Front Left Scan 0.438859343529
-Front Scan 0.365695675214
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.216029087702
-Front Left Scan 0.435424685478
-Front Scan 0.355977773666
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.223048329353
-Front Left Scan 0.42941403389
-Front Scan 0.347513794899
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.23196208477
-Front Left Scan 0.427206039429
-Front Scan 0.342198252678
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.241557319959
-Front Left Scan 0.419518947601
-Front Scan 0.339063445727
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.254478176435
-Front Left Scan 0.342852473259
-Front Scan 0.339063445727
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.329945246379
-Front Left Scan 0.321222305298
-Front Scan 0.802347024282
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.400437513987
-Front Left Scan 0.304417014122
-Front Scan 1.26361342271
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.459848920504
-Front Left Scan 0.29722058773
-Front Scan 1.72267182668
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.451044201851
-Front Left Scan 0.28213262558
-Front Scan 1.725288709
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.441789706548
-Front Left Scan 0.273545980453
-Front Scan 1.7238030831
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.436869422595
-Front Left Scan 0.267903327942
-Front Scan 1.72631092866
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.4359562397
-Front Left Scan 0.259807348251
-Front Scan 1.71671569347
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.436474164327
-Front Left Scan 0.261688232422
-Front Scan 1.51253072421
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.441053708394
-Front Left Scan 0.259112238884
-Front Scan 1.30319376787
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.445851325989
-Front Left Scan 0.253796696663
-Front Scan 1.08920911948
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.401718695958
-Front Left Scan 0.253960251808
-Front Scan 1.07695611318
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.350430528323
-Front Left Scan 0.254859805107
-Front Scan 1.05832445621
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.29441289107
-Front Left Scan 0.261361122131
-Front Scan 1.04259590308
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.285594542821
-Front Left Scan 0.262751340866
-Front Scan 1.0258042415
+Left Scan 0.178125182788
+Front Left Scan 0.331730723381
+Front Scan 0.860354582469
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.178534070651
+Front Left Scan 0.517406702042
+Front Scan 0.84875579675
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.180019696554
+Front Left Scan 0.512718121211
+Front Scan 0.836530049642
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.183059096336
+Front Left Scan 0.671870907148
+Front Scan 0.823432008425
+Angular Velocity -0.450617996189
+Linear Velocity 0.18
+Left Scan 0.191918333371
+Front Left Scan 0.657178203265
+Front Scan 0.80850760142
+Angular Velocity -0.200208253993
+Linear Velocity 0.18
+Left Scan 0.200436830521
+Front Left Scan 0.745334426562
+Front Scan 0.795518596967
+Angular Velocity 0.0410071902805
+Linear Velocity 0.18
+Left Scan 0.211422284444
+Front Left Scan 0.746084054311
+Front Scan 0.781643668811
+Angular Velocity 0.34740503894
+Linear Velocity 0.18
+Left Scan 0.218400637309
+Front Left Scan 0.727629582087
+Front Scan 0.769704143206
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.278793374697
-Front Left Scan 0.263282895088
-Front Scan 1.01179301739
+Left Scan 0.232234676679
+Front Left Scan 0.797140518824
+Front Scan 0.755420327187
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.27358686924
-Front Left Scan 0.252079367638
-Front Scan 1.00271570683
+Left Scan 0.252474625905
+Front Left Scan 0.775755683581
+Front Scan 0.737797260284
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.269647916158
-Front Left Scan 0.250893592834
-Front Scan 0.982693831126
+Left Scan 0.284994840622
+Front Left Scan 0.768654664358
+Front Scan 0.718184272448
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.266908367475
-Front Left Scan 0.239076733589
-Front Scan 0.968859791756
+Left Scan 0.283454696337
+Front Left Scan 0.753743886948
+Front Scan 0.699552615484
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.265586296717
-Front Left Scan 0.243370056152
-Front Scan 0.95375820001
-Angular Velocity 0.365916000846
-Linear Velocity 0.18
-Left Scan 0.263582746188
-Front Left Scan 0.23273897171
-Front Scan 0.947652141253
-Angular Velocity 0.296754915162
-Linear Velocity 0.18
-Left Scan 0.259970903397
-Front Left Scan 0.21642434597
-Front Scan 0.935017506282
-Angular Velocity 0.154845440355
-Linear Velocity 0.18
-Left Scan 0.254437287649
-Front Left Scan 0.208369255066
-Front Scan 0.921469688416
-Angular Velocity -0.0222878721795
-Linear Velocity 0.18
-Left Scan 0.250034928322
-Front Left Scan 0.20133638382
-Front Scan 0.910606900851
-Angular Velocity -0.305120239575
-Linear Velocity 0.18
-Left Scan 0.245591680209
-Front Left Scan 0.194794178009
-Front Scan 0.904023806254
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.239349325498
-Front Left Scan 0.190705299377
-Front Scan 0.898544708888
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.23181215922
-Front Left Scan 0.188170194626
-Front Scan 0.895737012227
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.224084178607
-Front Left Scan 0.185553312302
-Front Scan 0.866651455561
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.218209822973
-Front Left Scan 0.185757756233
-Front Scan 0.838247378667
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.211395025253
-Front Left Scan 0.186084866524
-Front Scan 0.796513557434
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.203626155853
-Front Left Scan 0.194998621941
-Front Scan 0.77713227272
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.196647802989
-Front Left Scan 0.192627072334
-Front Scan 0.75522951285
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.191673000654
-Front Left Scan 0.20444393158
-Front Scan 0.736366152763
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.187720417976
-Front Left Scan 0.202563047409
-Front Scan 0.720692118009
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.185662349065
-Front Left Scan 0.222066998482
-Front Scan 0.706571857135
-Angular Velocity -0.5
-Linear Velocity 0.18
-Left Scan 0.183031837145
-Front Left Scan 0.230653643608
-Front Scan 0.694114406904
-Angular Velocity -0.475966180684
-Linear Velocity 0.18
-Left Scan 0.182350357374
-Front Left Scan 0.824399709702
-Front Scan 0.680689255397
-Angular Velocity -0.458706055095
-Linear Velocity 0.18
-Left Scan 0.18131450812
-Front Left Scan 0.733013272285
-Front Scan 0.666282773018
-Angular Velocity -0.493925970255
-Linear Velocity 0.18
-Left Scan 0.183658798536
-Front Left Scan 0.676545858383
-Front Scan 0.651985327403
-Angular Velocity -0.439068064118
-Linear Velocity 0.18
-Left Scan 0.185307979584
-Front Left Scan 0.685991168022
-Front Scan 0.636488477389
-Angular Velocity -0.392010735803
-Linear Velocity 0.18
-Left Scan 0.189097007116
-Front Left Scan 0.649641036987
-Front Scan 0.62190481027
-Angular Velocity -0.283965525362
-Linear Velocity 0.18
-Left Scan 0.192245443662
-Front Left Scan 0.6388463974
-Front Scan 0.611219207446
-Angular Velocity -0.197060953246
-Linear Velocity 0.18
-Left Scan 0.199169278145
-Front Left Scan 0.620650887489
-Front Scan 0.599102497101
-Angular Velocity -0.00379101832708
-Linear Velocity 0.18
-Left Scan 0.203626155853
-Front Left Scan 0.617747783661
-Front Scan 0.586304306984
-Angular Velocity 0.118952574995
-Linear Velocity 0.18
-Left Scan 0.208382884661
-Front Left Scan 0.607116699219
-Front Scan 0.573833227158
-Angular Velocity 0.248366719484
-Linear Velocity 0.18
-Left Scan 0.211476802826
-Front Left Scan 0.587530970573
-Front Scan 0.561198592186
-Angular Velocity 0.327240052488
-Linear Velocity 0.18
-Left Scan 0.215770125389
-Front Left Scan 0.581029653549
-Front Scan 0.54953165849
-Angular Velocity 0.442262479994
-Linear Velocity 0.18
-Left Scan 0.219995299975
-Front Left Scan 0.572320342064
-Front Scan 0.533639550209
+Left Scan 0.274581829707
+Front Left Scan 0.751276930173
+Front Scan 0.683265248934
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.223702549934
-Front Left Scan 0.555842161179
-Front Scan 0.521413803101
+Left Scan 0.251247962316
+Front Left Scan 0.736938595772
+Front Scan 0.665083368619
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.225515286128
-Front Left Scan 0.542471528053
-Front Scan 0.503300070763
+Left Scan 0.254328250885
+Front Left Scan 0.736011783282
+Front Scan 0.646956006686
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.226714690526
-Front Left Scan 0.533026218414
-Front Scan 0.486440261205
+Left Scan 0.258267203967
+Front Left Scan 0.717557311058
+Front Scan 0.627356648445
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.227409799894
-Front Left Scan 0.52341735363
-Front Scan 0.468190232913
+Left Scan 0.261756380399
+Front Left Scan 0.705549637477
+Front Scan 0.609351952871
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.229127128919
-Front Left Scan 0.278166413307
-Front Scan 0.451371312141
+Left Scan 0.263473709424
+Front Left Scan 0.689030567805
+Front Scan 0.592601180077
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.230203866959
-Front Left Scan 0.291741490364
-Front Scan 0.433189431826
+Left Scan 0.260965863864
+Front Left Scan 0.557954748472
+Front Scan 0.574869076411
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.23070816199
-Front Left Scan 0.270765542984
-Front Scan 0.41638414065
+Left Scan 0.259998162587
+Front Left Scan 0.548523068428
+Front Scan 0.559195041656
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.230762680372
-Front Left Scan 0.261524677277
-Front Scan 0.401009956996
+Left Scan 0.25930305322
+Front Left Scan 0.418578505516
+Front Scan 0.541531085968
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.230094830195
-Front Left Scan 0.259684681892
-Front Scan 0.387284954389
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.229127128919
-Front Left Scan 0.245414495468
-Front Scan 0.371570030848
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.22792772452
-Front Left Scan 0.253796696663
-Front Scan 0.359453320503
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.227287133535
-Front Left Scan 0.27047932148
-Front Scan 0.34551024437
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.227055430412
-Front Left Scan 0.310386776924
-Front Scan 0.33511086305
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.227573355039
-Front Left Scan 0.411422967911
-Front Scan 0.322585264842
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.228663722674
-Front Left Scan 0.39788877964
-Front Scan 0.31150440375
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.230544606845
-Front Left Scan 0.394290566444
-Front Scan 0.300805171331
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.234429041545
-Front Left Scan 0.393063902855
-Front Scan 0.293199857076
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.239172140757
-Front Left Scan 0.392409682274
-Front Scan 0.286098837852
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.246436715126
-Front Left Scan 0.399278998375
-Front Scan 0.282159884771
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.254437287649
-Front Left Scan 0.406638979912
-Front Scan 0.764606674512
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.270670135816
-Front Left Scan 0.262056231499
-Front Scan 1.24834827582
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.32516125838
-Front Left Scan 0.253306031227
-Front Scan 1.70014210542
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.372564991315
-Front Left Scan 0.248849153519
-Front Scan 1.68749384085
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.409378528595
-Front Left Scan 0.21953189373
-Front Scan 1.6801883777
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.405712167422
-Front Left Scan 0.214379906654
-Front Scan 1.70852430662
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.40628461043
-Front Left Scan 0.209555029869
-Front Scan 1.70961467425
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.408233642578
-Front Left Scan 0.205956816673
-Front Scan 1.70949200789
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.410237193108
-Front Left Scan 0.20321726799
-Front Scan 1.50124541918
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.416125178337
-Front Left Scan 0.200682163239
-Front Scan 1.29447082678
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.368912259738
-Front Left Scan 0.199619054794
-Front Scan 1.07530693213
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.316710909208
-Front Left Scan 0.199987053871
-Front Scan 1.05157780647
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.255364100138
-Front Left Scan 0.201172828674
-Front Scan 1.03013845285
-Angular Velocity -0.6
-Linear Velocity 0.15
-Left Scan 0.243588129679
-Front Left Scan 0.203053712845
-Front Scan 1.02316009998
+Left Scan 0.256904244423
+Front Left Scan 0.408901492755
+Front Scan 0.526783863703
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.253987510999
+Front Left Scan 0.273655017217
+Front Scan 0.511123458544
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.251425147057
+Front Left Scan 0.260052680969
+Front Scan 0.497057716052
+Angular Velocity 0.5
+Linear Velocity 0.18
+Left Scan 0.252556403478
+Front Left Scan 0.248222192128
+Front Scan 0.481860717138
+Angular Velocity 0.346771331862
+Linear Velocity 0.18
+Left Scan 0.24872648716
+Front Left Scan 0.235751112302
+Front Scan 0.467863122622
+Angular Velocity 0.0671930694039
+Linear Velocity 0.18
+Left Scan 0.242715835571
+Front Left Scan 0.22449306647
+Front Scan 0.45397456487
+Angular Velocity -0.19374366471
+Linear Velocity 0.18
+Left Scan 0.234606226285
+Front Left Scan 0.215238571167
+Front Scan 0.441162745158
+Angular Velocity -0.406912310815
+Linear Velocity 0.18
+Left Scan 0.228595574697
+Front Left Scan 0.207469701767
+Front Scan 0.426361004512
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.23273897171
-Front Left Scan 0.205588817596
-Front Scan 1.00264755885
+Left Scan 0.225406249364
+Front Left Scan 0.2028901577
+Front Scan 0.410986820857
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.223757068316
-Front Left Scan 0.212662577629
-Front Scan 0.978754878044
+Left Scan 0.217800935109
+Front Left Scan 0.19963268439
+Front Scan 0.393840789795
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.211981097857
+Front Left Scan 0.196020841599
+Front Scan 0.375767946243
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.205111781756
+Front Left Scan 0.195271213849
+Front Scan 0.358335693677
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.200941125552
+Front Left Scan 0.194289882978
+Front Scan 0.341748476028
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.194753289223
+Front Left Scan 0.197438319524
+Front Scan 0.326824069023
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.190759817759
+Front Left Scan 0.198869427045
+Front Scan 0.31057759126
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.187161604563
+Front Left Scan 0.266104221344
+Front Scan 0.294399261475
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.187229752541
+Front Left Scan 0.287202835083
+Front Scan 0.278002858162
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.185335238775
+Front Left Scan 0.343070546786
+Front Scan 0.264346003532
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.185335238775
+Front Left Scan 0.347363869349
+Front Scan 0.250811815262
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.184939980507
+Front Left Scan 0.767864147822
+Front Scan 0.239540139834
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.188197453817
+Front Left Scan 0.769349773725
+Front Scan 0.228840907415
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.193799217542
+Front Left Scan 0.744939168294
+Front Scan 0.221739888191
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.20865547657
+Front Left Scan 0.34831794103
+Front Scan 0.213684797287
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.217119455338
+Front Left Scan 0.336133082708
+Front Scan 0.2106590271
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.278057376544
+Front Left Scan 0.337959448497
+Front Scan 0.695204774539
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.284408768018
+Front Left Scan 0.349694530169
+Front Scan 1.19306663672
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.614722013474
+Front Left Scan 0.472265481949
+Front Scan 1.68892494837
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.724535663923
+Front Left Scan 0.420473019282
+Front Scan 1.69738892714
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.774719834328
+Front Left Scan 0.350321491559
+Front Scan 1.70361765226
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.363583087921
+Front Left Scan 0.170928756396
+Front Scan 2.09773103396
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.374091506004
+Front Left Scan 0.157953381538
+Front Scan 1.82772874832
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.894769310951
+Front Left Scan 0.148630738258
+Front Scan 1.54854011536
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.18209481239
+Front Left Scan 0.135941584905
+Front Scan 0.873398105303
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.74461547534
+Front Left Scan 0.124560872714
+Front Scan 0.855393409729
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.73095862071
+Front Left Scan 0.11730992794
+Front Scan 0.669540246328
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.74268007278
+Front Left Scan 0.109595576922
+Front Scan 0.485186338425
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.69265945752
+Front Left Scan 0.108450690905
+Front Scan 0.302835981051
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.10098508994
+Front Left Scan 0.111122091611
+Front Scan 0.285499135653
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.728202025096
+Front Left Scan 0.116614818573
+Front Scan 0.272919019063
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.135559956233
+Front Left Scan 0.123593171438
+Front Scan 0.416970213254
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.126237312953
+Front Left Scan 0.120471994082
+Front Scan 0.560748815536
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.119367996852
+Front Left Scan 0.119831403097
+Front Scan 0.699607133865
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.115006526311
+Front Left Scan 0.12119436264
+Front Scan 0.683306137721
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.111858089765
+Front Left Scan 0.131416559219
+Front Scan 0.668899655342
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.109800020854
+Front Left Scan 0.146736224492
+Front Scan 0.655297319094
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.111640016238
+Front Left Scan 0.157149235408
+Front Scan 0.64335779349
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.114338676135
+Front Left Scan 0.173668305079
+Front Scan 0.629128495852
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.119422515233
+Front Left Scan 0.655474503835
+Front Scan 0.616820971171
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.124042948087
+Front Left Scan 0.819138685862
+Front Scan 0.604690631231
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.128145456314
+Front Left Scan 0.969091494878
+Front Scan 0.594577471415
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.13485121727
+Front Left Scan 0.639936765035
+Front Scan 0.586290677389
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.141093571981
+Front Left Scan 0.623022437096
+Front Scan 0.578985214233
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.156767606735
+Front Left Scan 0.603300412496
+Front Scan 0.575441519419
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.21705130736
-Front Left Scan 0.23429274559
-Front Scan 0.94553955396
+Left Scan 0.167044321696
+Front Left Scan 0.589002966881
+Front Scan 0.574596484502
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.211272358894
-Front Left Scan 0.23940384388
-Front Scan 0.928325374921
-Angular Velocity -0.295099987273
+Left Scan 0.57824921608
+Front Left Scan 0.571952342987
+Front Scan 0.863625685374
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.208246588707
-Front Left Scan 0.240630507469
-Front Scan 0.91431415081
-Angular Velocity -0.0189818872981
+Left Scan 0.969268679619
+Front Left Scan 0.563147624334
+Front Scan 1.13418678443
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.201622605324
-Front Left Scan 0.256577134132
-Front Scan 0.900589148204
-Angular Velocity 0.0757117463028
+Left Scan 1.43356084824
+Front Left Scan 0.523049354553
+Front Scan 2.55300037066
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.201499938965
-Front Left Scan 0.274895310402
-Front Scan 0.884751558304
-Angular Velocity 0.0583599329835
+Left Scan 1.38862407207
+Front Left Scan 0.536842505137
+Front Scan 2.8364414374
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.201554457347
-Front Left Scan 0.855475187302
-Front Scan 0.867905378342
-Angular Velocity 0.0461937778801
+Left Scan 1.20908141136
+Front Left Scan 0.525516311328
+Front Scan 3.14119919141
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.206134001414
-Front Left Scan 0.894728422165
-Front Scan 0.850882013639
-Angular Velocity 0.171279999283
+Left Scan 1.34375544389
+Front Left Scan 0.518497069677
+Front Scan 1.69128286839
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.206597407659
-Front Left Scan 1.11438298225
-Front Scan 0.836366494497
-Angular Velocity 0.186409986019
+Left Scan 1.33958478769
+Front Left Scan 0.518851439158
+Front Scan 1.08296676477
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.207456072172
-Front Left Scan 1.10052168369
-Front Scan 0.825844446818
-Angular Velocity 0.208884053098
+Left Scan 1.33706331253
+Front Left Scan 0.525134682655
+Front Scan 0.462997357051
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.208478291829
-Front Left Scan 0.680880069733
-Front Scan 0.812405665716
-Angular Velocity 0.232202019294
+Left Scan 1.02242410183
+Front Left Scan 0.529986818631
+Front Scan 0.441558003426
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.209050734838
-Front Left Scan 1.07050931454
-Front Scan 0.797603925069
-Angular Velocity 0.247862424453
+Left Scan 0.989781220754
+Front Left Scan 0.529577930768
+Front Scan 0.419764280319
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.209391474724
-Front Left Scan 0.282991290092
-Front Scan 0.778454343478
-Angular Velocity 0.256227588654
+Left Scan 0.988704482714
+Front Left Scan 0.512895305951
+Front Scan 0.400260329247
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.209391474724
-Front Left Scan 0.263937115669
-Front Scan 0.763707121213
-Angular Velocity 0.254853271114
+Left Scan 1.36542650064
+Front Left Scan 0.501623630524
+Front Scan 0.380429267883
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.11761319637
+Front Left Scan 0.487053593
+Front Scan 0.362438201904
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.882993340492
+Front Left Scan 0.483387231827
+Front Scan 0.347472906113
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.52311750253
+Front Left Scan 0.48505004247
+Front Scan 0.336610118548
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.428500850995
+Front Left Scan 0.484082341194
+Front Scan 0.327750881513
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.305834492048
+Front Left Scan 0.486099521319
+Front Scan 0.323348522186
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.501296520233
+Front Left Scan 0.433911800385
+Front Scan 1.31193033854
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.439731637637
+Front Left Scan 0.38405474027
+Front Scan 2.11741220951
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.500506003698
+Front Left Scan 0.32859591643
+Front Scan 2.41136169434
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.489765882492
+Front Left Scan 0.320595343908
+Front Scan 1.69985592365
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.779367526372
+Front Left Scan 0.322367191315
+Front Scan 1.18694694837
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.775633017222
+Front Left Scan 0.328650434812
+Front Scan 1.15824302038
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.773956576983
+Front Left Scan 0.33122642835
+Front Scan 1.14607179165
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.480293313662
+Front Left Scan 0.32859591643
+Front Scan 1.08925000827
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.815526843071
+Front Left Scan 0.32208096981
+Front Scan 1.04785692692
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.98498360316
+Front Left Scan 0.330476800601
+Front Scan 1.00080756346
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.954916715622
+Front Left Scan 0.33699174722
+Front Scan 0.980049689611
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.591224590937
+Front Left Scan 0.344937801361
+Front Scan 0.964798172315
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.38919309775
+Front Left Scan 0.341339588165
+Front Scan 0.946738958359
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.747337977091
+Front Left Scan 0.339853962262
+Front Scan 0.928570707639
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.209336956342
-Front Left Scan 0.244555830956
-Front Scan 0.750322858493
-Angular Velocity 0.252455598116
+Left Scan 0.738233407338
+Front Left Scan 0.339336037636
+Front Scan 0.910388827324
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.209064364433
-Front Left Scan 0.244555830956
-Front Scan 0.735793709755
-Angular Velocity 0.244306235843
+Left Scan 0.729428688685
+Front Left Scan 0.340072035789
+Front Scan 0.895178198814
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.209868510564
-Front Left Scan 0.245578050613
-Front Scan 0.720133304596
-Angular Velocity 0.266932500071
+Left Scan 0.35779050986
+Front Left Scan 0.336651007334
+Front Scan 0.880362828573
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.209009846052
-Front Left Scan 0.240630507469
-Front Scan 0.704922676086
-Angular Velocity 0.243192016416
+Left Scan 0.348086237907
+Front Left Scan 0.330027023951
+Front Scan 0.867387453715
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.209173401197
-Front Left Scan 0.225706100464
-Front Scan 0.691320339839
-Angular Velocity 0.247460351388
+Left Scan 0.344310839971
+Front Left Scan 0.319327791532
+Front Scan 0.8533898592
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.207796812057
-Front Left Scan 0.216792345047
-Front Scan 0.67754081885
-Angular Velocity 0.143448201267
+Left Scan 0.336133082708
+Front Left Scan 0.308001597722
+Front Scan 0.84236351649
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.207278887431
-Front Left Scan 0.212621688843
-Front Scan 0.663475076358
-Angular Velocity -0.0918216923168
+Left Scan 0.347568313281
+Front Left Scan 0.296280145645
+Front Scan 0.830533027649
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.203571637472
-Front Left Scan 0.205261707306
-Front Scan 0.649123112361
-Angular Velocity -0.322376907629
+Left Scan 0.363296866417
+Front Left Scan 0.283441066742
+Front Scan 0.822069048882
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.199619054794
-Front Left Scan 0.213725686073
-Front Scan 0.637006402016
-Angular Velocity -0.484432295493
+Left Scan 0.375250021617
+Front Left Scan 0.271447022756
+Front Scan 0.811942259471
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.195966323217
-Front Left Scan 0.210250139236
-Front Scan 0.621809403102
-Angular Velocity -0.498144116156
+Left Scan 0.36478249232
+Front Left Scan 0.258703351021
+Front Scan 0.813196182251
+Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.19419447581
-Front Left Scan 0.217119455338
-Front Scan 0.606312553088
+Left Scan 0.345224022865
+Front Left Scan 0.244296868642
+Front Scan 0.819602092107
+Angular Velocity 0.265343632448
+Linear Velocity 0.18
+Left Scan 0.336024045944
+Front Left Scan 0.23211201032
+Front Scan 0.827725330989
+Angular Velocity -0.0203776601475
+Linear Velocity 0.18
+Left Scan 0.346655130386
+Front Left Scan 0.219749967257
+Front Scan 0.82264149189
+Angular Velocity -0.30822064551
+Linear Velocity 0.18
+Left Scan 0.356781919797
+Front Left Scan 0.20910525322
+Front Scan 0.822805047035
 Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.192776997884
-Front Left Scan 0.220717668533
-Front Scan 0.588239709536
-Angular Velocity -0.401125607733
+Left Scan 0.369348406792
+Front Left Scan 0.195489287376
+Front Scan 0.89752248923
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.192027370135
-Front Left Scan 0.24439227581
-Front Scan 0.573029081027
-Angular Velocity -0.341287379743
+Left Scan 0.372319658597
+Front Left Scan 0.184517463048
+Front Scan 0.870931148529
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.191386779149
-Front Left Scan 0.250034928322
-Front Scan 0.558240969976
-Angular Velocity -0.219539021023
+Left Scan 0.378957271576
+Front Left Scan 0.173382083575
+Front Scan 0.831255396207
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.192872405052
-Front Left Scan 0.607116699219
-Front Scan 0.543834487597
-Angular Velocity -0.180898181461
+Left Scan 0.388729691505
+Front Left Scan 0.164291143417
+Front Scan 0.722177743912
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.194589734077
-Front Left Scan 0.582092761993
-Front Scan 0.529659708341
-Angular Velocity -0.136079348902
+Left Scan 0.642321944237
+Front Left Scan 0.153142134349
+Front Scan 0.710238218307
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.197056690852
-Front Left Scan 0.570766568184
-Front Scan 0.515689373016
-Angular Velocity -0.0716664036115
+Left Scan 1.0281894207
+Front Left Scan 0.145359635353
+Front Scan 0.690979599953
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.19825609525
-Front Left Scan 0.562875032425
-Front Scan 0.501855333646
-Angular Velocity -0.0393279168341
+Left Scan 1.2708234787
+Front Left Scan 0.137140989304
+Front Scan 0.661035378774
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.198433279991
-Front Left Scan 0.542594194412
-Front Scan 0.48938425382
-Angular Velocity -0.0369972560141
+Left Scan 1.3789879481
+Front Left Scan 0.132575074832
+Front Scan 0.633994261424
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.20025964578
-Front Left Scan 0.538341760635
-Front Scan 0.475263992945
-Angular Velocity 0.0110879566934
+Left Scan 0.928216338158
+Front Left Scan 0.127545754115
+Front Scan 0.612554907799
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.202208677928
-Front Left Scan 0.509842276573
-Front Scan 0.460857510567
-Angular Velocity 0.0653360181385
+Left Scan 0.603382190069
+Front Left Scan 0.124697168668
+Front Scan 0.592369476954
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.205520669619
-Front Left Scan 0.502809405327
-Front Scan 0.444869995117
-Angular Velocity 0.158729413483
+Left Scan 0.164168477058
+Front Left Scan 0.121371547381
+Front Scan 0.572129527728
+Angular Velocity -0.5
 Linear Velocity 0.18
-Left Scan 0.207633256912
-Front Left Scan 0.490133881569
-Front Scan 0.430136402448
-Angular Velocity 0.216694947084
+Left Scan 0.14993917942
+Front Left Scan 0.119708736738
+Front Scan 0.553034464518
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.139144539833
+Front Left Scan 0.116723855337
+Front Scan 0.53537050883
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.131948113441
+Front Left Scan 0.114038825035
+Front Scan 0.519137660662
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.125487685204
+Front Left Scan 0.111926237742
+Front Scan 0.502727627754
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.119708736738
+Front Left Scan 0.115183711052
+Front Scan 0.483523527781
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.114952007929
+Front Left Scan 0.119708736738
+Front Scan 0.464033206304
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.110672314962
+Front Left Scan 0.125882943471
+Front Scan 0.444474736849
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.108668764432
+Front Left Scan 0.131539225578
+Front Scan 0.426524559657
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.107305804888
+Front Left Scan 0.143533269564
+Front Scan 0.409133195877
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.106896917025
+Front Left Scan 0.154859463374
+Front Scan 0.392327904701
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.10736032327
+Front Left Scan 0.430354475975
+Front Scan 0.376258611679
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.10843706131
+Front Left Scan 0.522858540217
+Front Scan 0.361456871033
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.111530979474
+Front Left Scan 0.605808258057
+Front Scan 0.349353790283
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.11387526989
+Front Left Scan 0.415961623192
+Front Scan 0.338327447573
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.118454813957
+Front Left Scan 0.397902409236
+Front Scan 0.327478289604
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.122393767039
+Front Left Scan 0.382064819336
+Front Scan 0.316888093948
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.130094488462
+Front Left Scan 0.369252999624
+Front Scan 0.306829452515
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.138503948847
+Front Left Scan 0.359071691831
+Front Scan 0.298869768778
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.149080514908
+Front Left Scan 0.353688001633
+Front Scan 0.887068589528
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.508901834488
+Front Left Scan 0.351398229599
+Front Scan 1.29813718796
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.854303042094
+Front Left Scan 0.328364213308
+Front Scan 1.70905586084
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.20685978731
+Front Left Scan 0.297615845998
+Front Scan 1.52978579203
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 1.20771845182
+Front Left Scan 0.263078451157
+Front Scan 1.51516123613
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.937375426292
+Front Left Scan 0.248508413633
+Front Scan 1.5024039348
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.653988877932
+Front Left Scan 0.240439693133
+Front Scan 1.4904507796
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.366554339727
+Front Left Scan 0.234688003858
+Front Scan 1.3586798509
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.3582675457
+Front Left Scan 0.228445649147
+Front Scan 1.21638687452
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.357408881187
+Front Left Scan 0.223538994789
+Front Scan 1.04338641961
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.363869309425
+Front Left Scan 0.219354708989
+Front Scan 0.994796911875
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.335383454959
+Front Left Scan 0.219354708989
+Front Scan 0.950173616409
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.295380592346
+Front Left Scan 0.218714118004
+Front Scan 0.925204197566
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.247867822647
+Front Left Scan 0.220663150152
+Front Scan 0.906272689501
+Angular Velocity -0.138268186179
+Linear Velocity 0.18
+Left Scan 0.23707318306
+Front Left Scan 0.221930702527
+Front Scan 0.888649622599
+Angular Velocity -0.0713388097815
+Linear Velocity 0.18
+Left Scan 0.229740460714
+Front Left Scan 0.224574844042
+Front Scan 0.873956918716
+Angular Velocity -0.0394024277792
+Linear Velocity 0.18
+Left Scan 0.224656621615
+Front Left Scan 0.226387580236
+Front Scan 0.856129407883
+Angular Velocity -0.0992993194632
+Linear Velocity 0.18
+Left Scan 0.221290111542
+Front Left Scan 0.230203866959
+Front Scan 0.838192860285
+Angular Velocity -0.00760520739975
+Linear Velocity 0.18
+Left Scan 0.218441526095
+Front Left Scan 0.232997934024
+Front Scan 0.819956461589
+Angular Velocity 0.0586128533609
+Linear Velocity 0.18
+Left Scan 0.215920050939
+Front Left Scan 0.235015114148
+Front Scan 0.805154720942
+Angular Velocity 0.105632397931
+Linear Velocity 0.18
+Left Scan 0.212430874507
+Front Left Scan 0.233297785123
+Front Scan 0.7903393507
+Angular Velocity 0.0592059830495
+Linear Velocity 0.18
+Left Scan 0.210713545481
+Front Left Scan 0.233297785123
+Front Scan 0.774092872938
+Angular Velocity 0.0548337418125
+Linear Velocity 0.18
+Left Scan 0.209568659465
+Front Left Scan 0.236487110456
+Front Scan 0.755393067996
+Angular Velocity 0.131297306448
+Linear Velocity 0.18
+Left Scan 0.208532810211
+Front Left Scan 0.239921768506
+Front Scan 0.738001704216
+Angular Velocity 0.218336875085
+Linear Velocity 0.18
+Left Scan 0.210931619008
+Front Left Scan 0.498761415482
+Front Scan 0.719438195229
+Angular Velocity 0.307505351751
+Linear Velocity 0.18
+Left Scan 0.212253689766
+Front Left Scan 0.501855333646
+Front Scan 0.702632904053
+Angular Velocity 0.341475792802
+Linear Velocity 0.18
+Left Scan 0.212430874507
+Front Left Scan 0.511804938316
+Front Scan 0.686018427213
+Angular Velocity 0.342000134569
 Linear Velocity 0.18
 Left Scan 0.209745844205
-Front Left Scan 0.474718809128
-Front Scan 0.415443698565
-Angular Velocity 0.273439496093
+Front Left Scan 0.264400521914
+Front Scan 0.670916835467
+Angular Velocity 0.261729402012
 Linear Velocity 0.18
-Left Scan 0.212321837743
-Front Left Scan 0.462738394737
-Front Scan 0.400628328323
-Angular Velocity 0.342071323925
+Left Scan 0.207810441653
+Front Left Scan 0.265150149663
+Front Scan 0.656210501989
+Angular Velocity 0.204209101862
 Linear Velocity 0.18
-Left Scan 0.214325388273
-Front Left Scan 0.454642415047
-Front Scan 0.386848807335
+Left Scan 0.20740155379
+Front Left Scan 0.261102159818
+Front Scan 0.64025024573
+Angular Velocity 0.192748883698
+Linear Velocity 0.18
+Left Scan 0.20632481575
+Front Left Scan 0.250062187513
+Front Scan 0.623731176058
+Angular Velocity 0.166323369741
+Linear Velocity 0.18
+Left Scan 0.2067745924
+Front Left Scan 0.242497762044
+Front Scan 0.606762329737
+Angular Velocity 0.181170542373
+Linear Velocity 0.18
+Left Scan 0.208260218302
+Front Left Scan 0.234088301659
+Front Scan 0.589725335439
+Angular Velocity 0.067956715715
+Linear Velocity 0.18
+Left Scan 0.210768063863
+Front Left Scan 0.233066082001
+Front Scan 0.572920044263
+Angular Velocity 0.0424196647226
+Linear Velocity 0.18
+Left Scan 0.21253991127
+Front Left Scan 0.231934825579
+Front Scan 0.557532231013
+Angular Velocity 0.0154988877696
+Linear Velocity 0.18
+Left Scan 0.212376356125
+Front Left Scan 0.228268464406
+Front Scan 0.541980862617
+Angular Velocity -0.0691785610464
+Linear Velocity 0.18
+Left Scan 0.211408654849
+Front Left Scan 0.226142247518
+Front Scan 0.529060006142
+Angular Velocity -0.121005111899
+Linear Velocity 0.18
+Left Scan 0.207796812057
+Front Left Scan 0.222884774208
+Front Scan 0.512145678202
+Angular Velocity -0.198919532739
+Linear Velocity 0.18
+Left Scan 0.204484820366
+Front Left Scan 0.221058408419
+Front Scan 0.499742746353
+Angular Velocity -0.240041223888
+Linear Velocity 0.18
+Left Scan 0.200818459193
+Front Left Scan 0.219409227371
+Front Scan 0.484600265821
+Angular Velocity -0.27757069344
+Linear Velocity 0.18
+Left Scan 0.198774019877
+Front Left Scan 0.21797811985
+Front Scan 0.475114067396
+Angular Velocity -0.308992796099
+Linear Velocity 0.18
+Left Scan 0.196824987729
+Front Left Scan 0.21860508124
+Front Scan 0.459848920504
+Angular Velocity -0.291598259758
+Linear Velocity 0.18
+Left Scan 0.195053140322
+Front Left Scan 0.220145225525
+Front Scan 0.443316221237
+Angular Velocity -0.251390362109
+Linear Velocity 0.18
+Left Scan 0.19374469916
+Front Left Scan 0.22386610508
+Front Scan 0.422285755475
+Angular Velocity -0.162124733599
+Linear Velocity 0.18
+Left Scan 0.192722479502
+Front Left Scan 0.230898976326
+Front Scan 0.400914549828
+Angular Velocity -0.190948004024
+Linear Velocity 0.18
+Left Scan 0.192150036494
+Front Left Scan 0.238272587458
+Front Scan 0.382282892863
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.214965979258
-Front Left Scan 0.440740227699
-Front Scan 0.372156103452
+Left Scan 0.193458477656
+Front Left Scan 0.243070205053
+Front Scan 0.365641156832
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.216955900192
-Front Left Scan 0.436651349068
-Front Scan 0.359017173449
+Left Scan 0.194017291069
+Front Left Scan 0.352624893188
+Front Scan 2.15512526035
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.221181074778
-Front Left Scan 0.429086923599
-Front Scan 0.347922682762
+Left Scan 0.194780548414
+Front Left Scan 0.285553654035
+Front Scan 2.14336291949
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.227396170298
-Front Left Scan 0.42274916172
-Front Scan 0.341066996257
+Left Scan 0.202358603477
+Front Left Scan 0.326592365901
+Front Scan 2.64288759232
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.234320004781
-Front Left Scan 0.42119538784
-Front Scan 0.334824641546
+Left Scan 0.198719501495
+Front Left Scan 0.356209476789
+Front Scan 0.836993455887
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.241925319036
-Front Left Scan 0.42941403389
-Front Scan 0.329059322675
+Left Scan 0.204253117243
+Front Left Scan 0.351684451103
+Front Scan 0.826921184858
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.251711368561
-Front Left Scan 0.430109143257
-Front Scan 0.32533844312
+Left Scan 0.209350585938
+Front Left Scan 0.347922682762
+Front Scan 0.305670936902
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.260638753573
-Front Left Scan 0.348658680916
-Front Scan 0.330313245455
+Left Scan 0.215293089549
+Front Left Scan 0.341298699379
+Front Scan 0.283086697261
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.272932648659
-Front Left Scan 0.311245441437
-Front Scan 0.430981437365
+Left Scan 0.222026109695
+Front Left Scan 0.338790853818
+Front Scan 0.265245556831
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.336501081785
-Front Left Scan 0.296361923218
-Front Scan 0.53943212827
+Left Scan 0.232480009397
+Front Left Scan 0.386126438777
+Front Scan 0.248154044151
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.393772641818
-Front Left Scan 0.285730838776
-Front Scan 0.643766681353
+Left Scan 0.361865758896
+Front Left Scan 0.361415982246
+Front Scan 0.241925319036
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.442416667938
-Front Left Scan 0.280742406845
-Front Scan 0.656851092974
+Left Scan 0.401078104973
+Front Left Scan 0.335397084554
+Front Scan 0.23569659392
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.436010758082
-Front Left Scan 0.270969986916
-Front Scan 0.826294223468
+Left Scan 0.434647798538
+Front Left Scan 0.264782150586
+Front Scan 0.236895998319
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.433884541194
-Front Left Scan 0.263405561447
-Front Scan 0.982298572858
+Left Scan 0.349067568779
+Front Left Scan 0.249517003695
+Front Scan 0.533080736796
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.435710906982
-Front Left Scan 0.260543346405
-Front Scan 1.01322412491
+Left Scan 0.349476456642
+Front Left Scan 0.23070816199
+Front Scan 0.826348741849
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.440344969432
-Front Left Scan 0.258458018303
-Front Scan 0.873956918716
+Left Scan 0.378098607063
+Front Left Scan 0.201445420583
+Front Scan 1.1085767746
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.403599580129
-Front Left Scan 0.25293803215
-Front Scan 0.736870447795
+Left Scan 0.3974117438
+Front Left Scan 0.19156396389
+Front Scan 1.08776438236
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.357122659683
-Front Left Scan 0.25604557991
-Front Scan 0.707893927892
+Left Scan 0.821305791537
+Front Left Scan 0.186711827914
+Front Scan 1.06507110596
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.304689606031
-Front Left Scan 0.256413578987
-Front Scan 0.685773094495
+Left Scan 1.20067195098
+Front Left Scan 0.179120143255
+Front Scan 0.863557537397
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.291768749555
-Front Left Scan 0.2572722435
-Front Scan 0.680743773778
+Left Scan 1.61558409532
+Front Left Scan 0.176762223244
+Front Scan 0.841259519259
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.283645510674
-Front Left Scan 0.25915312767
-Front Scan 0.659358938535
+Left Scan 1.14744838079
+Front Left Scan 0.174417932828
+Front Scan 0.824563264847
 Angular Velocity -0.6
 Linear Velocity 0.15
-Left Scan 0.277989228566
-Front Left Scan 0.262587785721
-Front Scan 0.625693837802
+Left Scan 0.69212448597
+Front Left Scan 0.174922227859
+Front Scan 0.990012923876
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.207415183385
+Front Left Scan 0.177334666252
+Front Scan 0.972117265066
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.199346462886
+Front Left Scan 0.180769324303
+Front Scan 0.946970661481
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.191618482272
+Front Left Scan 0.191345890363
+Front Scan 0.922096649806
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.184926350911
+Front Left Scan 0.576136628787
+Front Scan 0.901188850403
+Angular Velocity -0.6
+Linear Velocity 0.15
+Left Scan 0.181723395983
+Front Left Scan 0.590924739838
+Front Scan 0.889412879944
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.18098739783
+Front Left Scan 0.603382190069
+Front Scan 0.879872163137
+Angular Velocity -0.5
+Linear Velocity 0.18
+Left Scan 0.182595690091
+Front Left Scan 0.247922341029
+Front Scan 0.870086113612
+Angular Velocity -0.482881520192
+Linear Velocity 0.18
+Left Scan 0.184203982353
+Front Left Scan 0.481983383497
+Front Scan 0.857724070549
+Angular Velocity -0.422721621725
+Linear Velocity 0.18
+Left Scan 0.18986026446
+Front Left Scan 0.703396161397
+Front Scan 0.846806764603
+Angular Velocity -0.262011654509
+Linear Velocity 0.18
+Left Scan 0.195789138476
+Front Left Scan 0.905073285103
+Front Scan 0.833722352982
+Angular Velocity -0.0948446664545
+Linear Velocity 0.18
+Left Scan 0.204416672389
+Front Left Scan 0.875047286352
+Front Scan 0.822300752004
+Angular Velocity 0.146986381213
+Linear Velocity 0.18
+Left Scan 0.213902870814
+Front Left Scan 0.837320566177
+Front Scan 0.805318276087
+Angular Velocity 0.409025575717
+Linear Velocity 0.18
+Left Scan 0.223579883575
+Front Left Scan 0.81068833669
+Front Scan 0.792220234871
 Angular Velocity 0.5
 Linear Velocity 0.18
-Left Scan 0.271528800329
-Front Left Scan 0.266881108284
-Front Scan 0.710306366285
-Angular Velocity 0.5
-Linear Velocity 0.18
-Left Scan 0.266976515452
-Front Left Scan 0.256577134132
-Front Scan 0.819670240084
-Angular Velocity 0.5
-Linear Velocity 0.18
-Left Scan 0.263828078906
-Front Left Scan 0.249176263809
-Front Scan 0.799539327621
+Left Scan 0.231471419334
+Front Left Scan 0.79685429732
+Front Scan 0.775183240573
 Angular Velocity 0.5
 Linear Velocity 0.18
