@@ -91,6 +91,9 @@ def send_velocity():
         X[1] = prevX[1]
     prevX = X
     fhandle.write("{};{}\n".format(X[0], X[1]))
+    fhandle1.write("{};{}\n".format(odomX, odomY))
+    fhandle2.write("{};{}\n".format(X[2], odomAng))
+    fhandle3.write("{};{}\n".format(velocity, (odomVx**2+odomVy**2)**(1/2)))
     """
     END
     """
