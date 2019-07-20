@@ -54,7 +54,7 @@ def read_data():
     if zGyro > 32767 :
 	zGyro -= 65536
 
-    return (xGyro, yGyro, zGyro * 0.07)
+    return (xGyro, yGyro, zGyro * 0.07 * pi / 180)
 
 if __name__ == "__main__":
     init_ang()

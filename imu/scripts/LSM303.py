@@ -6,12 +6,22 @@
 from __future__ import division
 import smbus
 import time
+import numpy as np
 from math import pi, atan2
 
 # Get I2C bus
 bus = smbus.SMBus(1)
+offset = 0
+
+def norm(b):
+    if b > np.pi:
+        return b - 2*np.pi
+    if b <= -np.pi:
+        return b + 2*np.pi
+    return b
 
 def init_acc_mag():
+    global offset
 
     # LSM303DLHC Accl address, 0x19(25)
     # Select control register1, 0x20(32)
@@ -19,7 +29,7 @@ def init_acc_mag():
     bus.write_byte_data(0x19, 0x20, 0x27)
     # LSM303DLHC Accl address, 0x19(25)
     # Select control register4, 0x23(35)
-    #		0x00(00)	Continuos update, Full scale selection = +/-2g,
+    #		0x00(00)	Continous update, Full scale selection = +/-2g,
     bus.write_byte_data(0x19, 0x23, 0x00)
 
     # LSM303DLHC Mag address, 0x1E(30)
@@ -34,6 +44,11 @@ def init_acc_mag():
     # Select CRB register, 0x01(01)
     #		0x20(32)	Gain setting = +/- 1.3g
     bus.write_byte_data(0x1E, 0x01, 0x20)
+    time.sleep(0.5)
+    offset1 = 0
+    for i in range(5):
+        offset1 += read_data()[-1]
+    offset = offset1 / 5    
 
 def read_data():
 
@@ -104,7 +119,7 @@ def read_data():
     if zMag > 32767 :
 	zMag -= 65536
 
-    return (xAccl * 2 * 9.81 / 32767, yAccl * 2 * 9.81 / 32767, zAccl * 2 * 9.81 / 32767, xMag * 180 / pi, yMag * 180 / pi, atan2(-xMag,-yMag) * 180 / pi)
+    return (xAccl * 2 * 9.81 / 32767, yAccl * 2 * 9.81 / 32767, zAccl * 2 * 9.81 / 32767, xMag * 180 / pi, yMag * 180 / pi, norm(atan2(-xMag,-yMag) - offset))
 
 if __name__ == "__main__":
     init_acc_mag()

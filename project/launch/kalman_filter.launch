@@ -52,4 +52,9 @@
   <node pkg="random_walk" type="walker" name="walker">  
   </node>
 
+  <!-- Localizer -->
+
+  <node pkg="state_estimation" type="localizer.py" name="localizer" output="screen">
+  </node>
+
 </launch>

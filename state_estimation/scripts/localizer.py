@@ -10,9 +10,6 @@ import kalmanfilter
 import numpy as np
 from sympy.matrices import *
 
-
-mean2 = 0.0988927000344
-mean0 = 0.00243190710785
 # Sonars:
 AA = 0
 sonarF_val = 0.0
@@ -40,9 +37,10 @@ ekf_estimation_msg = Odometry()
 ekf_estimation_msg.header.frame_id = "odom"
 ekf_estimation_msg.child_frame_id = "chassis"
 
-
+mean2 = 0.148
+mean0 = 0
 lenAccels = 10
-X = Matrix([0, 0, 9 % np.pi])
+X = Matrix([0, 0, 0])
 prevX = Matrix([0,0,0,0])
 P = zeros(3)
 prevV = 0
@@ -57,16 +55,17 @@ odomA = 0
 odomVx = 0
 odomVy = 0
 prevOdomV = 0
-start_angle = 2.7168146928204138
+start_angle = 0
 last10 = []
 accels = []
-fhandle = file("/home/shit/catkin_ws/src/state_estimation/scripts/xy", 'w')
-fhandle1 = file("/home/shit/catkin_ws/src/state_estimation/scripts/xyreal", 'w')
-fhandle2 = file("/home/shit/catkin_ws/src/state_estimation/scripts/angle", 'w')
-fhandle3 = file("/home/shit/catkin_ws/src/state_estimation/scripts/velocity", 'w')
+fhandle = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/xy", 'w')
+fhandle1 = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/xyreal", 'w')
+fhandle2 = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/angle", 'w')
+fhandle3 = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/velocity", 'w')
 
 def send_velocity():
     global X, P, imuLinAccX, last10, prevOdomV, odomA, prevV, prevAcc, accErr, prevtimestamp, AA, prevprevV, accels, givenvel, prevX
+    print "in here"
     if givenvel > 0.1:
         velocity = mean2
     else:
@@ -92,9 +91,6 @@ def send_velocity():
         X[1] = prevX[1]
     prevX = X
     fhandle.write("{};{}\n".format(X[0], X[1]))
-    fhandle1.write("{};{}\n".format(odomX, odomY))
-    fhandle2.write("{};{}\n".format(X[2], odomAng))
-    fhandle3.write("{};{}\n".format(velocity, (odomVx**2+odomVy**2)**(1/2)))
     """
     END
     """
@@ -129,40 +125,35 @@ def send_velocity():
 
     ekf_pub.publish(ekf_estimation_msg)
 
-    
+
 def sonarFrontCallback(msg):
     global sonarF_val
     sonarF_val = msg.range;
     send_velocity()
 
-    
 def sonarFrontLeftCallback(msg):
     global sonarFL_val
     sonarFL_val = msg.range
 
-    
 def sonarFrontRightCallback(msg):
     global sonarFR_val
     sonarFR_val = msg.range
 
-    
 def sonarLeftCallback(msg):
     global sonarL_val
     sonarL_val = msg.range
 
-    
 def sonarRightCallback(msg):
     global sonarR_val
     sonarR_val = msg.range
 
-    
 def imuCallback(msg):
     global imuAngVelX, imuAngVelY, imuAngVelZ, imuLinAccX, imuLinAccY, imuLinAccZ, imuRoll, imuPitch, imuYaw, timestamp, prevtimestamp
     # orientation:: quaternion to RPY (rool, pitch, yaw)
     orientation_q = msg.orientation
-    orientation_list = [orientation_q.x, orientation_q.y, orientation_q.z, orientation_q.w]
-    (imuRoll, imuPitch, imuYaw) = euler_from_quaternion(orientation_list)
-
+    #orientation_list = [orientation_q.x, orientation_q.y, orientation_q.z, orientation_q.w]
+    #(imuRoll, imuPitch, imuYaw) = euler_from_quaternion(orientation_list)
+    imuYaw = orientation_q.w
     # angular velocity
     imuAngVelX = msg.angular_velocity.x
     imuAngVelY = msg.angular_velocity.y
@@ -178,30 +169,19 @@ def imuCallback(msg):
         prevtimestamp = t
     timestamp = t
 
-
-def odomCallback(msg):
-    global odomX, odomY, odomVx, odomVy, odomAng
-    odomX = msg.pose.pose.position.x
-    odomY = msg.pose.pose.position.y
-    odomVx = msg.twist.twist.linear.x
-    odomVy = msg.twist.twist.linear.y
-    odomAng = euler_from_quaternion([msg.pose.pose.orientation.x, msg.pose.pose.orientation.y, msg.pose.pose.orientation.z, msg.pose.pose.orientation.w])[2]
-
 def cmdvelfun(msg):
     global givenvel
     givenvel = msg.linear.x
 
-    
 def follower_py():
     # Starts a new node
     rospy.init_node('localizer_node', anonymous=True)
-    rospy.Subscriber("sonarFront_scan", Range, sonarFrontCallback)
-    rospy.Subscriber("sonarFrontLeft_scan", Range, sonarFrontLeftCallback)
-    rospy.Subscriber("sonarFrontRight_scan", Range, sonarFrontRightCallback)
-    rospy.Subscriber("sonarLeft_scan", Range, sonarLeftCallback)
-    rospy.Subscriber("sonarRight_scan", Range, sonarRightCallback)
+    rospy.Subscriber("sonar_front", Range, sonarFrontCallback)
+    rospy.Subscriber("sonar_front_left", Range, sonarFrontLeftCallback)
+    rospy.Subscriber("sonar_front_right", Range, sonarFrontRightCallback)
+    rospy.Subscriber("sonar_left", Range, sonarLeftCallback)
+    rospy.Subscriber("sonar_right", Range, sonarRightCallback)
     rospy.Subscriber("imu_data", Imu, imuCallback)
-    rospy.Subscriber("odom", Odometry, odomCallback)
     rospy.Subscriber("cmd_vel", Twist, cmdvelfun)
     print "Ready"
     while not rospy.is_shutdown():
@@ -212,4 +192,8 @@ if __name__ == '__main__':
         #Testing our function
         follower_py()
     except rospy.ROSInterruptException:
+        print "Done"
         fhandle.close()
+        fhandle1.close()
+        fhandle2.close()
+        fhandle3.close()
