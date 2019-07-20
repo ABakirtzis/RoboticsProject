@@ -9,6 +9,9 @@ from tf.transformations import euler_from_quaternion, quaternion_from_euler
 import kalmanfilter
 import numpy as np
 from sympy.matrices import *
+import time
+
+startingtime = 0
 
 # Sonars:
 AA = 0
@@ -59,13 +62,13 @@ start_angle = 0
 last10 = []
 accels = []
 fhandle = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/xy", 'w')
-fhandle1 = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/xyreal", 'w')
-fhandle2 = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/angle", 'w')
-fhandle3 = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/velocity", 'w')
+
 
 def send_velocity():
-    global X, P, imuLinAccX, last10, prevOdomV, odomA, prevV, prevAcc, accErr, prevtimestamp, AA, prevprevV, accels, givenvel, prevX
-    print "in here"
+    global X, P, imuLinAccX, last10, prevOdomV, odomA, prevV, prevAcc, accErr, prevtimestamp, AA, prevprevV, accels, givenvel, prevX, timestamp
+    #print "mphka"
+    if time.time() - startingtime > 60:
+        fhandle.close()
     if givenvel > 0.1:
         velocity = mean2
     else:
@@ -74,26 +77,32 @@ def send_velocity():
     imuAngVelZ2 = imuAngVelZ
     sonars = [sonarR_val, sonarFR_val, sonarF_val, sonarFL_val, sonarL_val, kalmanfilter.norm((imuYaw + start_angle) % (2 * np.pi))]
     ekf_pub = rospy.Publisher('/ekf_estimation', Odometry, queue_size=1)
-
+    #print "init publisher"
     ekf_estimation_msg.header.seq += 1
     ekf_estimation_msg.header.stamp = rospy.Time.now()
-
+    
+    #print "skata"
     """
     PUT YOUR MAIN CODE HERE
     """
     if timestamp == prevtimestamp:
         return None
+    #print "skata1"
     dt = timestamp - prevtimestamp
     prevtimestamp = timestamp
+    #print "ready for update"
     X, P = kalmanfilter.update(X, P, dt, sonars, givenvel, imuAngVelZ2)
-    if abs(X[0]) > 1.89 or abs(X[1]) > 1.89:
+    if abs(X[0]) > 0.6 or abs(X[1]) > 0.6:
         X[0] = prevX[0]
         X[1] = prevX[1]
     prevX = X
+
+    #print "kalman update"
+    
     fhandle.write("{};{}\n".format(X[0], X[1]))
-    fhandle1.write("{};{}\n".format(odomX, odomY))
-    fhandle2.write("{};{}\n".format(X[2], odomAng))
-    fhandle3.write("{};{}\n".format(velocity, (odomVx**2+odomVy**2)**(1/2)))
+
+    #print "write to file"
+
     """
     END
     """
@@ -127,7 +136,7 @@ def send_velocity():
     """
 
     ekf_pub.publish(ekf_estimation_msg)
-
+    #print "bghka"
 
 def sonarFrontCallback(msg):
     global sonarF_val
@@ -167,7 +176,7 @@ def imuCallback(msg):
     imuLinAccY = msg.linear_acceleration.y
     imuLinAccZ = msg.linear_acceleration.z
 
-    t = msg.header.stamp.secs + msg.header.stamp.nsecs * 10 **-9
+    t = msg.header.stamp.secs + msg.header.stamp.nsecs * (10 ** (-9))
     if timestamp == 0 and prevtimestamp == 0:
         prevtimestamp = t
     timestamp = t
@@ -192,11 +201,9 @@ def follower_py():
 
 if __name__ == '__main__':
     try:
+        startingtime = time.time()
         #Testing our function
         follower_py()
     except rospy.ROSInterruptException:
         print "Done"
         fhandle.close()
-        fhandle1.close()
-        fhandle2.close()
-        fhandle3.close()

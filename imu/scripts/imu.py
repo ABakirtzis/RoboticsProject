@@ -28,6 +28,9 @@ def accel_publisher():
                 message.angular_velocity.y = yang
                 message.angular_velocity.z = zang
                 message.orientation.w = zmag # see here is the angle
+                t = time.time()
+                message.header.stamp.secs = int(t)
+                message.header.stamp.nsecs = int((t % 1) * 10 ** 9)
                 pub.publish(message)
                 rate.sleep()
         

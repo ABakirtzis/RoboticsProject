@@ -47,14 +47,14 @@
     <param name="sonar_trigger" value="24" /> 
   </node>
 
-  <!-- Random Walker -->
-
-  <node pkg="random_walk" type="walker" name="walker">  
-  </node>
-
   <!-- Localizer -->
 
   <node pkg="state_estimation" type="localizer.py" name="localizer" output="screen">
+  </node>
+
+    <!-- Random Walker -->
+
+  <node pkg="timed_roslaunch" type="timed_roslaunch.sh" name="timed_roslaunch" args="25 random_walk random_walk.launch">  
   </node>
 
 </launch>

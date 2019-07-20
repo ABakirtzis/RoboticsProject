@@ -62,25 +62,26 @@ def which_wall(x0, y0, theta0):
             d1 = ((p[0] - x0) ** 2 + (p[1] - y0) ** 2) ** (1/2)
             angle = np.arccos(d/d1)
             return i, angle
-    return None
+    return None, None
 
 
 def makeh_H_Cv_z(x0, y0, theta0, sonars):
+    theta0 = float(theta0)
     sonarangles = [-np.pi/2, -np.pi/3, 0, np.pi/3, np.pi/2]
-    sonarpoints = [(x0 + i * 0.01 * np.cos(theta0), y0 + j * 0.01 * np.sin(theta0)) for i,j in sonarpoints]
+    sonarpoints1 = [(x0 + i * 0.01 * np.cos(theta0), y0 + j * 0.01 * np.sin(theta0)) for i,j in sonarpoints]
     h = []
     z = []
     for i in range(5):
-    #    print "Checking sonar " + str(i)
+    #    #print "Checking sonar " + str(i)
         if sonars[i] > 1.99:
-    #        print "Doesn't see"
+    #        #print "Doesn't see"
             continue
-        wall, angle = which_wall(sonarpoints[i][0], sonarpoints[i][1], theta0 + sonarangles[i])
+        wall, angle = which_wall(sonarpoints1[i][0], sonarpoints1[i][1], theta0 + sonarangles[i])
         if angle > angle_threshold:
             continue
-        print "sensor {} -> wall {}".format(i, wall)
+        #print "sensor {} -> wall {}".format(i, wall)
         if wall == None:
-            print i, sonarpoints[i][0], sonarpoints[i][1], theta0
+            #print i, sonarpoints1[i][0], sonarpoints1[i][1], theta0
             continue
         h.append(equations[i][wall])
         z.append(sonars[i])
@@ -101,27 +102,37 @@ def norm(b):
     return b
 
 def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
+
+    #print "mphka"
+
     if vx > 0.1:
         velocity = mean2
         dvelocity = std2
     else:
         velocity = mean0
         dvelocity = std0
+
+    #print "evals"
+
+    #print "lock eval"
     Ak = A.evalf(subs = {x:X[0], y:X[1], v:velocity, theta:X[2], t:dt, w:wz})
+    #print "unlock"
     Cwk = Cw.evalf(subs = {theta:X[2], t:dt, dv:dvelocity})
     newPtemp = Ak * P * Ak.transpose() + Cwk
+
 
     est = Phi.evalf(subs = {x:X[0], y:X[1], v:velocity, theta:X[2], t:dt, w:wz})
 
     est[2] = norm(est[2])
 
-    if abs(est[0]) > 1.89 or abs(est[1]) > 1.89:
+    if abs(est[0]) > 0.6 or abs(est[1]) > 0.6:
         est[0] = prevest[0]
         est[1] = prevest[1]
     prevest = est
 
     h, H, Cv, z = makeh_H_Cv_z(est[0], est[1], est[2], sonars)
 
+    
     if abs(z[-1] - est[2]) > np.pi:
         if z[-1] > est[2]:
             z[-1] -= 2 * np.pi
@@ -129,14 +140,14 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
             est[2] -= 2 * np.pi
             
     newH = H.evalf(subs = {x:est[0], y:est[1], theta:est[2]})
-    #print "newH:\n{}".format(newH)
+    ##print "newH:\n{}".format(newH)
 
     newK = newPtemp * newH.transpose() * (newH * newPtemp * newH.transpose() + Cv).inv()
 
     heval = h.evalf(subs = {x:est[0], y:est[1], theta:est[2]})
-    #print "newK:\n{}\nz:\n{}\nh:\n{}\n, newK*:\n{}".format(newK, z, heval, newK*(z-heval))
+    ##print "newK:\n{}\nz:\n{}\nh:\n{}\n, newK*:\n{}".format(newK, z, heval, newK*(z-heval))
 
-    print "z: {}\n heval: {}".format(z[:-1], heval[:-1]) 
+    #print "z: {}\n heval: {}".format(z[:-1], heval[:-1]) 
 
     newX = est + newK * (z - heval)
     
@@ -151,11 +162,11 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
 if __name__ == "__main__":
     """for i in range(5):
         for j in range(4):
-            print "def wall{}{}(x, y, theta):".format(i,j)
-            print '\treturn ({}, ['.format(str(equations[i][j]).replace("sin", "np.sin").replace("cos", "np.cos")),
+            #print "def wall{}{}(x, y, theta):".format(i,j)
+            #print '\treturn ({}, ['.format(str(equations[i][j]).replace("sin", "np.sin").replace("cos", "np.cos")),
             for k in [x,y,v,theta]:
-                print str(sympy.simplify(sympy.diff(equations[i][j], k))).replace("sin", "np.sin").replace("cos", "np.cos") + [",",""][k==theta],
-            print '])\n\n'"""
-    #sympy.pprint(gw * gw.transpose())
-    #print (gw*gw.transpose())
-    print sympy.latex(Cw)
+                #print str(sympy.simplify(sympy.diff(equations[i][j], k))).replace("sin", "np.sin").replace("cos", "np.cos") + [",",""][k==theta],
+            #print '])\n\n'"""
+    #sympy.p#print(gw * gw.transpose())
+    ##print (gw*gw.transpose())
+    #print sympy.latex(Cw)
