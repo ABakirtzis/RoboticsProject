@@ -25,7 +25,8 @@ Cw = Matrix([[dv**2*t**2*sympy.cos(theta)**2, dv**2*t**2*sympy.sin(theta)*sympy.
 
 walls = [[1, 0, -0.75], [0, 1, -0.75], [1, 0, 0.75], [0, 1, 0.75]]
 sonarangles = [-np.pi/2, -np.pi/3, 0, np.pi/3, np.pi/2]
-sonarpoints = [(1.2, -3.5), (11.85, -2.25), (12.8, 0), (11.85, 2.25), (1.2, 3.5)]
+sonarpoints = [(1.2, -3.5), (11.85, -2.25), (12.8, 0), (11.85, 2.25), (1.2, 3.5)] # in cm
+sonarpoints = [(i * 0.01, j * 0.01) for i,j in sonarpoints] #in m
 
 equations = [[(0.75 - x - sonarpoints[i][0] * sympy.cos(theta)) / sympy.cos(theta + sonarangles[i]),
               (0.75 - y - sonarpoints[i][1] * sympy.sin(theta)) / sympy.sin(theta + sonarangles[i]),
@@ -68,7 +69,7 @@ def which_wall(x0, y0, theta0):
 def makeh_H_Cv_z(x0, y0, theta0, sonars):
     theta0 = float(theta0)
     sonarangles = [-np.pi/2, -np.pi/3, 0, np.pi/3, np.pi/2]
-    sonarpoints1 = [(x0 + i * 0.01 * np.cos(theta0), y0 + j * 0.01 * np.sin(theta0)) for i,j in sonarpoints]
+    sonarpoints1 = [(x0 + i * np.cos(theta0), y0 + j * np.sin(theta0)) for i,j in sonarpoints]
     h = []
     z = []
     for i in range(5):
