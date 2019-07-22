@@ -17,11 +17,14 @@ for f in ['xy']:
         else:
                 x2 = x
                 y2 = y
-	plt.plot(x,y)
-#plt.xlim(-0.75, 0.75)
-#plt.ylim(-0.75, 0.75)
+	plt.plot(x,y,'o')
+plt.xlim(-0.75, 0.75)
+plt.ylim(-0.75, 0.75)
 plt.xlabel(xlabels[titlos])
 plt.ylabel(ylabels[titlos])
 plt.title(titloi[titlos])
 titlos+=1
+plt.show()
+z = [float(i.strip()) * 180 / np.pi for i in open("angle", 'r').read().split('\n')[:-1]]
+plt.plot(z)
 plt.show()

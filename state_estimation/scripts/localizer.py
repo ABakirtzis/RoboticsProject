@@ -62,13 +62,14 @@ start_angle = 0
 last10 = []
 accels = []
 fhandle = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/xy", 'w')
-
+fhandle1 = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/angle", 'w')
 
 def send_velocity():
     global X, P, imuLinAccX, last10, prevOdomV, odomA, prevV, prevAcc, accErr, prevtimestamp, AA, prevprevV, accels, givenvel, prevX, timestamp
     #print "mphka"
-    if time.time() - startingtime > 60:
+    if time.time() - startingtime > 65:
         fhandle.close()
+        fhandle1.close()
     if givenvel > 0.1:
         velocity = mean2
     else:
@@ -100,6 +101,7 @@ def send_velocity():
     #print "kalman update"
     
     fhandle.write("{};{}\n".format(X[0], X[1]))
+    fhandle1.write("{}\n".format(X[2]))
 
     #print "write to file"
 
@@ -207,3 +209,4 @@ if __name__ == '__main__':
     except rospy.ROSInterruptException:
         print "Done"
         fhandle.close()
+        fhandle1.close()

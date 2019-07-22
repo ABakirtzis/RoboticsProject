@@ -89,16 +89,16 @@ int main(int argc, char **argv)
   */
   int phase = 1;
   float linX_move = 0.2;
-  float angZ_move = 3;
+  float angZ_move = 2.5;
   float linX = 0.0;
   float angZ = 0.0;
-  double fsfw = 0.35; // front sonar's threshold under which the linear motion is stopped (3.5cm from front sonar, but 3cm from chassis)
-  double flsfw = 0.25; // front-left sonar's threshold under which the linear motion is stopped (2.5cm from front sonar, but 2cm from chassis)
-  double frsfw = 0.25; // front-right sonar's threshold under which the linear motion is stopped (2.5cm from front sonar, but 2cm from chassis)
+  double fsfw = 0.2; // front sonar's threshold under which the linear motion is stopped (3.5cm from front sonar, but 3cm from chassis)
+  double flsfw = 0.15; // front-left sonar's threshold under which the linear motion is stopped (2.5cm from front sonar, but 2cm from chassis)
+  double frsfw = 0.15; // front-right sonar's threshold under which the linear motion is stopped (.5cm from front sonar, but 2cm from chassis)
   double counter = 0;
   double timeTarget = 0;
   double counterTotal = 0;
-  double timeTotalSim = 3*60;
+  double timeTotalSim = 13;
 
   sonarF_val = 1000;
   sonarFL_val = 1000;

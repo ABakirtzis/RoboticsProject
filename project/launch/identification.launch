@@ -2,6 +2,10 @@
 
 <launch>
 
+  <!-- IMU -->
+  <node pkg="imu" type="imu.py" name="imu">
+  </node>
+  
   <!-- MOTORS -->
 
   <arg name="test_mode" default="False"/>
@@ -11,9 +15,9 @@
     <param name="param_path" value="$(find dc_motor_driver)/params/motor_params.yaml"/>
   </node>
 
-  <!-- Follower -->
+  <!-- Test -->
 
-  <node pkg="project" type="walker.py" name="iden" output = "screen">  
+  <node pkg="project" type="angwalker.py" name="iden" output = "screen">  
   </node>
 
 </launch>

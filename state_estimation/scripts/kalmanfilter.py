@@ -4,6 +4,8 @@ import sympy
 from sympy.matrices import *
 import numpy as np
 
+sampleaa = 0
+
 mean2 = 0.148
 mean0 = 0
 std2 = 0.00474
@@ -11,6 +13,7 @@ std0 = 0.001
 prevest = Matrix([0,0,0])
 angle_threshold = 25 * np.pi / 180
 sensorApoklisi = 0.5
+sonar_deviation_threshold = 0.3
 
 [x,y,v,theta,w,t, dv] = sympy.symbol.symbols('x y v theta w t dv')
 
@@ -67,6 +70,7 @@ def which_wall(x0, y0, theta0):
 
 
 def makeh_H_Cv_z(x0, y0, theta0, sonars):
+    heval = []
     theta0 = float(theta0)
     sonarangles = [-np.pi/2, -np.pi/3, 0, np.pi/3, np.pi/2]
     sonarpoints1 = [(x0 + i * np.cos(theta0), y0 + j * np.sin(theta0)) for i,j in sonarpoints]
@@ -74,7 +78,7 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars):
     z = []
     for i in range(5):
     #    #print "Checking sonar " + str(i)
-        if sonars[i] > 1.99:
+        if sonars[i] > 2.3:
     #        #print "Doesn't see"
             continue
         wall, angle = which_wall(sonarpoints1[i][0], sonarpoints1[i][1], theta0 + sonarangles[i])
@@ -84,15 +88,21 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars):
         if wall == None:
             #print i, sonarpoints1[i][0], sonarpoints1[i][1], theta0
             continue
-        h.append(equations[i][wall])
-        z.append(sonars[i])
+        eq = equations[i][wall].evalf(subs = {x: x0, y: y0, theta: theta0})
+        if abs(sonars[i] - eq) < sonar_deviation_threshold:
+            h.append(equations[i][wall])
+            z.append(sonars[i])
+            heval.append(eq)
+            #print "sensor {} -> wall {}".format(i, wall)
     h.append(theta)
+    heval.append(theta0)
     h = Matrix(h)
     z.append(sonars[-1])
     z = Matrix(z)
+    heval = Matrix(heval)
     Cv = eye(len(h)) * 0.03 ** 2
     Cv[-1,-1] = 0.0043** 2
-    return (h, h.jacobian([x,y,theta]), Cv, z)
+    return (heval, h.jacobian([x,y,theta]), Cv, z)
 
 
 def norm(b):
@@ -103,6 +113,7 @@ def norm(b):
     return b
 
 def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
+    global prevest, sampleaa
 
     #print "mphka"
 
@@ -131,7 +142,7 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
         est[1] = prevest[1]
     prevest = est
 
-    h, H, Cv, z = makeh_H_Cv_z(est[0], est[1], est[2], sonars)
+    heval, H, Cv, z = makeh_H_Cv_z(est[0], est[1], est[2], sonars)
 
     
     if abs(z[-1] - est[2]) > np.pi:
@@ -145,14 +156,15 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
 
     newK = newPtemp * newH.transpose() * (newH * newPtemp * newH.transpose() + Cv).inv()
 
-    heval = h.evalf(subs = {x:est[0], y:est[1], theta:est[2]})
     ##print "newK:\n{}\nz:\n{}\nh:\n{}\n, newK*:\n{}".format(newK, z, heval, newK*(z-heval))
 
     #print "z: {}\n heval: {}".format(z[:-1], heval[:-1]) 
-
+    
     newX = est + newK * (z - heval)
     
     newX[2] = norm(newX[2])
+    print "sample: {}, x: {}, y: {}, a: {}".format(sampleaa, newX[0], newX[1], newX[2] * 180 / np.pi)
+    sampleaa += 1
 
     newP = (eye(3) - newK * newH) * newPtemp
 

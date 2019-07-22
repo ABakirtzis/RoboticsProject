@@ -7,11 +7,12 @@ from __future__ import division
 import smbus
 import time
 import numpy as np
-from math import pi, atan2
+from math import pi, atan2, cos, sin
 
 # Get I2C bus
 bus = smbus.SMBus(1)
 offset = 0
+#fhandle = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/xy_cal", 'w')
 
 def norm(b):
     if b > np.pi:
@@ -119,10 +120,20 @@ def read_data():
     if zMag > 32767 :
 	zMag -= 65536
 
-    return (xAccl * 2 * 9.81 / 32767, yAccl * 2 * 9.81 / 32767, zAccl * 2 * 9.81 / 32767, xMag * 180 / pi, yMag * 180 / pi, norm(atan2(-xMag,-yMag) - offset))
+    #fhandle.write("{};{}\n".format(xMag, yMag))
+
+    xMag -= 54.4
+    yMag -= -196.5
+    yaw = atan2(yMag, xMag)
+    print yMag, xMag, atan2(yMag, xMag), offset, norm(yaw)
+    return (xAccl * 2 * 9.81 / 32767, yAccl * 2 * 9.81 / 32767, zAccl * 2 * 9.81 / 32767, xMag * 180 / pi, yMag * 180 / pi, -norm(yaw + offset))
 
 if __name__ == "__main__":
     init_acc_mag()
-    while True:
-        print read_data()[5]
-        time.sleep(0.5)
+    try:
+        while True:
+            print read_data()[5]
+            time.sleep(0.5)
+    except:
+        pass
+        #fhandle.close()

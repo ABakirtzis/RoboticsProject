@@ -49,7 +49,7 @@
 
   <!-- Follower -->
 
-  <node pkg="project" type="rosfollower.py" name="wall_follower" output = "screen">  
+  <node pkg="wall_following" type="rosfollower.py" name="wall_follower" output = "screen">  
   </node>
 
 </launch>
