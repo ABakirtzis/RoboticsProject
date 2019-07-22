@@ -165,8 +165,10 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
     ##print "newK:\n{}\nz:\n{}\nh:\n{}\n, newK*:\n{}".format(newK, z, heval, newK*(z-heval))
 
     #print "z: {}\n heval: {}".format(z[:-1], heval[:-1]) 
-    
-    newX = est + newK * (z - heval)
+
+    zheval = z - heval
+    zheval[-1] = norm(zheval[-1])
+    newX = est + newK * (zheval)
 
     print "heval: {}, z: {}".format(heval, z)
     
