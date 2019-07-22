@@ -36,6 +36,8 @@ equations = [[(0.75 - x - sonarpoints[i][0] * sympy.cos(theta)) / sympy.cos(thet
               (0.75 + x + sonarpoints[i][0] * sympy.cos(theta)) / sympy.cos(theta + sonarangles[i]),
               (0.75 + y + sonarpoints[i][1] * sympy.sin(theta)) / sympy.sin(theta + sonarangles[i])] for i in range(5)]
 
+Hequations = [[[sympy.diff(i, x), sympy.diff(i, y), sympy.diff(i, theta)] for i in j] for j in equations]
+
 
 def line(x0, y0, theta0):
     return [-np.sin(theta0), np.cos(theta0), -np.cos(theta0) * y0 + np.sin(theta0) * x0]
@@ -70,12 +72,13 @@ def which_wall(x0, y0, theta0):
 
 
 def makeh_H_Cv_z(x0, y0, theta0, sonars):
-    heval = []
     theta0 = float(theta0)
     sonarangles = [-np.pi/2, -np.pi/3, 0, np.pi/3, np.pi/2]
     sonarpoints1 = [(x0 + i * np.cos(theta0), y0 + j * np.sin(theta0)) for i,j in sonarpoints]
     h = []
     z = []
+    H = []
+    heval = []
     for i in range(5):
     #    #print "Checking sonar " + str(i)
         if sonars[i] > 2.3:
@@ -93,6 +96,7 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars):
             h.append(equations[i][wall])
             z.append(sonars[i])
             heval.append(eq)
+            H.append(Hequations[i][wall])
             #print "sensor {} -> wall {}".format(i, wall)
     h.append(theta)
     heval.append(theta0)
@@ -100,9 +104,11 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars):
     z.append(sonars[-1])
     z = Matrix(z)
     heval = Matrix(heval)
+    H.append([0, 0, 1])
+    H = Matrix(H)
     Cv = eye(len(h)) * 0.03 ** 2
     Cv[-1,-1] = 0.0043** 2
-    return (heval, h.jacobian([x,y,theta]), Cv, z)
+    return (heval, H, Cv, z)
 
 
 def norm(b):
@@ -163,7 +169,7 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
     newX = est + newK * (z - heval)
     
     newX[2] = norm(newX[2])
-    print "sample: {}, x: {}, y: {}, a: {}".format(sampleaa, newX[0], newX[1], newX[2] * 180 / np.pi)
+    print "sample: {}, x: {}, y: {}, a: {}, w: {}".format(sampleaa, newX[0], newX[1], newX[2] * 180 / np.pi, wz)
     sampleaa += 1
 
     newP = (eye(3) - newK * newH) * newPtemp
