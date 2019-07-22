@@ -167,6 +167,8 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
     #print "z: {}\n heval: {}".format(z[:-1], heval[:-1]) 
     
     newX = est + newK * (z - heval)
+
+    print "heval: {}, z: {}".format(heval, z)
     
     newX[2] = norm(newX[2])
     print "sample: {}, x: {}, y: {}, a: {}, w: {}".format(sampleaa, newX[0], newX[1], newX[2] * 180 / np.pi, wz)

@@ -98,7 +98,7 @@ int main(int argc, char **argv)
   double counter = 0;
   double timeTarget = 0;
   double counterTotal = 0;
-  double timeTotalSim = 13;
+  double timeTotalSim = 30;
 
   sonarF_val = 1000;
   sonarFL_val = 1000;
