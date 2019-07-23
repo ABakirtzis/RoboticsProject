@@ -11,6 +11,14 @@ x, y, theta = sympy.symbols('x y theta')
 #sonarpoints
 #sonarangles
 
+angle_threshold = 25 * np.pi / 180
+sonar_deviation_threshold = 0.3
+walls = [[1, 0, -0.75], [0, 1, -0.75], [1, 0, 0.75], [0, 1, 0.75]]
+wallpoints = [[(0.75, -0.75), (0.75, 0.75)], [(0.75, 0.75), (-0.75, 0.75)], [(-0.75, 0.75), (-0.75, -0.75)], [(-0.75, -0.75), (0.75, -0.75)]]
+sonarangles = [-np.pi/2, -np.pi/3, 0, np.pi/3, np.pi/2]
+sonarpoints = [(1.2, -3.5), (11.85, -2.25), (12.8, 0), (11.85, 2.25), (1.2, 3.5)] # in cm
+sonarpoints = [(i * 0.01, j * 0.01) for i,j in sonarpoints] #in m
+
 
 #general line math
 
@@ -58,7 +66,7 @@ def intersection(l11, l22):
 
 
 def valid_intersection(x0, y0, theta0, i, wall_limits):
-    return min(wall_limits[0][0]) <= i[0] <= max(wall_limits[1][0]) and min(wall_limits[0][1]) <= i[1] <= max(wall_limits[1][1]) and (i[0] - x0) * np.cos(theta0) >= 0 and (i[1] - y0) * np.sin(theta0) >= 0
+    return min(wall_limits[0][0], wall_limits[1][0]) <= i[0] <= max(wall_limits[0][0], wall_limits[1][0]) and min(wall_limits[0][1], wall_limits[1][1]) <= i[1] <= max(wall_limits[0][1], wall_limits[1][1]) and (i[0] - x0) * np.cos(theta0) >= 0 and (i[1] - y0) * np.sin(theta0) >= 0
 
 
 def perpendicular_line_from_point(l, p):
@@ -104,16 +112,16 @@ def wall_equation(sonar_point, sonar_angle, wall):
     p, l = sonar_pos_line(sonar_point, sonar_angle)
     c = line_angle_sin(l, wall)
     d = line_point_dist(wall, p)
-    return sympy.simplify(d/c)
+    return sympy.trigsimp(d/c)
 
 
 def make_equations(sonar_points, sonar_angles, walls):
-    equations = [[wall_equation(sonar_points[j], sonar_angles[j], walls[i]) for i in walls] for j in range(len(sonar_points))]
-    Hequations = [[[sympy.diff(i, k) for k in (x, y, theta)] for i in j] for j in equations]
+    equations = [[wall_equation(sonar_points[j], sonar_angles[j], i) for i in walls] for j in range(len(sonar_points))]
+    Hequations = [[[sympy.trigsimp(sympy.diff(i, k)) for k in (x, y, theta)] for i in j] for j in equations]
     return equations, Hequations
 
 
-def which_wall(x0, y0, theta0, walls):
+def which_wall(x0, y0, theta0, walls, wall_limits, equations, Hequations):
     x0,y0,theta0 = float(x0),float(y0),float(theta0)
     myline = line(x0, y0, theta0)
     inter = None
@@ -121,7 +129,7 @@ def which_wall(x0, y0, theta0, walls):
     dist = None
     for i in range(len(walls)):
         p = intersection(myline, walls[i])
-        if valid_intersection(x0, y0, theta0, p):
+        if valid_intersection(x0, y0, theta0, p, wall_limits[i]):
             tempdist = point_point_dist(p, (x0, y0))
             if inter == None:
                 inter = i
@@ -136,16 +144,17 @@ def which_wall(x0, y0, theta0, walls):
                 angle = np.arccos(float(d)/float(tempdist))
     return inter, angle
 
-def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, equations, Hequations):
+def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, wall_limits, equations, Hequations):
     theta0 = float(theta0)
     h = []
     z = []
     H = []
     heval = []
     for i in range(5):
+        print "in for: ", i
         if sonars[i] > 2.3:
             continue
-        wall, angle = which_wall(sonarpoints[i][0], sonarpoints[i][1], theta0 + sonarangles[i], walls)
+        wall, angle = which_wall(sonarpoints[i][0], sonarpoints[i][1], theta0 + sonarangles[i], walls, wall_limits, equations, Hequations)
         if angle > angle_threshold:
             continue
         if wall == None:
@@ -156,6 +165,7 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, equati
             z.append(sonars[i])
             heval.append(eq)
             H.append(Hequations[i][wall])
+    print "out of for"
     h.append(theta)
     heval.append(theta0)
     h = Matrix(h)
@@ -166,17 +176,13 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, equati
     H = Matrix(H)
     Cv = eye(len(h)) * 0.03 ** 2
     Cv[-1,-1] = 0.0043** 2
+    print "gamo tin panagia"
     return (heval, H, Cv, z)
 
 
 if __name__ == "__main__":
-    walls = [[1, 0, -0.75], [0, 1, -0.75], [1, 0, 0.75], [0, 1, 0.75]]
-    sonarangles = [-np.pi/2, -np.pi/3, 0, np.pi/3, np.pi/2]
-    sonarpoints = [(1.2, -3.5), (11.85, -2.25), (12.8, 0), (11.85, 2.25), (1.2, 3.5)] # in cm
-    sonarpoints = [(i * 0.01, j * 0.01) for i,j in sonarpoints] #in m
-    eq = wall_equation(sonarpoints[0], sonarangles[0], walls[0])
-    eq2 = (0.75 - x - sonarpoints[0][0] * sympy.cos(theta)) / sympy.cos(theta + sonarangles[0])
-    for x1 in range(10):
-        for y1 in range(10):
-            for theta1 in range(30, 90, 5):
-                print eq.evalf(subs = {x: x1 * 0.46 - 2.3, y: y1 * 0.46 - 2.3, theta: theta1 * sympy.pi / 180}) - eq2.evalf(subs = {x: x1 * 0.46 - 2.3, y: y1 * 0.46 - 2.3, theta: theta1 * sympy.pi / 180})
+    equations, Hequations = make_equations(sonarpoints, sonarangles, walls)
+    with file("equations", 'w') as fhandle:
+        pickle.dump(equations, fhandle)
+    with file("Hequations", 'w') as fhandle:
+        pickle.dump(Hequations, fhandle)

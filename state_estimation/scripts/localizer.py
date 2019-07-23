@@ -6,7 +6,7 @@ from sensor_msgs.msg import Range
 from sensor_msgs.msg import Imu
 from nav_msgs.msg import Odometry
 from tf.transformations import euler_from_quaternion, quaternion_from_euler
-import kalmanfilter
+import general_kalmanfilter as kalmanfilter
 import numpy as np
 from sympy.matrices import *
 import time
@@ -66,7 +66,7 @@ fhandle1 = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/angle", 'w'
 
 def send_velocity():
     global X, P, imuLinAccX, last10, prevOdomV, odomA, prevV, prevAcc, accErr, prevtimestamp, AA, prevprevV, accels, givenvel, prevX, timestamp
-    #print "mphka"
+    print "mdfphka"
     if time.time() - startingtime > 65:
         fhandle.close()
         fhandle1.close()

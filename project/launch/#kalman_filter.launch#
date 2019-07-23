@@ -1,5 +1,3 @@
-<?xml version="1.0"?>
-
 <launch>
 
   <!-- IMU -->
@@ -54,7 +52,7 @@
 
     <!-- Random Walker -->
 
-  <node pkg="timed_roslaunch" type="timed_roslaunch.sh" name="timed_roslaunch" args="35 random_walk random_walk.launch">  
+  <node pkg="timed_roslaunch" type="timed_roslaunch.sh" name="timed_roslaunch" args="25 random_walk random_walk.launch">  
   </node>
 
 </launch>
