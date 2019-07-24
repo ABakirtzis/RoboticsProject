@@ -1,7 +1,7 @@
-from __future__ import division
 import sympy
 from sympy.matrices import *
 import numpy as np
+import pickle
 
 
 x, y, theta = sympy.symbols('x y theta')
@@ -20,14 +20,21 @@ sonarpoints = [(1.2, -3.5), (11.85, -2.25), (12.8, 0), (11.85, 2.25), (1.2, 3.5)
 sonarpoints = [(i * 0.01, j * 0.01) for i,j in sonarpoints] #in m
 
 
+def line_from_points(p1, p2):
+    return [p2[1] - p1[1], p1[0] - p2[0], (p2[0] - p1[0]) * p1[1] + (p1[1] - p2[1]) * p1[0]]
+
+
+walls_obst = [[1, 0, -0.75], [0, 1, -0.75], [1, 0, 0.75], [0, 1, 0.75], line_from_points((0.15, -0.15), (0.30, -0.15)), line_from_points((0.15, -0.15), (0.15, -0.30)), line_from_points((0.15, -0.30), (0.30, -0.30)), line_from_points((0.30, -0.30), (0.30, -0.15))]
+
+
+wall_points = [[(0.75, -0.75), (0.75, 0.75)], [(0.75, 0.75), (-0.75, 0.75)], [(-0.75, 0.75), (-0.75, -0.75)], [(-0.75, -0.75), (0.75, -0.75)], [(0.15, -0.15), (0.30, -0.15)], [(0.15, -0.15), (0.15, -0.30)], [(0.15, -0.30), (0.30, -0.30)], [(0.30, -0.30), (0.30, -0.15)]]
+
 #general line math
 
 def line(x0, y0, theta0):
     return [-sympy.sin(theta0), sympy.cos(theta0), -sympy.cos(theta0) * y0 + sympy.sin(theta0) * x0]
 
 
-def line_from_points(p1, p2):
-    return (p2[1] - p1[1], p1[0] - p2[0], (p2[0] - p1[0]) * p1[1] + (p1[1] - p2[1]) * p1[0])
 
 
 def line_point_dist(l, p):
@@ -112,12 +119,21 @@ def wall_equation(sonar_point, sonar_angle, wall):
     p, l = sonar_pos_line(sonar_point, sonar_angle)
     c = line_angle_sin(l, wall)
     d = line_point_dist(wall, p)
-    return sympy.trigsimp(d/c)
+    return d/c
+
+counter = 0
+
+def mytrigsimp(a):
+    global counter
+    counter += 1
+
+    print("O dionishs einai malakas {}".format(counter))
+    return sympy.trigsimp(a)
 
 
 def make_equations(sonar_points, sonar_angles, walls):
     equations = [[wall_equation(sonar_points[j], sonar_angles[j], i) for i in walls] for j in range(len(sonar_points))]
-    Hequations = [[[sympy.trigsimp(sympy.diff(i, k)) for k in (x, y, theta)] for i in j] for j in equations]
+    Hequations = [[[mytrigsimp(sympy.diff(sympy.simplify(i), k)) for k in (x, y, theta)] for i in j] for j in equations]
     return equations, Hequations
 
 
@@ -151,7 +167,7 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, wall_l
     H = []
     heval = []
     for i in range(5):
-        print "in for: ", i
+      
         if sonars[i] > 2.3:
             continue
         wall, angle = which_wall(sonarpoints[i][0], sonarpoints[i][1], theta0 + sonarangles[i], walls, wall_limits, equations, Hequations)
@@ -165,7 +181,6 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, wall_l
             z.append(sonars[i])
             heval.append(eq)
             H.append(Hequations[i][wall])
-    print "out of for"
     h.append(theta)
     heval.append(theta0)
     h = Matrix(h)
@@ -176,13 +191,12 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, wall_l
     H = Matrix(H)
     Cv = eye(len(h)) * 0.03 ** 2
     Cv[-1,-1] = 0.0043** 2
-    print "gamo tin panagia"
     return (heval, H, Cv, z)
 
 
 if __name__ == "__main__":
     equations, Hequations = make_equations(sonarpoints, sonarangles, walls)
-    with file("equations", 'w') as fhandle:
+    with open("equations_none", 'wb') as fhandle:
         pickle.dump(equations, fhandle)
-    with file("Hequations", 'w') as fhandle:
+    with open("Hequations_none", 'wb') as fhandle:
         pickle.dump(Hequations, fhandle)
