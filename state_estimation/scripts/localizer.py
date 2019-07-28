@@ -10,6 +10,7 @@ import general_kalmanfilter as kalmanfilter
 import numpy as np
 from sympy.matrices import *
 import time
+import math
 
 startingtime = 0
 
@@ -43,8 +44,8 @@ ekf_estimation_msg.child_frame_id = "chassis"
 mean2 = 0.148
 mean0 = 0
 lenAccels = 10
-X = Matrix([0, 0, 0])
-prevX = Matrix([0,0,0,0])
+X = Matrix([0.45, 0.45, -math.pi / 2])
+prevX = Matrix([0.45, 0.45, -math.pi / 2])
 P = zeros(3)
 prevV = 0
 prevprevV = 0
@@ -58,11 +59,12 @@ odomA = 0
 odomVx = 0
 odomVy = 0
 prevOdomV = 0
-start_angle = 0
+start_angle = -math.pi / 2
 last10 = []
 accels = []
 fhandle = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/xy", 'w')
 fhandle1 = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/angle", 'w')
+fhandle2 = file("/home/ubuntu/catkin_ws/src/state_estimation/scripts/dist", "w")
 
 def send_velocity():
     global X, P, imuLinAccX, last10, prevOdomV, odomA, prevV, prevAcc, accErr, prevtimestamp, AA, prevprevV, accels, givenvel, prevX, timestamp
@@ -93,7 +95,7 @@ def send_velocity():
     prevtimestamp = timestamp
     #print "ready for update"
     X, P = kalmanfilter.update(X, P, dt, sonars, givenvel, imuAngVelZ2)
-    if abs(X[0]) > 0.6 or abs(X[1]) > 0.6:
+    if abs(X[0]) > 0.65 or abs(X[1]) > 0.65:
         X[0] = prevX[0]
         X[1] = prevX[1]
     prevX = X
@@ -102,7 +104,7 @@ def send_velocity():
     
     fhandle.write("{};{}\n".format(X[0], X[1]))
     fhandle1.write("{}\n".format(X[2]))
-
+    fhandle2.write("{}\n".format(math.sqrt((X[0]+0.45)**2+(X[1]+0.45)**2)))
     #print "write to file"
 
     """
@@ -118,7 +120,7 @@ def send_velocity():
     quaternion = quaternion_from_euler(estimRoll, estimPitch, estimYaw)
     ekf_estimation_msg.pose.pose.orientation.x = quaternion[0]
     ekf_estimation_msg.pose.pose.orientation.y = quaternion[1]
-    ekf_estimation_msg.pose.pose.orientation.z = quaternion[2]
+    ekf_estimation_msg.pose.pose.orientation.z = estimYaw
     ekf_estimation_msg.pose.pose.orientation.w = quaternion[3]
     # velocities to be estimated
     ekf_estimation_msg.twist.twist.linear.x = velocity * np.cos(float(X[2])) # x-linear velocity to be estimated

@@ -4,7 +4,7 @@ import numpy as np
 import pickle
 
 
-x, y, theta = sympy.symbols('x y theta')
+x, y, theta = sympy.symbols('x y theta', real=True)
 #needed variables:
 #walls
 #wallpoints
@@ -123,28 +123,20 @@ def wall_equation(sonar_point, sonar_angle, wall):
 
 counter = 0
 
-<<<<<<< HEAD
-def mysimple(a):
-    global counter
-    counter += 1
-    print(counter)
-=======
+
 def mytrigsimp(a):
     global counter
     counter += 1
 
     print("O dionishs einai malakas {}".format(counter))
->>>>>>> 88442faaa354a4329bee8a1e2dceedaf359c66e4
-    return sympy.trigsimp(a)
+    return sympy.simplify(a)
 
 
 def make_equations(sonar_points, sonar_angles, walls):
-    equations = [[wall_equation(sonar_points[j], sonar_angles[j], i) for i in walls] for j in range(len(sonar_points))]
-<<<<<<< HEAD
-    Hequations = [[[mysimple(sympy.diff(sympy.simplify(i), k)) for k in (x, y, theta)] for i in j] for j in equations]
-=======
-    Hequations = [[[mytrigsimp(sympy.diff(sympy.simplify(i), k)) for k in (x, y, theta)] for i in j] for j in equations]
->>>>>>> 88442faaa354a4329bee8a1e2dceedaf359c66e4
+    equations = [[sympy.simplify(wall_equation(sonar_points[j], sonar_angles[j], i)) for i in walls] for j in range(len(sonar_points))]
+    print(equations)
+    Hequations = [[[mytrigsimp(sympy.diff(i, k)) for k in (x, y, theta)] for i in j] for j in equations]
+    print(Hequations)
     return equations, Hequations
 
 
@@ -171,7 +163,7 @@ def which_wall(x0, y0, theta0, walls, wall_limits, equations, Hequations):
                 angle = np.arccos(float(d)/float(tempdist))
     return inter, angle
 
-def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, wall_limits, equations, Hequations):
+def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, wall_limits, equations, Hequations, equations_lambd, Hequations_lambd):
     theta0 = float(theta0)
     h = []
     z = []
@@ -191,7 +183,8 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, wall_l
             h.append(equations[i][wall])
             z.append(sonars[i])
             heval.append(eq)
-            H.append(Hequations[i][wall])
+            H.append(Hequations_lambd[i][wall])
+            
     h.append(theta)
     heval.append(theta0)
     h = Matrix(h)
@@ -199,15 +192,15 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, wall_l
     z = Matrix(z)
     heval = Matrix(heval)
     H.append([0, 0, 1])
-    H = Matrix(H)
+    #H = Matrix(H)
     Cv = eye(len(h)) * 0.03 ** 2
     Cv[-1,-1] = 0.0043** 2
     return (heval, H, Cv, z)
 
 
 if __name__ == "__main__":
-    equations, Hequations = make_equations(sonarpoints, sonarangles, walls)
-    with open("equations_none", 'wb') as fhandle:
+    equations, Hequations = make_equations(sonarpoints, sonarangles, walls_obst)
+    with file("equations", 'w') as fhandle:
         pickle.dump(equations, fhandle)
-    with open("Hequations_none", 'wb') as fhandle:
+    with file("Hequations", 'w') as fhandle:
         pickle.dump(Hequations, fhandle)

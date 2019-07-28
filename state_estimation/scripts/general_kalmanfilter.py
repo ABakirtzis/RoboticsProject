@@ -4,6 +4,9 @@ import sympy
 from sympy.matrices import *
 import numpy as np
 import linemath
+import pickle
+from sympy import *
+from math import *
 
 sampleaa = 0
 
@@ -11,7 +14,7 @@ mean2 = 0.148
 mean0 = 0
 std2 = 0.00474
 std0 = 0.001
-prevest = Matrix([0,0,0])
+prevest = Matrix([0.45,0.45,-np.pi / 2])
 angle_threshold = 25 * np.pi / 180
 sensorApoklisi = 0.5
 sonar_deviation_threshold = 0.3
@@ -29,10 +32,15 @@ Cw = Matrix([[dv**2*t**2*sympy.cos(theta)**2, dv**2*t**2*sympy.sin(theta)*sympy.
 
 
 walls = [[1, 0, -0.75], [0, 1, -0.75], [1, 0, 0.75], [0, 1, 0.75]]
+
 wallpoints = [[(0.75, -0.75), (0.75, 0.75)], [(0.75, 0.75), (-0.75, 0.75)], [(-0.75, 0.75), (-0.75, -0.75)], [(-0.75, -0.75), (0.75, -0.75)]]
 sonarangles = [-np.pi/2, -np.pi/3, 0, np.pi/3, np.pi/2]
 sonarpoints = [(1.2, -3.5), (11.85, -2.25), (12.8, 0), (11.85, 2.25), (1.2, 3.5)] # in cm
 sonarpoints = [(i * 0.01, j * 0.01) for i,j in sonarpoints] #in m
+
+walls1 = [[1, 0, -0.75], [0, 1, -0.75], [1, 0, 0.75], [0, 1, 0.75], linemath.line_from_points((0.15, -0.15), (0.30, -0.15)), linemath.line_from_points((0.15, -0.15), (0.15, -0.30)), linemath.line_from_points((0.15, -0.30), (0.30, -0.30)), linemath.line_from_points((0.30, -0.30), (0.30, -0.15))]
+
+wallpoints1 = [[(0.75, -0.75), (0.75, 0.75)], [(0.75, 0.75), (-0.75, 0.75)], [(-0.75, 0.75), (-0.75, -0.75)], [(-0.75, -0.75), (0.75, -0.75)], [(0.15, -0.15), (0.30, -0.15)], [(0.15, -0.15), (0.15, -0.30)], [(0.15, -0.30), (0.30, -0.30)], [(0.30, -0.30), (0.30, -0.15)]]
 
 #loading equations
 with open('/home/ubuntu/catkin_ws/src/state_estimation/scripts/equations', 'r') as fhandle:
@@ -41,7 +49,18 @@ with open('/home/ubuntu/catkin_ws/src/state_estimation/scripts/Hequations', 'r')
     Hequations = pickle.load(fhandle)
 #loading equations
 
-print "ekei"
+
+equations_lambd = sympy.lambdify([x,y,theta], equations)
+
+Hequations_lambd = []
+for sonar_ind in range(0, 5):
+    Hequations_lambd_temp = []
+    for wall_ind in range(0, 8):
+        Hequations_lambd_temp.append(sympy.lambdify([x,y,theta], Hequations[sonar_ind][wall_ind]))
+    Hequations_lambd.append(Hequations_lambd_temp)
+
+print "{} {}".format(len(Hequations_lambd),len(Hequations_lambd[0]))
+
 def line(x0, y0, theta0):
     return [-np.sin(theta0), np.cos(theta0), -np.cos(theta0) * y0 + np.sin(theta0) * x0]
 
@@ -90,8 +109,7 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
         est[0] = prevest[0]
         est[1] = prevest[1]
     prevest = est
-    print "gamithike"
-    heval, H, Cv, z = linemath.makeh_H_Cv_z(est[0], est[1], est[2], sonars, sonarangles, sonarpoints, walls, wallpoints, equations, Hequations)
+    heval, H, Cv, z = linemath.makeh_H_Cv_z(est[0], est[1], est[2], sonars, sonarangles, sonarpoints, walls, wallpoints, equations, Hequations, equations_lambd, Hequations_lambd)
 
     
     if abs(z[-1] - est[2]) > np.pi:
@@ -99,25 +117,51 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
             z[-1] -= 2 * np.pi
         else:
             est[2] -= 2 * np.pi
-    print "gamietai"
+    #print "gamietai"
+
+    #F = sympy.lambdify([x,y,theta], H, modules=['sympy', 'math',{'Derivative': sympy.Derivative}])
+    
+    newH = []
+    for sonars_indx in range(len(H)-1):
+        newH.append(H[sonars_indx](float(est[0]), float(est[1]), float(est[2])))
+
+    newH.append(H[-1])
+    newH = Matrix(newH)
+        
             
-    newH = H.evalf(subs = {x:est[0], y:est[1], theta:est[2]})
+    #newH = H.subs({x:float(est[0]), y:float(est[1]), theta:float(est[2])}).doit().evalf()
+    #print est
+    #print type(float(est[2]))
+
+    
+    print  H
+
+
+    
     ##print "newH:\n{}".format(newH)
-    print "gamietai pio poli"
-    sympy.pprint(H)
-    newK = newPtemp * newH.transpose() * (newH * newPtemp * newH.transpose() + Cv).inv()
-    print "giati einai toso argo"
+    #print "gamietai pio poli"
+    newK_1 = newPtemp * newH.transpose()
+    #print "gamietai pio poli 1"
+
+
+    newK_2 = (newH * newPtemp * newH.transpose() + Cv).inv()
+    #print "gamietai pio poli inv"
+    newK = newK_1 * newK_2
+    #print "giati einai toso argo"
     ##print "newK:\n{}\nz:\n{}\nh:\n{}\n, newK*:\n{}".format(newK, z, heval, newK*(z-heval))
 
     #print "z: {}\n heval: {}".format(z[:-1], heval[:-1]) 
 
+    
     zheval = z - heval
     zheval[-1] = norm(zheval[-1])
     newX = est + newK * (zheval)
 
-    print "heval: {}, z: {}".format(heval, z)
-    
+    #print "heval: {}, z: {}".format(heval, z)
+    #print "estimation : {} {}".format(newX, type(newX))
+    newX = np.array(newX).astype(np.float64)
     newX[2] = norm(newX[2])
+    newX = sympy.Matrix(newX)
     print "sample: {}, x: {}, y: {}, a: {}, w: {}".format(sampleaa, newX[0], newX[1], newX[2] * 180 / np.pi, wz)
     sampleaa += 1
 

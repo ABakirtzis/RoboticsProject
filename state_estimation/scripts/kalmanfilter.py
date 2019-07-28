@@ -3,14 +3,14 @@ import re
 import sympy
 from sympy.matrices import *
 import numpy as np
-
+import math
 sampleaa = 0
 
 mean2 = 0.148
 mean0 = 0
 std2 = 0.00474
 std0 = 0.001
-prevest = Matrix([0,0,0])
+prevest = Matrix([0.45,0.45, -math.pi / 2])
 angle_threshold = 25 * np.pi / 180
 sensorApoklisi = 0.5
 sonar_deviation_threshold = 0.3
@@ -37,6 +37,7 @@ equations = [[(0.75 - x - sonarpoints[i][0] * sympy.cos(theta)) / sympy.cos(thet
               (0.75 + y + sonarpoints[i][1] * sympy.sin(theta)) / sympy.sin(theta + sonarangles[i])] for i in range(5)]
 
 Hequations = [[[sympy.diff(i, x), sympy.diff(i, y), sympy.diff(i, theta)] for i in j] for j in equations]
+
 
 
 def line(x0, y0, theta0):
