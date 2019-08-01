@@ -80,32 +80,22 @@ def send_velocity():
     imuAngVelZ2 = imuAngVelZ
     sonars = [sonarR_val, sonarFR_val, sonarF_val, sonarFL_val, sonarL_val, kalmanfilter.norm((imuYaw + start_angle) % (2 * np.pi))]
     ekf_pub = rospy.Publisher('/ekf_estimation', Odometry, queue_size=1)
-    #print "init publisher"
     ekf_estimation_msg.header.seq += 1
     ekf_estimation_msg.header.stamp = rospy.Time.now()
     
-    #print "skata"
-    """
-    PUT YOUR MAIN CODE HERE
-    """
     if timestamp == prevtimestamp:
         return None
-    #print "skata1"
-    dt = timestamp - prevtimestamp
+    dt = timestamp - prevtimestamp #compute dt for the kalman filter
     prevtimestamp = timestamp
-    #print "ready for update"
-    X, P = kalmanfilter.update(X, P, dt, sonars, givenvel, imuAngVelZ2)
-    if abs(X[0]) > 0.65 or abs(X[1]) > 0.65:
+    X, P = kalmanfilter.update(X, P, dt, sonars, givenvel, imuAngVelZ2) # call kalman filter
+    if abs(X[0]) > 0.65 or abs(X[1]) > 0.65: # if the car is outside the walls, then use the previous position
         X[0] = prevX[0]
         X[1] = prevX[1]
     prevX = X
-
-    #print "kalman update"
     
     fhandle.write("{};{}\n".format(X[0], X[1]))
     fhandle1.write("{}\n".format(X[2]))
     fhandle2.write("{}\n".format(math.sqrt((X[0]+0.45)**2+(X[1]+0.45)**2)))
-    #print "write to file"
 
     """
     END
@@ -129,18 +119,8 @@ def send_velocity():
     ekf_estimation_msg.twist.twist.angular.x = 0.0 # always zero value in 2D navigation
     ekf_estimation_msg.twist.twist.angular.y = 0.0 # always zero value in 2D navigation
     ekf_estimation_msg.twist.twist.angular.z = imuAngVelZ # angular velocity to be estimated
-    #rospy.loginfo("Angle %s", estimYaw * 180 / np.pi)
-    """
-    OPTIONAL
-    in case your extended kalman filter (EKF) is able to estimate covariances,
-    fill in the following variables:
-    ekf_estimation_msg.pose.covariance Matrix:6x6
-    ekf_estimation_msg.twist.covariance Matrix:6x6
-    http://docs.ros.org/melodic/api/nav_msgs/html/msg/Odometry.html
-    """
 
     ekf_pub.publish(ekf_estimation_msg)
-    #print "bghka"
 
 def sonarFrontCallback(msg):
     global sonarF_val
@@ -168,7 +148,6 @@ def imuCallback(msg):
     # orientation:: quaternion to RPY (rool, pitch, yaw)
     orientation_q = msg.orientation
     #orientation_list = [orientation_q.x, orientation_q.y, orientation_q.z, orientation_q.w]
-    #(imuRoll, imuPitch, imuYaw) = euler_from_quaternion(orientation_list)
     imuYaw = orientation_q.w
     # angular velocity
     imuAngVelX = msg.angular_velocity.x
@@ -190,7 +169,6 @@ def cmdvelfun(msg):
     givenvel = msg.linear.x
 
 def follower_py():
-    # Starts a new node
     rospy.init_node('localizer_node', anonymous=True)
     rospy.Subscriber("sonar_front", Range, sonarFrontCallback)
     rospy.Subscriber("sonar_front_left", Range, sonarFrontLeftCallback)

@@ -8,12 +8,12 @@ import math
 import pdcon
 import sys
 
-sonarF_val = 3.0;
+sonarF_val = 3.0; #using 3 as inf
 sonarFL_val = 3.0;
 sonarFR_val = 3.0;
 sonarL_val = 3.0;
 sonarR_val = 3.0;
-sonarL = []
+sonarL = [] #lists for smoothing inputs
 sonarFL = []
 sonarF = []
 bound = 0.4
@@ -23,7 +23,6 @@ state = 0
 substate = 0
 state2start = 0
 
-#fhandle = file("/home/ubuntu/catkin_ws/src/project/scripts/raw_data", 'w')
 pd0 = pdcon.pd_controller(setpoint = 0.3, kp = 27, kd = 2.5)
 pd = pdcon.pd_controller(setpoint = 0.2, kp = 27, kd = 2.5)
 def send_velocity():
@@ -38,15 +37,11 @@ def send_velocity():
     velocity_pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
     velocity = Twist()
     ctime = time.time()
-    """
-    PUT YOUR MAIN CODE HERE
-    """
-
     
     velocity.linear.x = 0.0
     velocity.angular.z = 0
 
-    sonarF.append(sonarF_val)
+    sonarF.append(sonarF_val) #smoothing the sonar inputs
     if len(sonarF) > 3:
         sonarF.pop(0)
     sonarFL.append(sonarFL_val)
@@ -59,99 +54,66 @@ def send_velocity():
     sonarFL_val = sum(sonarFL) / len(sonarFL)
     sonarL_val = sum(sonarL) / len(sonarL)
 
-    if sonarF_val < 0.4:
+    if sonarF_val < 0.4: # too close to a wall, start the turning state
 
         state = 2
         state2start = time.time()
 
-        
+
+    #using a state model
+    #state 0: no wall visible, search for a wall moving forward
+    #state 1: almost parallel to a wall, apply a pd controller to remain parallel
+    #state 2: steep turn ahead, turn right
+
     if state == 0:
-        print "state 0"
-     #   fhandle.write("state 0\n")
         velocity.linear.x = 0.18
         velocity.angular.z = -0.3
         if sonarL_val <= see_bound:
-            print "substate 0"
-      #      fhandle.write("substate 0\n")
             state = 1
             velocity.angular.z = 0
-       #     fhandle.close()
         elif sonarR_val <= see_bound + 0.2:
             if substate != 1 :
                 pd0.reset(sp = 0.4)
-            print "substate 1"
-        #    fhandle.write("substate 1\n")
             substate = 1
             pd_val = pd0.pd_out(sonarR_val)
             velocity.angular.z += pd_val
             velocity.angular.z = max(min(velocity.angular.z, 0.65), 0.1)
- #           fhandle.write("PD ret {}\n.".format(pd_val))
         elif sonarF_val <= see_bound + 0.1:
             if substate != 2:
                 pd0.reset(sp = 0.3)
-            print "substate 2"
-#            fhandle.write("substate 2\n")
             substate = 2
             pd_val = pd0.pd_out(sonarF_val)
             velocity.angular.z += pd_val
             velocity.angular.z = min(max(velocity.angular.z, -0.65), -0.1)
-  #          fhandle.write("PD ret {}\n.".format(pd_val))
         elif sonarFL_val <= see_bound:
             if substate != 3:
                 pd0.reset(sp = 0.3)
-            print "substate 3"
-   #         fhandle.write("substate 3\n")
             substate = 3
             pd_val = pd0.pd_out(sonarFL_val)
             velocity.angular.z += pd_val
             velocity.angular.z = min(max(velocity.angular.z, -0.65), -0.1)
-    #        fhandle.write("PD ret {}\n.".format(pd_val))
         elif sonarFR_val <= see_bound + 0.2:
             if substate != 4 :
                 pd0.reset(sp = 0.4)
-            print "substate 4"
-     #       fhandle.write("substate 4\n")
             substate = 4
             pd_val = pd0.pd_out(sonarFR_val)
             velocity.angular.z += pd_val
             velocity.angular.z = max(min(velocity.angular.z, 0.65), 0.1)
- #           fhandle.write("PD ret {}\n.".format(pd_val))
     elif state == 1:
-        rospy.loginfo("in state 1")
+        # the input to the pd controller is the minimum distance from the wall seen by the left and front left sonar
+        # assuming we are parallel to the wall
         velocity.linear.x = 0.18
-        #if sonarF_val / 3 < 0.3:
-        #    velocity.linear.x = 0.15
-        if sonarR_val <= 0.1:
-            rospy.loginfo("should terminate")
-         #   fhandle.close()
+        if sonarR_val <= 0.1: # just to terminate it if communication to raspberry pi is lost
             state = 3
             sys.exit(0)
-        #velocity.angular.z = pd.pd_out(min(sonarL_val, sonarFL_val * math.cos(math.pi/6), sonarF_val / 3)) 
-        #velocity.angular.z = min(max(pd.pd_out(min(sonarL_val, sonarFL_val * math.cos(math.pi/6), sonarF_val - 0.3)), -0.65), 0.65)
         velocity.angular.z = min(max(pd.pd_out(min(sonarL_val, sonarFL_val * math.cos(math.pi/6))), -0.5), 0.5)
-    elif state == 2:
+    elif state == 2: # turn right
 
         velocity.linear.x = 0.15
         velocity.angular.z = -0.6
         if time.time() - state2start > 1.3:
             state = 1
-        
-            
-               
-            
-    #rospy.loginfo("Velocity x, z: %s, %s", velocity.linear.x, velocity.angular.z)
-    rospy.loginfo("Right Scan %s", sonarR_val)
-    rospy.loginfo("Front Right Scan %s", sonarFR_val)
-    rospy.loginfo("Left Scan %s", sonarL_val)
-    rospy.loginfo("Front Left Scan %s", sonarFL_val)
-    rospy.loginfo("Front Scan %s", sonarF_val)
-    
-    #fhandle.write("Right Scan {}\n".format( sonarR_val))
-    #fhandle.write("Front Right Scan {}\n".format( sonarFR_val))
-   # fhandle.write("Left Scan {}\n".format( sonarL_val))
-    #fhandle.write("Front Left Scan {}\n".format( sonarFL_val))
-    #fhandle.write("Front Scan {}\n".format( sonarF_val))
-    #fhandle.write("Angular Velocity {}\nLinear Velocity {}\n".format(velocity.angular.z, velocity.linear.x))
+
     velocity_pub.publish(velocity)
 
 
@@ -178,7 +140,6 @@ def sonarRightCallback(msg):
     sonarR_val = msg.range;
 
 def follower_py():
-    # Starts a new node
     rospy.init_node('follower_node', anonymous=True)
     rospy.Subscriber("sonar_front_left", Range, sonarFrontLeftCallback)
     rospy.Subscriber("sonar_front_right", Range, sonarFrontRightCallback)
@@ -189,11 +150,9 @@ def follower_py():
 
     while not rospy.is_shutdown():
         rospy.spin()
-   #     if ztotal>=70:
-    #        break
+
 
 if __name__ == '__main__':
     try:
-        #Testing our function
         follower_py()
     except rospy.ROSInterruptException: pass
