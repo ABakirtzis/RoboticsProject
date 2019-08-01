@@ -1,4 +1,4 @@
 # RoboticsProject
 ros package to control differential drive mobile robot
 
-θ<sub>i</sub> text.
+![equation](http://www.sciweavers.org/upload/Tex2Img_1564682062/render.png)
