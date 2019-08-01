@@ -10,6 +10,7 @@ mean2 = 0.148
 mean0 = 0
 std2 = 0.00474
 std0 = 0.001
+
 prevest = Matrix([0.45,0.45, -math.pi / 2])
 angle_threshold = 25 * np.pi / 180
 sensorApoklisi = 0.5
@@ -21,15 +22,13 @@ Phi = Matrix([x + v * t * sympy.cos(theta), y + v * t * sympy.sin(theta), theta 
 
 A = Phi.jacobian([x, y, theta])
 
-#gw = Matrix([t * dv * sympy.cos(theta), t * sympy.sin(theta) * dv, t * dw])
-
 Cw = Matrix([[dv**2*t**2*sympy.cos(theta)**2, dv**2*t**2*sympy.sin(theta)*sympy.cos(theta), 0], [dv**2*t**2*sympy.sin(theta)*sympy.cos(theta), dv**2*t**2*sympy.sin(theta)**2, 0], [0, 0, 0.0015**2*t**2]])
 
-
 walls = [[1, 0, -0.75], [0, 1, -0.75], [1, 0, 0.75], [0, 1, 0.75]]
+
 sonarangles = [-np.pi/2, -np.pi/3, 0, np.pi/3, np.pi/2]
-sonarpoints = [(1.2, -3.5), (11.85, -2.25), (12.8, 0), (11.85, 2.25), (1.2, 3.5)] # in cm
-sonarpoints = [(i * 0.01, j * 0.01) for i,j in sonarpoints] #in m
+sonarpoints = [(1.2, -3.5), (11.85, -2.25), (12.8, 0), (11.85, 2.25), (1.2, 3.5)]
+sonarpoints = [(i * 0.01, j * 0.01) for i,j in sonarpoints]
 
 equations = [[(0.75 - x - sonarpoints[i][0] * sympy.cos(theta)) / sympy.cos(theta + sonarangles[i]),
               (0.75 - y - sonarpoints[i][1] * sympy.sin(theta)) / sympy.sin(theta + sonarangles[i]),
@@ -37,8 +36,6 @@ equations = [[(0.75 - x - sonarpoints[i][0] * sympy.cos(theta)) / sympy.cos(thet
               (0.75 + y + sonarpoints[i][1] * sympy.sin(theta)) / sympy.sin(theta + sonarangles[i])] for i in range(5)]
 
 Hequations = [[[sympy.diff(i, x), sympy.diff(i, y), sympy.diff(i, theta)] for i in j] for j in equations]
-
-
 
 def line(x0, y0, theta0):
     return [-np.sin(theta0), np.cos(theta0), -np.cos(theta0) * y0 + np.sin(theta0) * x0]
