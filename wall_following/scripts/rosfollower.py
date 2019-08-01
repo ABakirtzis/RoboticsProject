@@ -23,7 +23,7 @@ state = 0
 substate = 0
 state2start = 0
 
-fhandle = file("/home/ubuntu/catkin_ws/src/project/scripts/raw_data", 'w')
+#fhandle = file("/home/ubuntu/catkin_ws/src/project/scripts/raw_data", 'w')
 pd0 = pdcon.pd_controller(setpoint = 0.3, kp = 27, kd = 2.5)
 pd = pdcon.pd_controller(setpoint = 0.2, kp = 27, kd = 2.5)
 def send_velocity():
@@ -67,55 +67,55 @@ def send_velocity():
         
     if state == 0:
         print "state 0"
-        fhandle.write("state 0\n")
+     #   fhandle.write("state 0\n")
         velocity.linear.x = 0.18
         velocity.angular.z = -0.3
         if sonarL_val <= see_bound:
             print "substate 0"
-            fhandle.write("substate 0\n")
+      #      fhandle.write("substate 0\n")
             state = 1
             velocity.angular.z = 0
-            fhandle.close()
+       #     fhandle.close()
         elif sonarR_val <= see_bound + 0.2:
             if substate != 1 :
                 pd0.reset(sp = 0.4)
             print "substate 1"
-            fhandle.write("substate 1\n")
+        #    fhandle.write("substate 1\n")
             substate = 1
             pd_val = pd0.pd_out(sonarR_val)
             velocity.angular.z += pd_val
             velocity.angular.z = max(min(velocity.angular.z, 0.65), 0.1)
-            fhandle.write("PD ret {}\n.".format(pd_val))
+ #           fhandle.write("PD ret {}\n.".format(pd_val))
         elif sonarF_val <= see_bound + 0.1:
             if substate != 2:
                 pd0.reset(sp = 0.3)
             print "substate 2"
-            fhandle.write("substate 2\n")
+#            fhandle.write("substate 2\n")
             substate = 2
             pd_val = pd0.pd_out(sonarF_val)
             velocity.angular.z += pd_val
             velocity.angular.z = min(max(velocity.angular.z, -0.65), -0.1)
-            fhandle.write("PD ret {}\n.".format(pd_val))
+  #          fhandle.write("PD ret {}\n.".format(pd_val))
         elif sonarFL_val <= see_bound:
             if substate != 3:
                 pd0.reset(sp = 0.3)
             print "substate 3"
-            fhandle.write("substate 3\n")
+   #         fhandle.write("substate 3\n")
             substate = 3
             pd_val = pd0.pd_out(sonarFL_val)
             velocity.angular.z += pd_val
             velocity.angular.z = min(max(velocity.angular.z, -0.65), -0.1)
-            fhandle.write("PD ret {}\n.".format(pd_val))
+    #        fhandle.write("PD ret {}\n.".format(pd_val))
         elif sonarFR_val <= see_bound + 0.2:
             if substate != 4 :
                 pd0.reset(sp = 0.4)
             print "substate 4"
-            fhandle.write("substate 4\n")
+     #       fhandle.write("substate 4\n")
             substate = 4
             pd_val = pd0.pd_out(sonarFR_val)
             velocity.angular.z += pd_val
             velocity.angular.z = max(min(velocity.angular.z, 0.65), 0.1)
-            fhandle.write("PD ret {}\n.".format(pd_val))
+ #           fhandle.write("PD ret {}\n.".format(pd_val))
     elif state == 1:
         rospy.loginfo("in state 1")
         velocity.linear.x = 0.18
@@ -123,7 +123,7 @@ def send_velocity():
         #    velocity.linear.x = 0.15
         if sonarR_val <= 0.1:
             rospy.loginfo("should terminate")
-            fhandle.close()
+         #   fhandle.close()
             state = 3
             sys.exit(0)
         #velocity.angular.z = pd.pd_out(min(sonarL_val, sonarFL_val * math.cos(math.pi/6), sonarF_val / 3)) 
@@ -148,10 +148,10 @@ def send_velocity():
     
     #fhandle.write("Right Scan {}\n".format( sonarR_val))
     #fhandle.write("Front Right Scan {}\n".format( sonarFR_val))
-    fhandle.write("Left Scan {}\n".format( sonarL_val))
-    fhandle.write("Front Left Scan {}\n".format( sonarFL_val))
-    fhandle.write("Front Scan {}\n".format( sonarF_val))
-    fhandle.write("Angular Velocity {}\nLinear Velocity {}\n".format(velocity.angular.z, velocity.linear.x))
+   # fhandle.write("Left Scan {}\n".format( sonarL_val))
+    #fhandle.write("Front Left Scan {}\n".format( sonarFL_val))
+    #fhandle.write("Front Scan {}\n".format( sonarF_val))
+    #fhandle.write("Angular Velocity {}\nLinear Velocity {}\n".format(velocity.angular.z, velocity.linear.x))
     velocity_pub.publish(velocity)
 
 

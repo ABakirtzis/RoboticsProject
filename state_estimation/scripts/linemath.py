@@ -178,7 +178,8 @@ def makeh_H_Cv_z(x0, y0, theta0, sonars, sonarangles, sonarpoints, walls, wall_l
             continue
         if wall == None:
             continue
-        eq = equations[i][wall].evalf(subs = {x: x0, y: y0, theta: theta0})
+        #eq = equations[i][wall].evalf(subs = {x: x0, y: y0, theta: theta0})
+        eq = equations_lambd[i][wall](float(x0), float(y0), float(theta0))
         if abs(sonars[i] - eq) < sonar_deviation_threshold:
             h.append(equations[i][wall])
             z.append(sonars[i])
