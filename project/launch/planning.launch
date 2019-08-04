@@ -49,7 +49,7 @@
 
   <!-- Localizer -->
 
-  <node pkg="state_estimation" type="localizer.py" name="localizer" output="screen">
+  <node pkg="state_estimation" type="localizer2.py" name="localizer" output="screen">
   </node>
 
   <!-- Planner -->

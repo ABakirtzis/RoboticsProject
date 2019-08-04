@@ -23,7 +23,7 @@ std2 = 0.00474
 std0 = 0.001
 
 
-prevest = Matrix([0.45,0.45,-np.pi / 2])
+prevest = Matrix([0,0,0])
 angle_threshold = 25 * np.pi / 180
 sensorApoklisi = 0.5
 sonar_deviation_threshold = 0.3
@@ -149,9 +149,9 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
     newX = sympy.Matrix(newX)
   
     sampleaa += 1
-
+    
     newP = (eye(3) - newK * newH) * newPtemp
-
+    print sampleaa
     return newX, newP
 
 

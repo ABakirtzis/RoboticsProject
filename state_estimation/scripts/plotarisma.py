@@ -18,8 +18,10 @@ for f in ['xy']:
                 x2 = x
                 y2 = y
 	plt.plot(x, y, 'o')
+"""
 for i in range(len(x)):
         plt.annotate(i, (x[i],y[i]))
+"""
 plt.xlim(-0.75, 0.75)
 plt.ylim(-0.75, 0.75)
 plt.xlabel(xlabels[titlos])

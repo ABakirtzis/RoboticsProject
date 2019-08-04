@@ -29,23 +29,23 @@ imuLinAccZ = 0.0
 
 start_point = [0.45, 0.45, -math.pi / 2]
 
-end_point = [-0.15, -0.45]
+end_point = [0.10, -0.45]
 
 
 
 target_ang = 0.0
-state = 2
+state = 0
 count_state_0 = 0
 theta = math.atan2(end_point[1]- start_point[1], end_point[0]- start_point[0]) - start_point[2]
 pd_turn = pdcon.pd_controller(setpoint = theta, kp = 9, kd = 1.9)
 
-attractive_gain = 30.0
-repulsive_gain = 90.0
+attractive_gain = 80.0
+repulsive_gain = 150.0
 grid_area_width = 1.5
 grid_resolution = 0.15
-robot_radious = 0.18
-
-obstacle = (0.15 + 0.075, -0.15 - 0.075)
+robot_radious = 0.15
+cells_count = int(grid_area_width / grid_resolution)
+obstacle = [(0.15 + 0.075, -0.15 - 0.075)]
 obstacle1 = (0.1,-0.1)
 
 moves = [[1,0],
@@ -65,31 +65,34 @@ def point_dist(p1, p2):
 
 def calculate_attractive_potential(x, y):
 
-    return 0.5 * attractive_gain * point_dist([x, y], end_point)
-
+    sum = 0
+    for obst in obstacle:
+        sum += 0.5 * attractive_gain * point_dist([x, y], end_point)
+    return sum
 
 def calculate_repulsive_potential(x,y):
+    sum = 0
+    for obst in obstacle:
+        dq = point_dist([x,y], obst)
 
-    dq = point_dist([x,y], obstacle)
+        if dq <= robot_radious:
+            if dq < 0.05:
+                dq = 0.05
+                sum += 0.5 * repulsive_gain * (1.0 / dq - 1.0 / robot_radious)**2
+            else:
 
-    if dq <= robot_radious:
-        if dq < 0.05:
-            dq = 0.05
-        return 0.5 * repulsive_gain * (1.0 / dq - 1.0 / robot_radious)**2
-    else:
-
-        return 0
-
+                sum += 0
+    return sum 
 
 def calculate_potential_field_values():
 
-    potential_map = [[0.0 for i in range(0, 10)] for j in range(0, 10)]
+    potential_map = [[0.0 for i in range(0, cells_count)] for j in range(0, cells_count)]
 
-    for x_cell in range(0, 10):
+    for x_cell in range(0, cells_count):
 
         x = x_cell * grid_resolution - 0.75
 
-        for y_cell in range(0, 10):
+        for y_cell in range(0, cells_count):
 
             y = y_cell * grid_resolution - 0.75
 
@@ -102,7 +105,7 @@ def calculate_potential_field_values():
 
 
 pmap = calculate_potential_field_values()
-
+print "ready 2"
 #plt.grid(True)
 #plt.axis('equal')
 #plt.pcolor(pmap, vmax = 200, cmap=plt.cm.Blues)
@@ -136,16 +139,16 @@ def send_velocity():
     velocity.angular.z = 0
 
     
-    if point_dist(X, end_point) < 0.17:
+    if point_dist(X, end_point) < 0.13:
         state = 3
 
     # line pose torwards target point
     if state == 0:
         
         velocity.angular.z =  -min(max(pd_turn.pd_out(imuYaw), -2.8), 2.8)
-        if abs(imuYaw - theta) < 0.06:
+        if abs(imuYaw - theta) < 0.07:
             count_state_0 += 1
-            if count_state_0 >= 8:
+            if count_state_0 >= 5:
                 velocity.angular.z = 0
             
                 print "fuck"
@@ -160,27 +163,28 @@ def send_velocity():
     elif state == 2:
         velocity.linear.x = 0.2
         minp = float("inf")
+        mini = 0
         for i in range(0, 8):
 
             x_cell, y_cell = find_cell(X[0], X[1])
-
+            print "{} {}".format(x_cell,y_cell)
             x_cell += moves[i][0]
             y_cell += moves[i][1]
-
+            print "{} {} {} {}".format(x_cell, y_cell, len(pmap), len(pmap[0]))
             if x_cell >= len(pmap) or y_cell >= len(pmap[0]):
 
                 p = float("inf")
-
             else:
-
+                
                 p = pmap[x_cell][y_cell]
 
             if minp > p:
 
                 minp = p
+                mini = i
                 x_choice = x_cell * grid_resolution - 0.75
                 y_choice = y_cell * grid_resolution - 0.75
-
+            print "{} {}".format(x_choice, y_choice)
         theta_choice = math.atan2(y_choice-X[1], x_choice-X[0])
                 
         pd_turn1 = pdcon.pd_controller(setpoint = theta_choice, kp = 9, kd = 1.9)
@@ -287,6 +291,6 @@ def follower_py():
 if __name__ == '__main__':
     try:
         #Testing our function
-        time.sleep(35)
+        time.sleep(20)
         follower_py()
     except rospy.ROSInterruptException: pass

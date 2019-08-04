@@ -23,8 +23,8 @@ state = 0
 substate = 0
 state2start = 0
 
-pd0 = pdcon.pd_controller(setpoint = 0.3, kp = 27, kd = 2.5)
-pd = pdcon.pd_controller(setpoint = 0.2, kp = 27, kd = 2.5)
+pd0 = pdcon.pd_controller(setpoint = 0.3, kp = 25, kd = 2.5)
+pd = pdcon.pd_controller(setpoint = 0.2, kp = 25, kd = 2.5)
 def send_velocity():
     global sonarF_val
     global sonarFL_val
@@ -54,7 +54,7 @@ def send_velocity():
     sonarFL_val = sum(sonarFL) / len(sonarFL)
     sonarL_val = sum(sonarL) / len(sonarL)
 
-    if sonarF_val < 0.4: # too close to a wall, start the turning state
+    if sonarF_val < 0.33: # too close to a wall, start the turning state
 
         state = 2
         state2start = time.time()
@@ -110,7 +110,7 @@ def send_velocity():
     elif state == 2: # turn right
 
         velocity.linear.x = 0.15
-        velocity.angular.z = -0.6
+        velocity.angular.z = -0.9
         if time.time() - state2start > 1.3:
             state = 1
 
