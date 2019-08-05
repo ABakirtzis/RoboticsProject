@@ -155,6 +155,7 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
     newP = (eye(3) - newK * newH) * newPtemp
 
     newdt = time.time() - timestarted
+    print newdt
     retX = Phi_lambd(float(newX[0]), float(newX[1]), float(newX[2]), float(velocity), float(newdt), float(wz))
     
     retX[2] = norm(est[2])
