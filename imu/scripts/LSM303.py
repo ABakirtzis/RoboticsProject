@@ -45,7 +45,7 @@ def init_acc_mag():
     # Select CRB register, 0x01(01)
     #		0x20(32)	Gain setting = +/- 1.3g
     bus.write_byte_data(0x1E, 0x01, 0x20)
-    time.sleep(0.5)
+    time.sleep(1)
     offset1 = 0
     for i in range(5):
         offset1 += read_data()[-1]
@@ -125,7 +125,6 @@ def read_data():
     xMag -= 54.4
     yMag -= -196.5
     yaw = atan2(yMag, xMag)
-    print yMag, xMag, atan2(yMag, xMag), offset, norm(yaw)
     return (xAccl * 2 * 9.81 / 32767, yAccl * 2 * 9.81 / 32767, zAccl * 2 * 9.81 / 32767, xMag * 180 / pi, yMag * 180 / pi, -norm(yaw + offset))
 
 if __name__ == "__main__":

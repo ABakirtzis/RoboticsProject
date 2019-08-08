@@ -9,9 +9,9 @@ import LSM303
 
 def initialize_imu():
         L3GD20.init_ang()
+        time.sleep(1)
         LSM303.init_acc_mag()
         time.sleep(0.5)
-        
 
 def accel_publisher():
         pub = rospy.Publisher("imu_data", Imu, queue_size = 10)

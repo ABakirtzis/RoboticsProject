@@ -75,7 +75,7 @@ equations_lambd = []
 for sonar_ind in range(0, 5):
     Hequations_lambd_temp = []
     equations_lambd_temp = []
-    for wall_ind in range(0, 8):
+    for wall_ind in range(0, len(walls)):
         equations_lambd_temp.append(sympy.lambdify([x,y,theta], equations[sonar_ind][wall_ind]))
         Hequations_lambd_temp.append(sympy.lambdify([x,y,theta], Hequations[sonar_ind][wall_ind]))
     Hequations_lambd.append(Hequations_lambd_temp)
@@ -155,7 +155,6 @@ def update(X, P, dt, sonars, vx, wz): #X = [x, y, theta]
     newP = (eye(3) - newK * newH) * newPtemp
 
     newdt = time.time() - timestarted
-    print newdt
     retX = Phi_lambd(float(newX[0]), float(newX[1]), float(newX[2]), float(velocity), float(newdt), float(wz))
     
     retX[2] = norm(est[2])

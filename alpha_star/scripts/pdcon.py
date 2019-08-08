@@ -9,7 +9,7 @@ class pd_controller:
         self._der = 0
         self.kp = kp
         self.kd = kd
-        self.derivative_samples = 4
+        self.derivative_samples = derivative_samples
         self._curtime = time.time()
         self._history = [0 for i in range(self.derivative_samples)]
         self._history_times = [0 for i in range(self.derivative_samples)]
@@ -32,7 +32,7 @@ class pd_controller:
         self._history_times.pop(0)
         self._history_times.append(time.time())
         self._calc_der()
-        return self.kp*self._history[-1] + self.kd*self._der
+        return self.kp*self._history[-1] + self.kd*self._der, self.kp*self._history[-1], self.kd*self._der
 
     def reset(self, sp):
         self.setpoint = sp
