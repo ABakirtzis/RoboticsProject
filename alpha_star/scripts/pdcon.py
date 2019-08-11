@@ -4,11 +4,12 @@ import time
 
 class pd_controller:
 
-    def __init__(self, setpoint = 1, kp = 1, kd = 1, derivative_samples = 3):
+    def __init__(self, setpoint = 1, kp = 1, kd = 1, ksetpoint = 0, derivative_samples = 3):
         self.setpoint = setpoint
         self._der = 0
         self.kp = kp
         self.kd = kd
+        self.ksetpoint = ksetpoint
         self.derivative_samples = derivative_samples
         self._curtime = time.time()
         self._history = [0 for i in range(self.derivative_samples)]
@@ -28,14 +29,16 @@ class pd_controller:
 
     def pd_out(self, out):
         self._history.pop(0)
-        self._history.append(out - self.setpoint)
+        self._history.append(out)
         self._history_times.pop(0)
         self._history_times.append(time.time())
         self._calc_der()
-        return self.kp*self._history[-1] + self.kd*self._der, self.kp*self._history[-1], self.kd*self._der
+        return self.kp * (self.setpoint - self._history[-1]) + self.kd * (self.ksetpoint - self._der)
 
-    def reset(self, sp):
+    
+    def reset(self, sp, sk = 0):
         self.setpoint = sp
+        self.ksetpoint = sk
         self._der = 0
         self._curtime = time.time()
         self._history = [0 for i in range(self.derivative_samples)]
