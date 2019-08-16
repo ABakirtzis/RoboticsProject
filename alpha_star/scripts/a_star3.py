@@ -29,7 +29,7 @@ angular_velocity_limit = 2
 
 #planning
 start = (0.30, 0.45)
-end = (0.30, -0.45)
+end = (0.2, -0.45)
 startang_robot = -np.pi/2
 obstacles = [((0.30, 0.15), (-0.30, -0.15))]
 resolution = 80
@@ -70,7 +70,7 @@ def send_velocity():
                 
     elif state == 1:
         try:
-            fhandle.write("{};{} {}".format(x,y,((x - end[0]) ** 2 + (y - end[1]) ** 2) ** (1/2.)))
+            fhandle.write("{};{} {}\n".format(x,y,((x - end[0]) ** 2 + (y - end[1]) ** 2) ** (1/2.)))
         except:
             pass
         begin_time = time.time()
@@ -83,44 +83,18 @@ def send_velocity():
             if curvemath.my_dist(cur[i], (x,y)) < m:
                 m = curvemath.my_dist(cur[i], (x,y))
                 ind = i
-        temp = int(0.04 * resolution / size)
-        print temp
+        temp = int(0.1 * resolution / size)
         if ind + temp < len(cur):
-            p1 = cur[ind + temp - 1]
-            p2 = cur[ind + temp]
-        elif ind + temp >= len(cur):
-            esc_pd = True
-        elif ind == 0:
-            p1 = cur[ind]
-            p2 = cur[ind+1]
+            p1 = cur[ind + temp]
         else:
-            p2 = cur[ind]
-            p1 = cur[ind-1]
-        try:
-            fhandle.write(" beforem: {},".format(m))
-        except:
-            pass
-        if not esc_pd:
-            curve_angle = np.arctan2(p2[1] - p1[1], p2[0] - p1[0])
-            m = (atan_coefficient * m) ** 2
-            if linemath.is_it_left(p1, p2, (x,y)):
-                m = -m
-            angle_setpoint = linemath.norm(np.arctan(m) + curve_angle)
-        else:
-            curve_angle = 0
-            angle_setpoint = linemath.norm(np.arctan2(cur[-1][1] - y, cur[-1][0] - x))
+            p1 = cur[-1]
+        angle_setpoint = linemath.norm(np.arctan2(p1[1] - y, p1[0] - x))
         angle_setpoint += 2 * np.pi
-        print "angle: {}".format(angle_setpoint)
-        print "rangle: {}".format(linemath.norm(imuYaw + startang_robot) + 2 * np.pi)
         pd_turn.setpoint = angle_setpoint
         temp = pd_turn.pd_out(linemath.norm(imuYaw + startang_robot) + 2 * np.pi)
         w = min(max(temp, -angular_velocity_limit), angular_velocity_limit)
         velocity.angular.z =  w
         velocity.linear.x = 0.2
-        try:
-            fhandle.write(" curve:{}, m: {}, setpoint: {}\n".format(curve_angle, m, angle_setpoint))
-        except:
-            pass
 
     elif state == 2:
         ready_to_write = False

@@ -54,7 +54,7 @@
 
   <!-- Planner -->
 
-  <node pkg="alpha_star" type="a_star2.py" name="a_star" output="screen">
+  <node pkg="alpha_star" type="a_star3.py" name="a_star" output="screen">
   </node>
 
 </launch>
