@@ -29,25 +29,22 @@ angular_velocity_limit = 2
 
 #planning
 start = (0.45, 0.45)
-end = (0.30, -0.45)
+end = (0.30, -0.55)
 startang_robot = -np.pi/2
 obstacles = [((0.30, 0.15), (-0.30, -0.15))]
-resolution = 80
-size = 1.5
-safety_net = 0.13
 
-cur,obs,obs_s = curvemath.find_curve(start = start, end = end, resolution = resolution, safety_net = safety_net, obstacles = obstacles, smoothing_range = 0.8, plot_ret = True)
+
+cur,obs,obs_s = curvemath.find_curve(start = start, end = end, obstacles = obstacles, smoothing_range = 0.8, plot_ret = True)
+pd = pdcon.pd_controller(setpoint = 0, kp = 13, kd = 5)
 startang_curve = np.arctan2(cur[1][1] - cur[0][1], cur[1][0] - cur[0][0])
 startangle = linemath.norm(startang_curve - startang_robot)
 fhandle = file("/home/ubuntu/catkin_ws/src/alpha_star/scripts/info", 'w')
-pd_turn = pdcon.pd_controller(setpoint = startangle, kp = 5, kd = 0.4, f = linemath.norm)
-atan_coefficient = 11
-esc_pd = False
+pd_turn = pdcon.pd_controller(setpoint = startangle, kp = 5, kd = 0.4)
 
 def send_velocity():
     global pd0, pd, state, substate, state2start, startangle, ready_to_write
-    global imuYaw, atan_coefficient
-    global state, esc_pd
+    global imuYaw
+    global state
     global count_state_0
     global X
     x,y,theta = X
@@ -58,10 +55,13 @@ def send_velocity():
         ready_to_write=False
     
     if state == 0:
-        velocity.angular.z =  min(max(pd_turn.pd_out(imuYaw), -angular_velocity_limit), angular_velocity_limit)
+        #fhandle.write("theta: {}\n".format(theta))
+        #fhandle.write("imuyaw {}\n".format(imuYaw))
+        velocity.angular.z =  min(max(pd_turn.pd_out(imuYaw), -2.8), 2.8)
         if abs(velocity.angular.z) < 0.5:
             velocity.angular.z = 0
         velocity.linear.x = 0
+        #fhandle.write("diafora {}\n".format(linemath.norm(imuYaw - startangle)))
         if abs(linemath.norm(imuYaw - startangle)) < 0.17:
             count_state_0 += 1
             if count_state_0 >= 5:
@@ -70,7 +70,7 @@ def send_velocity():
                 
     elif state == 1:
         try:
-            fhandle.write("{};{} {}".format(x,y,((x - end[0]) ** 2 + (y - end[1]) ** 2) ** (1/2.)))
+            fhandle.write("{};{} {}\n".format(x,y,((x - end[0]) ** 2 + (y - end[1]) ** 2) ** (1/2.)))
         except:
             pass
         begin_time = time.time()
@@ -83,44 +83,20 @@ def send_velocity():
             if curvemath.my_dist(cur[i], (x,y)) < m:
                 m = curvemath.my_dist(cur[i], (x,y))
                 ind = i
-        temp = int(0.04 * resolution / size)
-        print temp
-        if ind + temp < len(cur):
-            p1 = cur[ind + temp - 1]
-            p2 = cur[ind + temp]
-        elif ind + temp >= len(cur):
-            esc_pd = True
-        elif ind == 0:
+        if ind == 0:
             p1 = cur[ind]
             p2 = cur[ind+1]
         else:
             p2 = cur[ind]
             p1 = cur[ind-1]
-        try:
-            fhandle.write(" beforem: {},".format(m))
-        except:
-            pass
-        if not esc_pd:
-            curve_angle = np.arctan2(p2[1] - p1[1], p2[0] - p1[0])
-            m = (atan_coefficient * m) ** 2
-            if linemath.is_it_left(p1, p2, (x,y)):
-                m = -m
-            angle_setpoint = linemath.norm(np.arctan(m) + curve_angle)
-        else:
-            angle_setpoint = linemath.norm(np.arctan2(cur[-1][1] - y, cur[-1][0] - x))
-        angle_setpoint += 2 * np.pi
-        print "angle: {}".format(angle_setpoint)
-        print "rangle: {}".format(linemath.norm(imuYaw + startang_robot) + 2 * np.pi)
-        pd_turn.setpoint = angle_setpoint
-        temp = pd_turn.pd_out(linemath.norm(imuYaw + startang_robot) + 2 * np.pi)
+        if not linemath.is_it_left(p1, p2, (x,y)):
+            m = -m
+        temp = pd.pd_out(m)
         w = min(max(temp, -angular_velocity_limit), angular_velocity_limit)
-        velocity.angular.z =  w
+        velocity.angular.z =  min(max(w, -angular_velocity_limit), angular_velocity_limit)
         velocity.linear.x = 0.2
-        try:
-            fhandle.write(" curve:{}, m: {}, setpoint: {}\n".format(curve_angle, m, angle_setpoint))
-        except:
-            pass
 
+        
     elif state == 2:
         ready_to_write = False
         velocity.linear.x = 0
@@ -136,7 +112,7 @@ def send_velocity():
         plt.plot([i[0] for i in obs_s], [i[1] for i in obs_s], 'o')
         plt.plot([i[0] for i in cur], [i[1] for i in cur], 'o')
         plt.plot(x1, y1, '--', linewidth = 2)
-        plt.title("C: {}".format(atan_coefficient))
+        plt.title("kp: {}, kd: {}".format(pd.kp, pd.kd))
         plt.xlim(-0.75, 0.75)
         plt.ylim(-0.75, 0.75)
         with open("/home/ubuntu/catkin_ws/src/alpha_star/scripts/fignum", 'r') as fhandle2:
