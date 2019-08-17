@@ -175,11 +175,9 @@ def smoothen_curve(cur, smoothing_range, resolution, size, minrange = 0.03): #cu
         rest.append(cur[curvesi[i][-1]+1:curvesi[i+1][0]])
         resti.append((curvesi[i][-1]+1,curvesi[i+1][0]))
     final_curve = []
-    print curvesi
     if curvesi[0][0] > 0:
         final_curve = rest.pop(0)
     for i in range(len(curves)):
-        """start change"""
         minsamples = minrange * resolution / size
         j = 1
         while j < len(curves[i]) - 1:
@@ -196,14 +194,11 @@ def smoothen_curve(cur, smoothing_range, resolution, size, minrange = 0.03): #cu
                 else:
                     break
             j += 1
-        """end change"""
-        print curvesi[i]
         final_curve += bezier_curve2(curves[i], curvesi[i][-1] - curvesi[i][0] + 1)
         if curvesi[i][-1] < len(cur)-1:
             final_curve += rest.pop(0)
     if len(rest) > 0:
         final_curve += rest.pop(0)
-    print curvesi
     return final_curve
         
 
@@ -243,7 +238,7 @@ def find_curve(start, end, obstacles, resolution = 80, size = 1.5, safety_net = 
             plt.ylabel('y(m)')
             plt.title('Curve Smoothing')
         
-            plt.plot([i[0] for i in p], [i[1] for i in p], markersize = 3, linewidth = 2, label = 'final curve')
+            plt.plot([i[0] for i in p], [i[1] for i in p], 'o', markersize = 3, linewidth = 2, label = 'final curve')
             plt.legend()
             plt.show()
 
@@ -253,4 +248,4 @@ def find_curve(start, end, obstacles, resolution = 80, size = 1.5, safety_net = 
 
 
 if __name__ == "__main__":
-    find_curve(start = (0, 0.45), end = (0.30, -0.55), obstacles = [((0.30, 0.15), (-0.30, -0.15))], smoothing_range = 0.15, debugging = True )
+    find_curve(start = (0.3, 0.45), end = (0.30, -0.55), obstacles = [((0.30, 0.15), (-0.30, -0.15))], smoothing_range = 0.15, debugging = True )
