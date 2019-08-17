@@ -213,13 +213,17 @@ def find_curve(start, end, obstacles, resolution = 80, size = 1.5, safety_net = 
         obs = [coords(i, resolution, size) for i in plotobstacles]
         obs_safety = [coords(i, resolution, size) for i in plotobstacles_safety]
         if debugging:
-            plt.plot([i[0] for i in obs], [i[1] for i in obs], 'o')
-            plt.plot([i[0] for i in obs_safety], [i[1] for i in obs_safety], 'o')
-            plt.plot([i[0] for i in cur], [i[1] for i in cur], 'o')
+            plt.plot([i[0] for i in obs], [i[1] for i in obs], 'o', label = 'obstacle')
+            plt.plot([i[0] for i in obs_safety], [i[1] for i in obs_safety], 'o', label = 'safety net')
+            plt.plot([i[0] for i in cur], [i[1] for i in cur], 'o', label = 'A*')
             plt.xlim(-size/2, size/2)
             plt.ylim(-size/2, size/2)
+            plt.xlabel('x(m)')
+            plt.ylabel('y(m)')
+            plt.title('Curve Smoothing')
         
-            plt.plot([i[0] for i in p], [i[1] for i in p], markersize = 3, linewidth = 2)
+            plt.plot([i[0] for i in p], [i[1] for i in p], markersize = 3, linewidth = 2, label = 'final curve')
+            plt.legend()
             plt.show()
 
     if plot_ret:
