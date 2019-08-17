@@ -21,32 +21,33 @@ globalstarttime = time.time()
 # IMU:
 imuYaw = 0.0
 
+
 X = [0.45,0.45,-np.pi/2] # x, y, theta
-count_state_0 = 0
+
+count_state_0 = 0 # to escape state 0
 state = 0
 ready_to_write = True
 angular_velocity_limit = 2
 
 #planning
-start = (0.30, 0.45)
-end = (0.2, -0.45)
-startang_robot = -np.pi/2
-obstacles = [((0.30, 0.15), (-0.30, -0.15))]
-resolution = 80
-size = 1.5
-safety_net = 0.13
+start = (0.30, 0.45) # start point
+end = (0.2, -0.45) # end point 
+startang_robot = -np.pi/2 # starting angle
+obstacles = [((0.30, 0.15), (-0.30, -0.15))] #obstacles
+resolution = 80 # grid resolution
+size = 1.5 # square map size
+safety_net = 0.13 # distance from obstacles
 
-cur,obs,obs_s = curvemath.find_curve(start = start, end = end, resolution = resolution, safety_net = safety_net, obstacles = obstacles, smoothing_range = 0.8, plot_ret = True)
-startang_curve = np.arctan2(cur[1][1] - cur[0][1], cur[1][0] - cur[0][0])
+cur,obs,obs_s = curvemath.find_curve(start = start, end = end, resolution = resolution, safety_net = safety_net, obstacles = obstacles, smoothing_range = 0.8, plot_ret = True) # curvemath returns the curve
+startang_curve = np.arctan2(cur[1][1] - cur[0][1], cur[1][0] - cur[0][0]) # find the starting angle
 startangle = linemath.norm(startang_curve - startang_robot)
-fhandle = file("/home/ubuntu/catkin_ws/src/alpha_star/scripts/info", 'w')
+fhandle = file("/home/ubuntu/catkin_ws/src/alpha_star/scripts/info", 'w') # for debugging and plotting
 pd_turn = pdcon.pd_controller(setpoint = startangle, kp = 5, kd = 0.4, f = linemath.norm)
-atan_coefficient = 11
 esc_pd = False
 
 def send_velocity():
-    global pd0, pd, state, substate, state2start, startangle, ready_to_write
-    global imuYaw, atan_coefficient
+    global pd0, pd, state, state2start, startangle, ready_to_write
+    global imuYaw
     global state, esc_pd
     global count_state_0
     global X
@@ -57,7 +58,7 @@ def send_velocity():
         state = 2
         ready_to_write=False
     
-    if state == 0:
+    if state == 0: # try to reach starting angle
         velocity.angular.z =  min(max(pd_turn.pd_out(imuYaw), -angular_velocity_limit), angular_velocity_limit)
         if abs(velocity.angular.z) < 0.5:
             velocity.angular.z = 0
@@ -68,35 +69,35 @@ def send_velocity():
                 velocity.angular.z = 0
                 state = 1
                 
-    elif state == 1:
+    elif state == 1: # find a point on the curve to set heading to
         try:
             fhandle.write("{};{} {}\n".format(x,y,((x - end[0]) ** 2 + (y - end[1]) ** 2) ** (1/2.)))
         except:
             pass
         begin_time = time.time()
         
-        if ((x - end[0]) ** 2 + (y - end[1]) ** 2) ** (1/2.) < 0.05:
+        if ((x - end[0]) ** 2 + (y - end[1]) ** 2) ** (1/2.) < 0.05: # if distance to goal is less than 5cm, stop
             state = 2
-        m = 1000
+        m = 1000 # distance of the curve starting at high value
         ind = 0
-        for i in range(len(cur)):
+        for i in range(len(cur)): # find closest curve point
             if curvemath.my_dist(cur[i], (x,y)) < m:
                 m = curvemath.my_dist(cur[i], (x,y))
                 ind = i
-        temp = int(0.1 * resolution / size)
-        if ind + temp < len(cur):
+        temp = int(0.1 * resolution / size) # how many samples to look forward
+        if ind + temp < len(cur): # if curve finished, pick end point
             p1 = cur[ind + temp]
-        else:
+        else: 
             p1 = cur[-1]
-        angle_setpoint = linemath.norm(np.arctan2(p1[1] - y, p1[0] - x))
-        angle_setpoint += 2 * np.pi
+        angle_setpoint = linemath.norm(np.arctan2(p1[1] - y, p1[0] - x)) #find setpoint
+        angle_setpoint += 2 * np.pi # may be obsolete
         pd_turn.setpoint = angle_setpoint
-        temp = pd_turn.pd_out(linemath.norm(imuYaw + startang_robot) + 2 * np.pi)
-        w = min(max(temp, -angular_velocity_limit), angular_velocity_limit)
+        temp = pd_turn.pd_out(linemath.norm(imuYaw + startang_robot) + 2 * np.pi) # take PD output
+        w = min(max(temp, -angular_velocity_limit), angular_velocity_limit) # restrain it
         velocity.angular.z =  w
         velocity.linear.x = 0.2
 
-    elif state == 2:
+    elif state == 2: #plotting the results for future debugging
         ready_to_write = False
         velocity.linear.x = 0
         velocity.angular.z = 0

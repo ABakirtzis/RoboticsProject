@@ -6,20 +6,20 @@ import time
 #general
 #=======
 
-def which_cell(x, resolution, size):
+def which_cell(x, resolution, size): # cell of real coordinates x
     return (int((0.75 - x[1]) * resolution / size), int((x[0] + 0.75) * resolution / size))
 
-def coords(x, resolution, size):
+def coords(x, resolution, size): # coordinates of cell x
     return (x[1] * size / resolution - 0.75, 0.75 - x[0] * size / resolution)
 
-def neighbors2(a, resolution, board):
+def neighbors2(a, resolution, board): # grid neighbors, for A* with diagonals
     ret = []
     for x,y in [(j,k) for j in range(-1, 2) for k in range(-1, 2) if j != 0 or k != 0]:
         if -1 < a[0] + x <= resolution and -1 < a[1] + y <= resolution and board[a[0]+x][a[1]+y] != 0:
             ret.append((x+a[0],y+a[1]))
     return ret
 
-def neighbors(a, resolution, board):
+def neighbors(a, resolution, board): # grid neighbors, for A* without diagonals
     ret = []
     for x,y in [(j,k) for j in range(-1, 2) for k in range(-1, 2) if (j != 0 or k != 0) and j*k == 0]:
         if -1 < a[0] + x <= resolution and -1 < a[1] + y <= resolution and board[a[0]+x][a[1]+y] != 0:
@@ -30,11 +30,11 @@ def neighbors(a, resolution, board):
 #a_star
 #======
 
-def my_dist(a,b):
+def my_dist(a,b): # eucledian distance
     return ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** (1/2.)
 
 
-def reconstruct_path(cameFrom, current):
+def reconstruct_path(cameFrom, current): # for A*
     total_path = [current]
     keyset = set(cameFrom.keys())
     while current in keyset:
@@ -43,7 +43,7 @@ def reconstruct_path(cameFrom, current):
     total_path.reverse()
     return total_path
 
-def A_Star(board, start, goal, h, resolution):
+def A_Star(board, start, goal, h, resolution): # the A* algorithm
     inf = resolution ** 3
     openSet = set([start])
     closedSet = set()
@@ -74,11 +74,11 @@ def A_Star(board, start, goal, h, resolution):
 #smoothing
 #=========
 
-def interpolate(x, y, t):
+def interpolate(x, y, t): # for a bezier curve
     return ((float(y[0]) - x[0]) * t + x[0], (float(y[1]) - x[1]) * t + x[1])
 
 
-def bezier(p, t):
+def bezier(p, t): # returns a point on a bezier curve given by p points with interpolation coefficient t
     while True:
         if len(p) == 2:
             return interpolate(p[0], p[1], t)
@@ -88,14 +88,14 @@ def bezier(p, t):
         p = p1
 
 
-def bezier_curve(p, n):
+def bezier_curve(p, n): # return n points of a bezier curve using a list of points p
     t = 1./n
     d = 0
     while d <= 1.001:
         yield bezier(p, d)
         d+=t
 
-def bezier_curve2(p, n):
+def bezier_curve2(p, n): #midpoints trick for big bezier curves
     s = p.pop(0)
     e = p.pop()
     c = []
@@ -123,7 +123,7 @@ def bezier_curve2(p, n):
             curve.append(j)
     return curve
 
-def smoothen_curve(cur, smoothing_range, resolution, size):
+def smoothen_curve(cur, smoothing_range, resolution, size): #curve smoothing
     p = []
     pi = []
     curves = []
@@ -186,7 +186,7 @@ def smoothen_curve(cur, smoothing_range, resolution, size):
     return final_curve
         
 
-def find_curve(start, end, obstacles, resolution = 80, size = 1.5, safety_net = 0.15, smoothing = True, smoothing_range = 0.08, debugging = False, plot_ret = False):
+def find_curve(start, end, obstacles, resolution = 80, size = 1.5, safety_net = 0.15, smoothing = True, smoothing_range = 0.08, debugging = False, plot_ret = False): # does A* and smooths curve
     if debugging or plot_ret:
         if debugging:
             from matplotlib import pyplot as plt
