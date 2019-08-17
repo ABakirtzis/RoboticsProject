@@ -12,14 +12,14 @@ def which_cell(x, resolution, size): # cell of real coordinates x
 def coords(x, resolution, size): # coordinates of cell x
     return (x[1] * size / resolution - 0.75, 0.75 - x[0] * size / resolution)
 
-def neighbors2(a, resolution, board): # grid neighbors, for A* with diagonals
+def neighbors(a, resolution, board): # grid neighbors, for A* with diagonals
     ret = []
     for x,y in [(j,k) for j in range(-1, 2) for k in range(-1, 2) if j != 0 or k != 0]:
         if -1 < a[0] + x <= resolution and -1 < a[1] + y <= resolution and board[a[0]+x][a[1]+y] != 0:
             ret.append((x+a[0],y+a[1]))
     return ret
 
-def neighbors(a, resolution, board): # grid neighbors, for A* without diagonals
+def neighbors2(a, resolution, board): # grid neighbors, for A* without diagonals
     ret = []
     for x,y in [(j,k) for j in range(-1, 2) for k in range(-1, 2) if (j != 0 or k != 0) and j*k == 0]:
         if -1 < a[0] + x <= resolution and -1 < a[1] + y <= resolution and board[a[0]+x][a[1]+y] != 0:
@@ -123,7 +123,7 @@ def bezier_curve2(p, n): #midpoints trick for big bezier curves
             curve.append(j)
     return curve
 
-def smoothen_curve(cur, smoothing_range, resolution, size): #curve smoothing
+def smoothen_curve(cur, smoothing_range, resolution, size, minrange = 0.03): #curve smoothing
     p = []
     pi = []
     curves = []
@@ -175,14 +175,35 @@ def smoothen_curve(cur, smoothing_range, resolution, size): #curve smoothing
         rest.append(cur[curvesi[i][-1]+1:curvesi[i+1][0]])
         resti.append((curvesi[i][-1]+1,curvesi[i+1][0]))
     final_curve = []
+    print curvesi
     if curvesi[0][0] > 0:
         final_curve = rest.pop(0)
     for i in range(len(curves)):
+        """start change"""
+        minsamples = minrange * resolution / size
+        j = 1
+        while j < len(curves[i]) - 1:
+            if len(curves[i]) < 4:
+                break
+            threshold = curvesi[i][j] + minsamples
+            k = j+1
+            while k < len(curves[i])-2:
+                if len(curves[i]) < 4:
+                    break
+                if curvesi[i][k] <= threshold:
+                    curves[i].pop(k)
+                    curvesi[i].pop(k)
+                else:
+                    break
+            j += 1
+        """end change"""
+        print curvesi[i]
         final_curve += bezier_curve2(curves[i], curvesi[i][-1] - curvesi[i][0] + 1)
         if curvesi[i][-1] < len(cur)-1:
             final_curve += rest.pop(0)
     if len(rest) > 0:
         final_curve += rest.pop(0)
+    print curvesi
     return final_curve
         
 
@@ -232,4 +253,4 @@ def find_curve(start, end, obstacles, resolution = 80, size = 1.5, safety_net = 
 
 
 if __name__ == "__main__":
-    find_curve(start = (0, 0.45), end = (0.30, -0.55), obstacles = [((0.30, 0.15), (-0.30, -0.15))], smoothing_range = 0.8, debugging = True )
+    find_curve(start = (0, 0.45), end = (0.30, -0.55), obstacles = [((0.30, 0.15), (-0.30, -0.15))], smoothing_range = 0.15, debugging = True )
