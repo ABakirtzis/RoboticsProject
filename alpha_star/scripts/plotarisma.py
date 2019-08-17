@@ -32,3 +32,14 @@ plt.ylabel('y(m)')
 plt.xlim(-0.75, 0.75)
 plt.ylim(-0.75, 0.75)
 plt.show()
+d = []
+for x,y in zip(x1,y1):
+    d.append(min([((x - i[0]) ** 2 + (y - i[1]) ** 2) ** (1/2.) for i in cur]))
+plt.plot(d)
+plt.xlabel('sample')
+plt.ylabel('error(m)')
+plt.title('Error/Sample')
+plt.show()
+
+print "Max Error: {}m".format(max(d))
+print "Mean Error: {}m".format(sum(d)/len(d))
