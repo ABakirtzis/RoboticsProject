@@ -61,7 +61,7 @@
 Για τον πίνακα μετρήσεων z ισχύει ότι:
 
 <p align="center">
-  <img width="150px" src="/eq/z.gif">
+  <img width="150px" src="/eq/z.png">
 </p>
 Όπου L, FL, F, FR, R οι μετρήσεις των σόναρ και θ<sub>imu</sub> η μέτρηση του μαγνητομέτρου.
 
