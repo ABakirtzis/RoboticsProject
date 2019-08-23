@@ -98,12 +98,15 @@
 
 Κατά την έναρξη του task υπολογίζεται για κάθε κέλι στο occupancy grid η ένταση του τεχνιτού potential field ακολουθώντας τις παρακάτω εξισώσεις:
 
-$$U(cell) = U_{att}(cell)+U_{rep}(cell)$$
-
-$$U_{att}(cell)= \frac{1}{2}K_{att}euclidian_distance^{2}(cell, goal)$$
-
-$$U_{rep}(cell)= \frac{1}{2}K_{rep}\left(\frac{1}{euclidian_distance^{2}(cell, obst}-\frac{1}{robot_r}\right)$$
-
+<p align="center">
+  <img width="240px" src="/eq/11.png">
+</p>
+<p align="center">
+  <img width="350px" src="/eq/22.png">
+</p>
+<p align="center">
+  <img width="480px" src="/eq/33.png">
+</p>
 Οι παραπάνω τιμές αποθυκεύονται σε εναν πίνακα.
 
 Κατά της διάρκεια της εκτέλεσης του task, χρησιμοποιόντας τα δεδομένα του kalman filter, υπολογίζεται η θέση του ρομπότ πάνω στο occupancy grid. Γνωρίζοντας το cell που βρίσκετε το ρομπότ, χρησιμοποιήτε best-first αλγόριθμος στα 8 γειτονικά κέλια επιλέγοντας αυτό με την μικρότερη τιμή στον APF πίνακα.
