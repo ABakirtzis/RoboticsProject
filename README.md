@@ -21,6 +21,10 @@
   - Theta (0.0043 std) from magnetometer
   - Linear acceleration (0.05 std)
   - Gyro (0.001534 std)
+  
+<p align="center">
+  <img width="700px"  src="/eq/body.png">
+</p>
 
 
 ## Calibration του μαγνητομέτρου:
